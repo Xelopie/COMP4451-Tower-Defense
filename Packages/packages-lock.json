@@ -31,7 +31,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.probuilder": {
-      "version": "4.5.0",
+      "version": "4.4.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
