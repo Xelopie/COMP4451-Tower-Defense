@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 302034069}
   - component: {fileID: 302034068}
   m_Layer: 0
-  m_Name: End
+  m_Name: End1
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2129,7 +2129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368272084}
   m_Layer: 0
-  m_Name: Way 1
+  m_Name: Path1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2574,7 +2574,7 @@ GameObject:
   - component: {fileID: 502791343}
   - component: {fileID: 502791344}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Wave1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2609,45 +2609,45 @@ MonoBehaviour:
   spawnInstructions:
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 10
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
       type: 2}
-    delayToSpawn: 0.5
+    delayToSpawn: 2
     startingNode: {fileID: 1134052312}
-  timeToNextWave: 30
+  timeToNextWave: 40
 --- !u!1001 &508313139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2767,7 +2767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 522010960}
   m_Layer: 0
-  m_Name: Way 2
+  m_Name: Path2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3296,7 +3296,7 @@ GameObject:
   - component: {fileID: 632872062}
   - component: {fileID: 632872061}
   m_Layer: 0
-  m_Name: Start1
+  m_Name: Start2
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3874,6 +3874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 502791343}
+  - {fileID: 1229790323}
   m_Father: {fileID: 1018309220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3927,6 +3928,7 @@ MonoBehaviour:
   startWavesOnAwake: 0
   waves:
   - {fileID: 502791344}
+  - {fileID: 1229790325}
 --- !u!1001 &697692524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6088,7 +6090,7 @@ GameObject:
   - component: {fileID: 1134052311}
   - component: {fileID: 1134052310}
   m_Layer: 0
-  m_Name: Start
+  m_Name: Start1
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -7535,6 +7537,70 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 0.099999994, z: 1.0000004}
   m_Center: {x: 0.5000001, y: -0.049999997, z: 0.5000002}
+--- !u!1 &1229790322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229790323}
+  - component: {fileID: 1229790325}
+  m_Layer: 0
+  m_Name: LastWave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229790323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229790322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 693399236}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229790325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229790322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e163b44e2cbd43b1b9d9b55ed78cca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInstructions:
+  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+      type: 2}
+    delayToSpawn: 0
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 632872063}
 --- !u!1001 &1230051309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11309,7 +11375,7 @@ GameObject:
   - component: {fileID: 2042254797}
   - component: {fileID: 2042254796}
   m_Layer: 0
-  m_Name: Level1PoolManager
+  m_Name: Stage1PoolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
