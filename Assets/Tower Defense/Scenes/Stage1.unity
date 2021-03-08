@@ -4100,7 +4100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intro: {fileID: 693399237}
-  towerLibrary: {fileID: 11400000, guid: f9a88c696ebce45318e1ae33adc9cfbc, type: 2}
+  towerLibrary: {fileID: 11400000, guid: f4dd891f33bbf8542bbeb23352769dc2, type: 2}
   startingCurrency: 10
   currencyGainer:
     constantCurrencyAddition: 1
@@ -7085,12 +7085,12 @@ PrefabInstance:
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
       propertyPath: mapSize.x
-      value: -24.086246
+      value: -23.674925
       objectReference: {fileID: 0}
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
       propertyPath: mapSize.y
-      value: -10.630506
+      value: -10.579091
       objectReference: {fileID: 0}
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
@@ -7105,12 +7105,12 @@ PrefabInstance:
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
       propertyPath: mapSize.width
-      value: 52.677914
+      value: 52.26657
       objectReference: {fileID: 0}
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
       propertyPath: mapSize.height
-      value: 34.12125
+      value: 34.069813
       objectReference: {fileID: 0}
     - target: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
