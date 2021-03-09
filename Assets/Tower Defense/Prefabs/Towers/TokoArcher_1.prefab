@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7192744855919492362}
   - component: {fileID: 7192744855919492363}
+  - component: {fileID: 6612048104278432338}
   m_Layer: 0
   m_Name: TokoArcher_1
   m_TagString: Untagged
@@ -49,6 +50,25 @@ MonoBehaviour:
   buildEffectPrefab: {fileID: 1395313577031670, guid: c559c1920b5d04e6d83aa4464fba5c68,
     type: 3}
   levelData: {fileID: 11400000, guid: f98ae683bc6522747a866df04486a070, type: 2}
+--- !u!95 &6612048104278432338
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192744855919492361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b3830182df19b9e419707c4a0cdcab46, type: 3}
+  m_Controller: {fileID: 9100000, guid: 7ba43698346bc374eb65b1f4cea7b297, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &148571461814491976
 PrefabInstance:
   m_ObjectHideFlags: 0
