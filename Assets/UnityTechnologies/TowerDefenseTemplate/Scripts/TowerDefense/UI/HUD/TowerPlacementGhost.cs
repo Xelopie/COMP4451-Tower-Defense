@@ -43,7 +43,7 @@ namespace TowerDefense.UI.HUD
 		/// <summary>
 		/// The list of attached mesh renderers 
 		/// </summary>
-		protected MeshRenderer[] m_MeshRenderers;
+		protected Renderer[] m_Renderers;
 
 		/// <summary>
 		/// Movement velocity for smooth damping
@@ -71,7 +71,8 @@ namespace TowerDefense.UI.HUD
 		/// <param name="tower">The tower controller we're a ghost of</param>
 		public virtual void Initialize(Tower tower)
 		{
-			m_MeshRenderers = GetComponentsInChildren<MeshRenderer>();
+			m_Renderers = GetComponentsInChildren<Renderer>();
+
 			controller = tower;
 			if (GameUI.instanceExists)
 			{
@@ -123,9 +124,9 @@ namespace TowerDefense.UI.HUD
 			}
 			
 			transform.rotation = rotation;
-			foreach (MeshRenderer meshRenderer in m_MeshRenderers)
+			foreach (var renderer in m_Renderers)
 			{
-				meshRenderer.sharedMaterial = validLocation ? material : invalidPositionMaterial;
+				renderer.sharedMaterial = validLocation ? material : invalidPositionMaterial;
 			}
 		}
 

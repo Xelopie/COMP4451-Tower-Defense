@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Stage1TowerLibrary
   m_EditorClassIdentifier: 
   configurations:
-  - {fileID: 4165484395395368597, guid: 7e47218faff5df045bf4129ac0e944f8, type: 3}
+  - {fileID: 8849886480339930969, guid: b2278b27e2d1d504482d4be2bdc746c5, type: 3}
+  - {fileID: 114126723238285906, guid: 7c0dba931e033498aa3fcfdf50adb263, type: 3}
