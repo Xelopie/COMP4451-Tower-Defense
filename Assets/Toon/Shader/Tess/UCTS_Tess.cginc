@@ -1,10 +1,4 @@
-﻿//UCTS_Tess.cginc
-//Unitychan Toon Shader ver.2.0
-//v.2.0.6
-//nobuyuki@unity3d.com
-//https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project
-//(C)Unity Technologies Japan/UCL
-// UNITY_SHADER_NO_UPGRADE
+﻿// UNITY_SHADER_NO_UPGRADE
 #ifndef UCTS_TESS
 #define UCTS_TESS
 
