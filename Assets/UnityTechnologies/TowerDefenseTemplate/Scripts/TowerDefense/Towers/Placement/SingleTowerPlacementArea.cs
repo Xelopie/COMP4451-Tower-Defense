@@ -122,7 +122,7 @@ namespace TowerDefense.Towers.Placement
 			Matrix4x4 originalMatrix = Gizmos.matrix;
 			Gizmos.matrix = transform.localToWorldMatrix;
 
-			Gizmos.DrawWireSphere(Vector3.zero, 1);
+			Gizmos.DrawWireSphere(Vector3.zero, 0.5f);
 
 			Gizmos.matrix = originalMatrix;
 			Gizmos.color = prevCol;
