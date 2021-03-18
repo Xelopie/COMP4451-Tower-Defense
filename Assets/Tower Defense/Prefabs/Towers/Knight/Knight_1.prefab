@@ -28420,7 +28420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3555269191704078682}
   - component: {fileID: 7007910393071396658}
-  - component: {fileID: 8691241350834799907}
+  - component: {fileID: 6085355190373372632}
   m_Layer: 10
   m_Name: Targetter
   m_TagString: Untagged
@@ -28436,7 +28436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329906049679467281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8107159216446282189}
@@ -28454,16 +28454,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e4035901ee40bba7c0866d2c6338a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 8107159216446282189}
+  turret: {fileID: 4108094835507009}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
-  searchRate: 2
+  searchRate: 1
   idleRotationSpeed: 0
   idleCorrectionTime: 2
-  attachedCollider: {fileID: 8691241350834799907}
+  attachedCollider: {fileID: 6085355190373372632}
   idleWaitTime: 2
---- !u!136 &8691241350834799907
-CapsuleCollider:
+--- !u!65 &6085355190373372632
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28472,9 +28472,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2
-  m_Height: 6
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5751629816177375677
 GameObject:
@@ -28540,12 +28539,11 @@ MonoBehaviour:
   - {fileID: 4108094835507009}
   epicenter: {fileID: 4108094835507009}
   isMultiAttack: 1
-  fireRate: 10
+  fireRate: 1
   randomAudioSource: {fileID: 0}
   towerTargetter: {fileID: 7007910393071396658}
-  radiusEffectColor: {r: 0, g: 1, b: 0.91210127, a: 0.5176471}
+  radiusEffectColor: {r: 0, g: 1, b: 0.91210127, a: 0.24705882}
   knightAnimator: {fileID: 95887088428975379}
-  attackParameter: Attack
 --- !u!1 &8107159216446282187
 GameObject:
   m_ObjectHideFlags: 0

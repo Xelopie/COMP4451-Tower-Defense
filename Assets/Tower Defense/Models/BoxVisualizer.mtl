@@ -1,0 +1,8 @@
+newmtl Red
+Kd 1 0.4009434 0.4009434
+d 0.4901961
+
+newmtl TransparentRed
+Kd 1 0.4009434 0.4009434
+d 0.1647059
+

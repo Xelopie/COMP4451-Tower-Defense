@@ -125,6 +125,11 @@ namespace TowerDefense.Targetting
 				{
 					return capsule.radius;
 				}
+                var box = attachedCollider as BoxCollider;
+                if (box != null)
+                {
+                    return box.size.x / 2;
+                }
 				return 0;
 			}
 		}

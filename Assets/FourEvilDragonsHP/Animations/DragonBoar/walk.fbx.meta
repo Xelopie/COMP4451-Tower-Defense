@@ -1,101 +1,281 @@
 fileFormatVersion: 2
 guid: 4c7a0e0d6f7821c439d739697a6bbee0
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Chest
-    100002: DragonBoar
-    100004: Head
-    100006: Jaw1
-    100008: Jaw2
-    100010: Jaw3
-    100012: joint5
-    100014: joint6
-    100016: joint7
-    100018: joint8
-    100020: L_Feet
-    100022: L_Fingers
-    100024: L_Hand
-    100026: L_Horn1
-    100028: L_Horn2
-    100030: L_LowerArm
-    100032: L_LowerEye
-    100034: L_LowerLeg
-    100036: L_Toes
-    100038: L_UpperArm
-    100040: L_UpperEye
-    100042: L_UpperLeg
-    100044: R_Feet
-    100046: R_Fingers
-    100048: R_Hand
-    100050: R_Horn1
-    100052: R_Horn2
-    100054: R_LowerEye
-    100056: R_RowerArm
-    100058: R_RowerReg
-    100060: R_Toes
-    100062: R_UpperArm
-    100064: R_UpperEye
-    100066: R_UpperReg
-    100068: Root
-    100070: Root_CTRL
-    100072: Spine1
-    100074: Tongue1
-    100076: Tongue2
-    100078: Tongue3
-    100080: UpperMouth1
-    100082: UpperMouth2
-    100084: //RootNode
-    400000: Chest
-    400002: DragonBoar
-    400004: Head
-    400006: Jaw1
-    400008: Jaw2
-    400010: Jaw3
-    400012: joint5
-    400014: joint6
-    400016: joint7
-    400018: joint8
-    400020: L_Feet
-    400022: L_Fingers
-    400024: L_Hand
-    400026: L_Horn1
-    400028: L_Horn2
-    400030: L_LowerArm
-    400032: L_LowerEye
-    400034: L_LowerLeg
-    400036: L_Toes
-    400038: L_UpperArm
-    400040: L_UpperEye
-    400042: L_UpperLeg
-    400044: R_Feet
-    400046: R_Fingers
-    400048: R_Hand
-    400050: R_Horn1
-    400052: R_Horn2
-    400054: R_LowerEye
-    400056: R_RowerArm
-    400058: R_RowerReg
-    400060: R_Toes
-    400062: R_UpperArm
-    400064: R_UpperEye
-    400066: R_UpperReg
-    400068: Root
-    400070: Root_CTRL
-    400072: Spine1
-    400074: Tongue1
-    400076: Tongue2
-    400078: Tongue3
-    400080: UpperMouth1
-    400082: UpperMouth2
-    400084: //RootNode
-    4300000: DragonBoar
-    7400000: Walk
-    9500000: //RootNode
-    13700000: DragonBoar
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Chest
+  - first:
+      1: 100002
+    second: DragonBoar
+  - first:
+      1: 100004
+    second: Head
+  - first:
+      1: 100006
+    second: Jaw1
+  - first:
+      1: 100008
+    second: Jaw2
+  - first:
+      1: 100010
+    second: Jaw3
+  - first:
+      1: 100012
+    second: joint5
+  - first:
+      1: 100014
+    second: joint6
+  - first:
+      1: 100016
+    second: joint7
+  - first:
+      1: 100018
+    second: joint8
+  - first:
+      1: 100020
+    second: L_Feet
+  - first:
+      1: 100022
+    second: L_Fingers
+  - first:
+      1: 100024
+    second: L_Hand
+  - first:
+      1: 100026
+    second: L_Horn1
+  - first:
+      1: 100028
+    second: L_Horn2
+  - first:
+      1: 100030
+    second: L_LowerArm
+  - first:
+      1: 100032
+    second: L_LowerEye
+  - first:
+      1: 100034
+    second: L_LowerLeg
+  - first:
+      1: 100036
+    second: L_Toes
+  - first:
+      1: 100038
+    second: L_UpperArm
+  - first:
+      1: 100040
+    second: L_UpperEye
+  - first:
+      1: 100042
+    second: L_UpperLeg
+  - first:
+      1: 100044
+    second: R_Feet
+  - first:
+      1: 100046
+    second: R_Fingers
+  - first:
+      1: 100048
+    second: R_Hand
+  - first:
+      1: 100050
+    second: R_Horn1
+  - first:
+      1: 100052
+    second: R_Horn2
+  - first:
+      1: 100054
+    second: R_LowerEye
+  - first:
+      1: 100056
+    second: R_RowerArm
+  - first:
+      1: 100058
+    second: R_RowerReg
+  - first:
+      1: 100060
+    second: R_Toes
+  - first:
+      1: 100062
+    second: R_UpperArm
+  - first:
+      1: 100064
+    second: R_UpperEye
+  - first:
+      1: 100066
+    second: R_UpperReg
+  - first:
+      1: 100068
+    second: Root
+  - first:
+      1: 100070
+    second: Root_CTRL
+  - first:
+      1: 100072
+    second: Spine1
+  - first:
+      1: 100074
+    second: Tongue1
+  - first:
+      1: 100076
+    second: Tongue2
+  - first:
+      1: 100078
+    second: Tongue3
+  - first:
+      1: 100080
+    second: UpperMouth1
+  - first:
+      1: 100082
+    second: UpperMouth2
+  - first:
+      1: 100084
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Chest
+  - first:
+      4: 400002
+    second: DragonBoar
+  - first:
+      4: 400004
+    second: Head
+  - first:
+      4: 400006
+    second: Jaw1
+  - first:
+      4: 400008
+    second: Jaw2
+  - first:
+      4: 400010
+    second: Jaw3
+  - first:
+      4: 400012
+    second: joint5
+  - first:
+      4: 400014
+    second: joint6
+  - first:
+      4: 400016
+    second: joint7
+  - first:
+      4: 400018
+    second: joint8
+  - first:
+      4: 400020
+    second: L_Feet
+  - first:
+      4: 400022
+    second: L_Fingers
+  - first:
+      4: 400024
+    second: L_Hand
+  - first:
+      4: 400026
+    second: L_Horn1
+  - first:
+      4: 400028
+    second: L_Horn2
+  - first:
+      4: 400030
+    second: L_LowerArm
+  - first:
+      4: 400032
+    second: L_LowerEye
+  - first:
+      4: 400034
+    second: L_LowerLeg
+  - first:
+      4: 400036
+    second: L_Toes
+  - first:
+      4: 400038
+    second: L_UpperArm
+  - first:
+      4: 400040
+    second: L_UpperEye
+  - first:
+      4: 400042
+    second: L_UpperLeg
+  - first:
+      4: 400044
+    second: R_Feet
+  - first:
+      4: 400046
+    second: R_Fingers
+  - first:
+      4: 400048
+    second: R_Hand
+  - first:
+      4: 400050
+    second: R_Horn1
+  - first:
+      4: 400052
+    second: R_Horn2
+  - first:
+      4: 400054
+    second: R_LowerEye
+  - first:
+      4: 400056
+    second: R_RowerArm
+  - first:
+      4: 400058
+    second: R_RowerReg
+  - first:
+      4: 400060
+    second: R_Toes
+  - first:
+      4: 400062
+    second: R_UpperArm
+  - first:
+      4: 400064
+    second: R_UpperEye
+  - first:
+      4: 400066
+    second: R_UpperReg
+  - first:
+      4: 400068
+    second: Root
+  - first:
+      4: 400070
+    second: Root_CTRL
+  - first:
+      4: 400072
+    second: Spine1
+  - first:
+      4: 400074
+    second: Tongue1
+  - first:
+      4: 400076
+    second: Tongue2
+  - first:
+      4: 400078
+    second: Tongue3
+  - first:
+      4: 400080
+    second: UpperMouth1
+  - first:
+      4: 400082
+    second: UpperMouth2
+  - first:
+      4: 400084
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: DragonBoar
+  - first:
+      74: 7400000
+    second: Walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: DragonBoar
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -124,6 +304,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -242,25 +423,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -269,10 +453,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -282,13 +466,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
