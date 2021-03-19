@@ -220,7 +220,7 @@ RectTransform:
   m_LocalScale: {x: 0.07214519, y: 0.13890634, z: 1.4907}
   m_Children: []
   m_Father: {fileID: 918256660}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -295,7 +295,8 @@ MonoBehaviour:
   skillName: Skill 3
   skillSprite: {fileID: 21300000, guid: 5e93a13d0aab81048b25143ba568ef1b, type: 3}
   skillDes: Skill 3 Description
-  isUpgrade: 0
+  learnt: 0
+  isSelected: 0
 --- !u!114 &11997433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +363,7 @@ GameObject:
   - component: {fileID: 84172837}
   - component: {fileID: 84172836}
   m_Layer: 5
-  m_Name: SkillName
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,8 +385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.4, y: -8.6}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 239, y: -8.6}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84172836
 MonoBehaviour:
@@ -419,7 +420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skill 1
+  m_Text: Kohaku Otori
 --- !u!222 &84172837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -461,7 +462,7 @@ RectTransform:
   m_LocalScale: {x: 0.07214519, y: 0.13890634, z: 1.4907}
   m_Children: []
   m_Father: {fileID: 918256660}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -536,7 +537,8 @@ MonoBehaviour:
   skillName: Skill 2
   skillSprite: {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
   skillDes: Skill 2 Description
-  isUpgrade: 0
+  learnt: 0
+  isSelected: 0
 --- !u!114 &159076650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +701,7 @@ RectTransform:
   m_LocalScale: {x: 0.07214519, y: 0.13890634, z: 1.4907}
   m_Children: []
   m_Father: {fileID: 918256660}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -774,7 +776,8 @@ MonoBehaviour:
   skillName: Skill 1
   skillSprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
   skillDes: Skill 1 Description
-  isUpgrade: 0
+  learnt: 0
+  isSelected: 0
 --- !u!114 &337852672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,14 +859,15 @@ RectTransform:
   m_GameObject: {fileID: 476005302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.69866997, y: 0.90840393, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 0.5067034, y: 0.90840393, z: 1}
+  m_Children:
+  - {fileID: 933016148}
   m_Father: {fileID: 918256660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.3, y: -2}
+  m_AnchoredPosition: {x: -6.11, y: -2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476005304
@@ -946,6 +950,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4717bd3569cb2d4bb67f6acb0c8ad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterSprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
+  CharacterName: Kohaku Otori
+  CharacterStatus: 'HP
+
+    ATK
+
+    DEF
+
+    RES
+
+    BLK
+
+    ATKSPD
+
+    DPCost
+
+    ReDP'
   skills:
   - {fileID: 337852671}
   - {fileID: 159076649}
@@ -990,7 +1011,7 @@ RectTransform:
   m_LocalScale: {x: 0.07214519, y: 0.13890634, z: 1.4907}
   m_Children: []
   m_Father: {fileID: 918256660}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1065,7 +1086,8 @@ MonoBehaviour:
   skillName: Skill 4
   skillSprite: {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
   skillDes: Skill 4 Description
-  isUpgrade: 0
+  learnt: 0
+  isSelected: 0
 --- !u!114 &821557735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,12 +1172,11 @@ RectTransform:
   m_LocalScale: {x: 20.6625, y: 10.73169, z: 1}
   m_Children:
   - {fileID: 476005303}
-  - {fileID: 1423953370}
   - {fileID: 337852667}
   - {fileID: 159076645}
   - {fileID: 11997428}
   - {fileID: 821557730}
-  - {fileID: 933016148}
+  - {fileID: 1494421778}
   m_Father: {fileID: 195729351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1213,7 +1234,7 @@ GameObject:
   - component: {fileID: 933016150}
   - component: {fileID: 933016149}
   m_Layer: 5
-  m_Name: SelectedSkill
+  m_Name: CharacterIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,16 +1249,16 @@ RectTransform:
   m_GameObject: {fileID: 933016147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.089006655, y: 0.17137094, z: 1.8391}
+  m_LocalScale: {x: 0.17565829, y: 0.18865058, z: 1.8391}
   m_Children:
   - {fileID: 84172835}
   - {fileID: 1589906822}
-  m_Father: {fileID: 918256660}
-  m_RootOrder: 6
+  m_Father: {fileID: 476005303}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.924377, y: 30.750061}
+  m_AnchoredPosition: {x: -42.23378, y: 36.052307}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933016149
@@ -1259,7 +1280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1388,7 +1409,7 @@ GameObject:
   - component: {fileID: 1423953372}
   - component: {fileID: 1423953371}
   m_Layer: 5
-  m_Name: Button
+  m_Name: LevelUpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1403,15 +1424,15 @@ RectTransform:
   m_GameObject: {fileID: 1423953369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14700545, y: 0.10882258, z: 1}
+  m_LocalScale: {x: 0.38656318, y: 0.14598131, z: 1}
   m_Children:
   - {fileID: 1944059023}
-  m_Father: {fileID: 918256660}
-  m_RootOrder: 1
+  m_Father: {fileID: 1494421778}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: -25}
+  m_AnchoredPosition: {x: 19.51664, y: 32.893223}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423953371
@@ -1427,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.1632653, b: 0, a: 0.57254905}
+  m_Color: {r: 1, g: 0.1632653, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1543,6 +1564,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1494421777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494421778}
+  - component: {fileID: 1494421780}
+  - component: {fileID: 1494421779}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1494421778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494421777}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.38028827, y: 0.7454557, z: 1}
+  m_Children:
+  - {fileID: 1423953370}
+  m_Father: {fileID: 918256660}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30.248047, y: 0.2795589}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1494421779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494421777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1494421780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494421777}
+  m_CullTransparentMesh: 0
 --- !u!1 &1522716741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1734,7 @@ GameObject:
   - component: {fileID: 1589906824}
   - component: {fileID: 1589906823}
   m_Layer: 5
-  m_Name: SkillDescription
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,15 +1749,15 @@ RectTransform:
   m_GameObject: {fileID: 1589906821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.92492, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 933016148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.4, y: -207}
-  m_SizeDelta: {x: 700, y: 300}
+  m_AnchoredPosition: {x: 238, y: -220}
+  m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589906823
 MonoBehaviour:
@@ -1695,7 +1791,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skill 1 Description
+  m_Text: 'HP
+
+    ATK
+
+    DEF
+
+    RES
+
+    BLK
+
+    ATKSPD
+
+    DPCost
+
+    ReDP'
 --- !u!222 &1589906824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1716,7 +1826,7 @@ GameObject:
   - component: {fileID: 1944059025}
   - component: {fileID: 1944059024}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,7 +1848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 15, y: 0}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944059024
@@ -1773,7 +1883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Learn
+  m_Text: /50lv
 --- !u!222 &1944059025
 CanvasRenderer:
   m_ObjectHideFlags: 0
