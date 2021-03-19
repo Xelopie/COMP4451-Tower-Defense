@@ -10,5 +10,6 @@ public class Skill : MonoBehaviour
 
     [TextArea(1, 3)]
     public string skillDes;
-    public bool isUpgrade;
+    public bool learnt = false;
+    public bool isSelected = false;
 }
