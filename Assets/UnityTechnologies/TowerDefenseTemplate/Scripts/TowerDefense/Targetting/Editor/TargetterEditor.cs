@@ -22,7 +22,8 @@ namespace TowerDefense.Targetting.Editor
 			/// <summary>
 			/// For capsule collider
 			/// </summary>
-			Capsule
+			Capsule,
+            Box
 		}
 
 		/// <summary>
@@ -72,14 +73,14 @@ namespace TowerDefense.Targetting.Editor
 				(TargetterCollider) EditorGUILayout.EnumPopup("Targetter Collider", m_ColliderConfiguration);
 			AttachCollider();
 			m_ColliderRadius = EditorGUILayout.FloatField("Radius", m_ColliderRadius);
-			if (m_ColliderConfiguration == TargetterCollider.Capsule)
+			if (m_ColliderConfiguration == TargetterCollider.Capsule || m_ColliderConfiguration == TargetterCollider.Box)
 			{
 				m_ExtraVerticalRange = EditorGUILayout.FloatField("Vertical Range", m_ExtraVerticalRange);
 			}
 			SetValues();
-			EditorUtility.SetDirty(m_Targetter);
-			EditorUtility.SetDirty(m_AttachedCollider);
-			serializedObject.ApplyModifiedProperties();
+            EditorUtility.SetDirty(m_Targetter);
+            EditorUtility.SetDirty(m_AttachedCollider);
+            serializedObject.ApplyModifiedProperties();
 		}
 
 		/// <summary>
@@ -115,9 +116,22 @@ namespace TowerDefense.Targetting.Editor
 					m_AttachedCollider = m_Targetter.gameObject.AddComponent<CapsuleCollider>();
 					m_SerializedAttachedCollider.objectReferenceValue = m_AttachedCollider;
 					break;
+                case TargetterCollider.Box:
+                    if (m_AttachedCollider is BoxCollider)
+                    {
+                        GetValues();
+                        return;
+                    }
+                    if (m_AttachedCollider != null)
+                    {
+                        DestroyImmediate(m_AttachedCollider, true);
+                    }
+                    m_AttachedCollider = m_Targetter.gameObject.AddComponent<BoxCollider>();
+                    m_SerializedAttachedCollider.objectReferenceValue = m_AttachedCollider;
+                    break;
 			}
 			SetValues();
-			m_AttachedCollider.hideFlags = HideFlags.HideInInspector;
+			//m_AttachedCollider.hideFlags = HideFlags.HideInInspector;
 		}
 
 		/// <summary>
@@ -136,6 +150,10 @@ namespace TowerDefense.Targetting.Editor
 					capsule.radius = m_ColliderRadius;
 					capsule.height = m_ExtraVerticalRange + m_ColliderRadius * 2;
 					break;
+                case TargetterCollider.Box:
+                    var box = (BoxCollider)m_AttachedCollider;
+                    box.size = new Vector3(m_ColliderRadius * 2, m_ExtraVerticalRange, m_ColliderRadius * 2);
+                    break;
 			}
 		}
 
@@ -155,6 +173,11 @@ namespace TowerDefense.Targetting.Editor
 					m_ColliderRadius = capsule.radius;
 					m_ExtraVerticalRange = capsule.height - m_ColliderRadius * 2;
 					break;
+                case TargetterCollider.Box:
+                    var box = (BoxCollider) m_AttachedCollider;
+                    m_ColliderRadius = box.size.x / 2;
+                    m_ExtraVerticalRange = box.size.y;
+                    break;
 			}
 		}
 
@@ -181,6 +204,9 @@ namespace TowerDefense.Targetting.Editor
 						case TargetterCollider.Capsule:
 							m_AttachedCollider = m_Targetter.gameObject.AddComponent<CapsuleCollider>();
 							break;
+                        case TargetterCollider.Box:
+                            m_AttachedCollider = m_Targetter.gameObject.AddComponent<BoxCollider>();
+                            break;
 					}
 					m_SerializedAttachedCollider.objectReferenceValue = m_AttachedCollider;
 				}
@@ -193,6 +219,10 @@ namespace TowerDefense.Targetting.Editor
 			{
 				m_ColliderConfiguration = TargetterCollider.Capsule;
 			}
+            else if (m_AttachedCollider is BoxCollider)
+            {
+                m_ColliderConfiguration = TargetterCollider.Box;
+            }
 			// to ensure the collider is referenced by the serialized object
 			if (m_SerializedAttachedCollider.objectReferenceValue == null)
 			{
@@ -200,7 +230,7 @@ namespace TowerDefense.Targetting.Editor
 			}
 			GetValues();
 			m_AttachedCollider.isTrigger = true;
-			m_AttachedCollider.hideFlags = HideFlags.HideInInspector;
+			//m_AttachedCollider.hideFlags = HideFlags.HideInInspector;
 		}
 	}
 }

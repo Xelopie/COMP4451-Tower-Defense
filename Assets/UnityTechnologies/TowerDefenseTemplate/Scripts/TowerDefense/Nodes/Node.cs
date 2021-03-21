@@ -11,6 +11,11 @@ namespace TowerDefense.Nodes
 	[RequireComponent(typeof(Collider))]
 	public class Node : MonoBehaviour
 	{
+        /// <summary>
+        /// Move to this node's exact transform to proceed, not using the collider area as a trigger
+        /// </summary>
+        public bool compareTransform = false;
+
 		/// <summary>
 		/// Reference to the MeshObject created by an AreaMeshCreator
 		/// </summary>
@@ -44,25 +49,41 @@ namespace TowerDefense.Nodes
 		{
 			// Fallback to our position if we have no mesh
 			return areaMesh == null ? transform.position : areaMesh.GetRandomPointInside();
-		}
+        }
 
-		/// <summary>
-		/// When agent enters the node area, get the next node
-		/// </summary>
-		public virtual void OnTriggerEnter(Collider other)
-		{
-			var agent = other.gameObject.GetComponent<Agent>();
-			if (agent != null)
-			{
-				agent.GetNextNode(this);
-			}
-		}
+        /// <summary>
+        /// When agent enters the node area, get the next node
+        /// </summary>
+        public virtual void OnTriggerEnter(Collider other)
+        {
+            if (compareTransform) return;
+
+            var agent = other.gameObject.GetComponent<Agent>();
+            if (agent != null)
+            {
+                agent.GetNextNode(this);
+            }
+        }
+
+        public void OnTriggerStay(Collider other)
+        {
+            if (!compareTransform) return;
+            var agent = other.gameObject.GetComponent<Agent>();
+            if (agent != null)
+            {
+                if (transform.position.x == other.transform.position.x && transform.position.z == other.transform.position.z)
+                {
+                    agent.GetNextNode(this);
+                }
+            }
+        }
+
 
 #if UNITY_EDITOR
-		/// <summary>
-		/// Ensure the collider is a trigger
-		/// </summary>
-		protected void OnValidate()
+        /// <summary>
+        /// Ensure the collider is a trigger
+        /// </summary>
+        protected void OnValidate()
 		{
 			var trigger = GetComponent<Collider>();
 			if (trigger != null)
