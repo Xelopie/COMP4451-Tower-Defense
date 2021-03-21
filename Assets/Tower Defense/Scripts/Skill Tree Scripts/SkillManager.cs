@@ -6,6 +6,10 @@ public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance; // Singleton Pattern
 
+    public Sprite CharacterSprite;
+    public string CharacterName;
+    [TextArea(1, 3)]
+    public string CharacterStatus;
     public Skill[] skills; // skills[0]
     public SkillButton[] skillButtons; // skillButtons[0]
 
@@ -13,13 +17,13 @@ public class SkillManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
         else
         {
-            if(instance != this)
+            if (instance != this)
             {
                 Destroy(gameObject);
             }

@@ -14,10 +14,27 @@ public class SkillButton : MonoBehaviour
     // This method will be called when we press each skill
     public void PressSkillButton()
     {
-        SkillManager.instance.activateSkill = transform.GetComponent<Skill>();
+        Skill selectedSkill = transform.GetComponent<Skill>();
 
-        skillImage.sprite = SkillManager.instance.skills[skillButtonId].skillSprite;
-        skillNameText.text = SkillManager.instance.skills[skillButtonId].skillName;
-        skillDesText.text = SkillManager.instance.skills[skillButtonId].skillDes;
+        if (!selectedSkill.isSelected)
+        {
+            SkillManager.instance.activateSkill = selectedSkill;
+
+            skillImage.sprite = SkillManager.instance.skills[skillButtonId].skillSprite;
+            skillNameText.text = SkillManager.instance.skills[skillButtonId].skillName;
+            skillDesText.text = SkillManager.instance.skills[skillButtonId].skillDes;
+
+            selectedSkill.isSelected = true;
+        }
+        else
+        {
+            SkillManager.instance.activateSkill = null;
+
+            skillImage.sprite = SkillManager.instance.CharacterSprite;
+            skillNameText.text = SkillManager.instance.CharacterName;
+            skillDesText.text = SkillManager.instance.CharacterStatus;
+
+            selectedSkill.isSelected = false;
+        }
     }
 }
