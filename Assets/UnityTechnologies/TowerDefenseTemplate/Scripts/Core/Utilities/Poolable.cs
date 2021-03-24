@@ -26,7 +26,7 @@ namespace Core.Utilities
 			pool.Return(this);
 		}
 
-		/// <summary>gameObject
+		/// <summary>
 		/// Pool the object if possible, otherwise destroy it
 		/// </summary>
 		/// <param name="gameObject">GameObject attempting to pool</param>

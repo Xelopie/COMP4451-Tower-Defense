@@ -6953,7 +6953,7 @@ PrefabInstance:
         type: 3}
       propertyPath: buildInfoUI
       value: 
-      objectReference: {fileID: 1625210312}
+      objectReference: {fileID: 0}
     - target: {fileID: 114555595464069464, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
       propertyPath: m_PauseMenu
@@ -9055,6 +9055,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224871109748178570, guid: c2e9adc0fa208453ebebb129fa7c880d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 52.9
+      objectReference: {fileID: 0}
     - target: {fileID: 224900234323222818, guid: c2e9adc0fa208453ebebb129fa7c880d,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -9163,18 +9168,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1625210310}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1625210312 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114356164956294334, guid: c2e9adc0fa208453ebebb129fa7c880d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1625210310}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4856e607ac3a4750bc5c57af015e618c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1667841758
 GameObject:
   m_ObjectHideFlags: 0
