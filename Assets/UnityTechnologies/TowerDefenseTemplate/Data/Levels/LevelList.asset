@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,22 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - id: 0
-    name: Level 1
-    description: Don't allow enemies to rush through
-    sceneName: Level1
+    name: Stage 1
+    description: 
+    sceneName: Stage1
   - id: 1
-    name: Level 2
-    description: Create mazes to slow enemies
-    sceneName: Level2
-  - id: 2
-    name: Level 3
-    description: Take advantage of choke points
-    sceneName: Level3
-  - id: 3
-    name: Level 4
-    description: Protect the long mountain pass
-    sceneName: Level4
-  - id: 4
-    name: Level 5
-    description: Guard both paths from enemies
-    sceneName: Level5
+    name: Stage 2
+    description: 
+    sceneName: Stage2

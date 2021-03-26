@@ -29,7 +29,7 @@ namespace TowerDefense.UI
 		public Canvas pauseMenuCanvas;
 
 		public Text titleText;
-		
+
 		public Text descriptionText;
 
 		/// <summary>
@@ -38,17 +38,12 @@ namespace TowerDefense.UI
 		public Button levelSelectConfirmButton;
 
 		public Button restartConfirmButton;
-		
+
 		public Button levelSelectButton;
-		
+
 		public Button restartButton;
 
 		public Image topPanel;
-
-		/// <summary>
-		/// Color to change the top panel to highlight confirmation button
-		/// </summary>
-		public Color topPanelDisabledColor = new Color(1, 1, 1, 1);
 
 		/// <summary>
 		/// State of pause menu
@@ -109,7 +104,6 @@ namespace TowerDefense.UI
 		{
 			bool open = m_State == State.Open;
 			restartButton.interactable = !open;
-			topPanel.color = open ? topPanelDisabledColor : Color.white;
 			levelSelectConfirmButton.gameObject.SetActive(open);
 			m_State = open ? State.LevelSelectPressed : State.Open;
 		}
@@ -119,9 +113,9 @@ namespace TowerDefense.UI
 		/// </summary>
 		public void RestartPressed()
 		{
+
 			bool open = m_State == State.Open;
 			levelSelectButton.interactable = !open;
-			topPanel.color = open ? topPanelDisabledColor : Color.white;
 			restartConfirmButton.gameObject.SetActive(open);
 			m_State = open ? State.RestartPressed : State.Open;
 		}
@@ -137,7 +131,6 @@ namespace TowerDefense.UI
 			restartConfirmButton.gameObject.SetActive(false);
 			levelSelectButton.interactable = true;
 			restartButton.interactable = true;
-			topPanel.color = Color.white;
 
 			m_State = State.Closed;
 		}

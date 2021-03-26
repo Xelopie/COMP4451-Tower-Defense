@@ -42,12 +42,16 @@ namespace TowerDefense.UI
 			{
 				if (m_RadiusVisualizers.Count < i + 1)
 				{
-					m_RadiusVisualizers.Add(Instantiate(radiusVisualizerPrefab));
+                    var visualizer = Instantiate(radiusVisualizerPrefab);
+                    visualizer.SetActive(false);
+                    m_RadiusVisualizers.Add(visualizer);
 				}
 
                 if (m_BoxVisualizers.Count < i + 1)
                 {
-                    m_BoxVisualizers.Add(Instantiate(boxVisualizerPrefab));
+                    var visualizer = Instantiate(boxVisualizerPrefab);
+                    visualizer.SetActive(false);
+                    m_BoxVisualizers.Add(visualizer);
                 }
 
 				ITowerRadiusProvider provider = providers[i];
