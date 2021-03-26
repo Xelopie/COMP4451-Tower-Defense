@@ -50,8 +50,8 @@ namespace TowerDefense.Agents
 				m_TargetTower.removed -= OnTargetTowerDestroyed;
 			}
 			m_AttackAffector.enabled = false;
-			m_TargetTower = null;
-		}
+            m_TargetTower = null;
+        }
 
 		/// <summary>
 		/// Gets the closest tower to the agent
@@ -169,9 +169,13 @@ namespace TowerDefense.Agents
 			}
 			MoveToNode();
 
-			// Resume path once blocking has been cleared
-			m_IsAttacking = false;
-			m_NavMeshAgent.isStopped = false;
+            // Resume path once blocking has been cleared
+            if (m_NavMeshAgent.enabled)
+            {
+                m_NavMeshAgent.isStopped = false;
+            }
+
+            m_IsAttacking = false;
 			m_AttackAffector.enabled = false;
 			state = isPathBlocked ? State.OnPartialPath : State.OnCompletePath;
 			// Move the Targetter back to the agent's position
