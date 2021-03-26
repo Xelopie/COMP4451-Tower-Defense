@@ -913,8 +913,8 @@ MonoBehaviour:
   levelCompleteText: '{0} COMPLETE!'
   levelFailedText: '{0} FAILED!'
   background: {fileID: 114977527437981662}
-  winBackgroundColor: {r: 1, g: 0.922921, b: 0.30147058, a: 0.547}
-  loseBackgroundColor: {r: 0.8161765, g: 0.47938365, b: 0.2640571, a: 0.534}
+  winBackgroundColor: {r: 1, g: 1, b: 1, a: 0}
+  loseBackgroundColor: {r: 0.8207547, g: 0.19744569, b: 0.23103803, a: 0.3882353}
   nextLevelButton: {fileID: 223444885329299750}
 --- !u!82 &82438393256394770
 AudioSource:
