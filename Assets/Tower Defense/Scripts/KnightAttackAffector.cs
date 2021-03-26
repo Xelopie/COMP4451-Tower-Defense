@@ -8,18 +8,6 @@ public class KnightAttackAffector : AttackAffector
 {
     [Header("Customized attributes for Knight")]
     public Animator knightAnimator;
-    public string attackParameter = "Attack";
-
-    protected override void Update()
-    {
-        m_FireTimer -= Time.deltaTime;
-        if (trackingEnemy != null && m_FireTimer <= 0.0f)
-        {
-            OnFireTimer();
-            m_FireTimer = 1 / fireRate;
-        }
-
-    }
 
     protected override void OnFireTimer()
     {
@@ -31,10 +19,10 @@ public class KnightAttackAffector : AttackAffector
             }
         }
 
-        if (m_TrackingEnemy != null && !knightAnimator.GetBool(attackParameter))
+        if (m_TrackingEnemy != null && !knightAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             FireProjectile();
-            knightAnimator.SetBool(attackParameter, true);
+            knightAnimator.SetTrigger("Attack");
         }
     }
 }

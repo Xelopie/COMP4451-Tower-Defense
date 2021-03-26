@@ -10,15 +10,19 @@ namespace TowerDefense.UI
 		/// Prefab used to visualize effect radius of tower
 		/// </summary>
 		public GameObject radiusVisualizerPrefab;
+        public GameObject boxVisualizerPrefab;
 
 		public float radiusVisualizerHeight = 0.02f;
+        public float boxVisualizerHeight = 3.0f;
 
 		/// <summary>
 		/// The local euler angles
 		/// </summary>
-		public Vector3 localEuler;
+		public Vector3 radiusLocalEuler;
+        public Vector3 boxLocalEuler;
 
 		readonly List<GameObject> m_RadiusVisualizers = new List<GameObject>();
+        readonly List<GameObject> m_BoxVisualizers = new List<GameObject>();
 
 		/// <summary>
 		/// Sets up the radius visualizer for a tower or ghost tower
@@ -41,20 +45,43 @@ namespace TowerDefense.UI
 					m_RadiusVisualizers.Add(Instantiate(radiusVisualizerPrefab));
 				}
 
+                if (m_BoxVisualizers.Count < i + 1)
+                {
+                    m_BoxVisualizers.Add(Instantiate(boxVisualizerPrefab));
+                }
+
 				ITowerRadiusProvider provider = providers[i];
 
-				GameObject radiusVisualizer = m_RadiusVisualizers[i];
-				radiusVisualizer.SetActive(true);
-				radiusVisualizer.transform.SetParent(ghost == null ? tower.transform : ghost);
-				radiusVisualizer.transform.localPosition = new Vector3(0, radiusVisualizerHeight, 0);
-				radiusVisualizer.transform.localScale = Vector3.one * provider.effectRadius * 2.0f;
-				radiusVisualizer.transform.localRotation = new Quaternion {eulerAngles = localEuler};
+                if (provider.targetter.attachedCollider is BoxCollider)
+                {
+                    GameObject boxVisualizer = m_BoxVisualizers[i];
+                    boxVisualizer.SetActive(true);
+                    boxVisualizer.transform.SetParent(ghost == null ? tower.transform : ghost);
+                    boxVisualizer.transform.localPosition = new Vector3(0, radiusVisualizerHeight, 0);
+                    boxVisualizer.transform.localScale = new Vector3(provider.effectRadius * 2.0f, boxVisualizerHeight, provider.effectRadius * 2.0f);
+                    boxVisualizer.transform.localRotation = new Quaternion { eulerAngles = boxLocalEuler };
 
-				var visualizerRenderer = radiusVisualizer.GetComponent<Renderer>();
-				if (visualizerRenderer != null)
-				{
-					visualizerRenderer.material.color = provider.effectColor;
-				}
+                    var visualizerRenderer = boxVisualizer.GetComponent<Renderer>();
+                    if (visualizerRenderer != null)
+                    {
+                        visualizerRenderer.material.color = provider.effectColor;
+                    }
+                }
+                else
+                {
+                    GameObject radiusVisualizer = m_RadiusVisualizers[i];
+                    radiusVisualizer.SetActive(true);
+                    radiusVisualizer.transform.SetParent(ghost == null ? tower.transform : ghost);
+                    radiusVisualizer.transform.localPosition = new Vector3(0, radiusVisualizerHeight, 0);
+                    radiusVisualizer.transform.localScale = new Vector3(provider.effectRadius * 2.0f, 0.001f, provider.effectRadius * 2.0f);
+                    radiusVisualizer.transform.localRotation = new Quaternion { eulerAngles = radiusLocalEuler };
+
+                    var visualizerRenderer = radiusVisualizer.GetComponent<Renderer>();
+                    if (visualizerRenderer != null)
+                    {
+                        visualizerRenderer.material.color = provider.effectColor;
+                    }
+                }
 			}
 		}
 
@@ -68,6 +95,11 @@ namespace TowerDefense.UI
 				radiusVisualizer.transform.parent = transform;
 				radiusVisualizer.SetActive(false);
 			}
-		}
+            foreach (GameObject boxVisualizer in m_BoxVisualizers)
+            {
+                boxVisualizer.transform.parent = transform;
+                boxVisualizer.SetActive(false);
+            }
+        }
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using ActionGameFramework.Health;
 using Core.Utilities;
 using TowerDefense.Affectors;
@@ -14,7 +15,9 @@ namespace TowerDefense.Agents
 	/// </summary>
 	[RequireComponent(typeof(NavMeshAgent)), RequireComponent(typeof(AttackAffector))]
 	public abstract class Agent : Targetable
-	{	
+	{
+        public float poolDelay = 0.0f;
+
 		/// <summary>
 		/// A means of keeping track of the agent along its path
 		/// </summary>
@@ -158,8 +161,14 @@ namespace TowerDefense.Agents
 			}
 			m_NavMeshAgent.enabled = false;
 
-			Poolable.TryPool(gameObject);
+            StartCoroutine(TryPoolWithDelay());
 		}
+
+        public IEnumerator TryPoolWithDelay()
+        {
+            yield return new WaitForSeconds(poolDelay);
+            Poolable.TryPool(gameObject);
+        }
 
 		/// <summary>	
 		/// Setup all the necessary parameters for this agent from configuration data
