@@ -339,5 +339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusVisualizerPrefab: {fileID: 1696264954119898, guid: 037db0977f12f4f92915a74fe6e66d6a,
     type: 3}
-  radiusVisualizerHeight: 0.02
-  localEuler: {x: 90, y: 0, z: 0}
+  boxVisualizerPrefab: {fileID: 1696264954119898, guid: 357ded3b78ec42f42972e3629153b9f5,
+    type: 3}
+  radiusVisualizerHeight: 0.5
+  boxVisualizerHeight: 3
+  radiusLocalEuler: {x: 0, y: 0, z: 0}
+  boxLocalEuler: {x: 0, y: 0, z: 0}
