@@ -13,11 +13,13 @@ namespace TowerDefense.UI
         public GameObject boxVisualizerPrefab;
 
 		public float radiusVisualizerHeight = 0.02f;
+        public float boxVisualizerHeight = 3.0f;
 
 		/// <summary>
 		/// The local euler angles
 		/// </summary>
-		public Vector3 localEuler;
+		public Vector3 radiusLocalEuler;
+        public Vector3 boxLocalEuler;
 
 		readonly List<GameObject> m_RadiusVisualizers = new List<GameObject>();
         readonly List<GameObject> m_BoxVisualizers = new List<GameObject>();
@@ -56,13 +58,13 @@ namespace TowerDefense.UI
                     boxVisualizer.SetActive(true);
                     boxVisualizer.transform.SetParent(ghost == null ? tower.transform : ghost);
                     boxVisualizer.transform.localPosition = new Vector3(0, radiusVisualizerHeight, 0);
-                    boxVisualizer.transform.localScale = Vector3.one * provider.effectRadius * 2.0f;
-                    boxVisualizer.transform.localRotation = new Quaternion { eulerAngles = localEuler };
+                    boxVisualizer.transform.localScale = new Vector3(provider.effectRadius * 2.0f, boxVisualizerHeight, provider.effectRadius * 2.0f);
+                    boxVisualizer.transform.localRotation = new Quaternion { eulerAngles = boxLocalEuler };
 
                     var visualizerRenderer = boxVisualizer.GetComponent<Renderer>();
                     if (visualizerRenderer != null)
                     {
-                        //visualizerRenderer.material.color = provider.effectColor;
+                        visualizerRenderer.material.color = provider.effectColor;
                     }
                 }
                 else
@@ -71,8 +73,8 @@ namespace TowerDefense.UI
                     radiusVisualizer.SetActive(true);
                     radiusVisualizer.transform.SetParent(ghost == null ? tower.transform : ghost);
                     radiusVisualizer.transform.localPosition = new Vector3(0, radiusVisualizerHeight, 0);
-                    radiusVisualizer.transform.localScale = Vector3.one * provider.effectRadius * 2.0f;
-                    radiusVisualizer.transform.localRotation = new Quaternion { eulerAngles = localEuler };
+                    radiusVisualizer.transform.localScale = new Vector3(provider.effectRadius * 2.0f, 0.001f, provider.effectRadius * 2.0f);
+                    radiusVisualizer.transform.localRotation = new Quaternion { eulerAngles = radiusLocalEuler };
 
                     var visualizerRenderer = radiusVisualizer.GetComponent<Renderer>();
                     if (visualizerRenderer != null)

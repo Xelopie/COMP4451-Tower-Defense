@@ -187,6 +187,12 @@ namespace TowerDefense.Affectors
 		protected virtual void Update()
 		{
 			m_FireTimer -= Time.deltaTime;
+
+            if (targetter.searchControlByAttackSpeed)
+            {
+                targetter.SearchForTarget();
+            }
+
 			if (trackingEnemy != null && m_FireTimer <= 0.0f)
 			{
 				OnFireTimer();

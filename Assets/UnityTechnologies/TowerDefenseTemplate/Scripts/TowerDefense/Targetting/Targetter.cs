@@ -52,10 +52,15 @@ namespace TowerDefense.Targetting
 		/// </summary>
 		public float searchRate;
 
-		/// <summary>
-		/// Y rotation speed while the turret is idle in degrees per second
-		/// </summary>
-		public float idleRotationSpeed = 39f;
+        /// <summary>
+        /// If the searching is done at each time before the tower attacks
+        /// </summary>
+        public bool searchControlByAttackSpeed = false;
+
+        /// <summary>
+        /// Y rotation speed while the turret is idle in degrees per second
+        /// </summary>
+        public float idleRotationSpeed = 39f;
 
 		/// <summary>
 		/// The time it takes for the tower to correct its x rotation on idle in seconds
@@ -176,6 +181,21 @@ namespace TowerDefense.Targetting
 			return m_TargetsInRange;
 		}
 
+        /// <summary>
+        /// Wrap up for the target searching function
+        /// </summary>
+        public void SearchForTarget()
+        {
+            m_CurrrentTargetable = GetNearestTargetable();
+            if (m_CurrrentTargetable != null)
+            {
+                if (acquiredTarget != null)
+                {
+                    acquiredTarget(m_CurrrentTargetable);
+                }
+            }
+        }
+
 		/// <summary>
 		/// Checks if the targetable is a valid target
 		/// </summary>
@@ -292,17 +312,9 @@ namespace TowerDefense.Targetting
 		{
 			m_SearchTimer -= Time.deltaTime;
 
-			if (m_SearchTimer <= 0.0f && m_CurrrentTargetable == null && m_TargetsInRange.Count > 0)
+			if (m_SearchTimer <= 0.0f && m_CurrrentTargetable == null && m_TargetsInRange.Count > 0 && !searchControlByAttackSpeed)
 			{
-				m_CurrrentTargetable = GetNearestTargetable();
-				if (m_CurrrentTargetable != null)
-				{
-					if (acquiredTarget != null)
-					{
-						acquiredTarget(m_CurrrentTargetable);
-					}
-					m_SearchTimer = searchRate;
-				}
+                SearchForTarget();
 			}
 
 			AimTurret();
