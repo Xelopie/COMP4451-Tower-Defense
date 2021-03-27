@@ -48,8 +48,8 @@ MonoBehaviour:
   turret: {fileID: 2329273584931377098}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
-  searchRate: 1
-  searchControlByAttackSpeed: 1
+  searchRate: 20
+  searchControlByAttackSpeed: 0
   idleRotationSpeed: 0
   idleCorrectionTime: 2
   attachedCollider: {fileID: 3775361177540694689}
