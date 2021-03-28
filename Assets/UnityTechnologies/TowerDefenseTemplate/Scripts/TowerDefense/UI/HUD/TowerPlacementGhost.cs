@@ -126,7 +126,12 @@ namespace TowerDefense.UI.HUD
 			transform.rotation = rotation;
 			foreach (var renderer in m_Renderers)
 			{
-				renderer.sharedMaterial = validLocation ? material : invalidPositionMaterial;
+				var materials = new Material[renderer.materials.Length];
+				for (int i = 0; i < materials.Length; i++) 
+				{
+					materials[i] = validLocation ? material : invalidPositionMaterial;
+				}
+				renderer.sharedMaterials = materials;
 			}
 		}
 

@@ -63,6 +63,15 @@ namespace Core.Health
 			}
 		}
 
+		/// <summary>
+		/// Heal this unit
+		/// </summary>
+		/// <param name="healValue">Heal value.</param>
+		public virtual void IncreaseHealth(float healValue)
+		{
+			configuration.IncreaseHealth(healValue);
+		}
+
 		protected virtual void Awake()
 		{
 			configuration.Init();

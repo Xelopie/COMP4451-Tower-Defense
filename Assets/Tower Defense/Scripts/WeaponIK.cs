@@ -23,37 +23,64 @@ public class WeaponIK : MonoBehaviour
     [Range(0, 1)]
     public float weight = 1.0f;
 
+	/// <summary>
+	/// DO NOT populate m_targetTransform, it is controlled by targetter/debugTargetTransform
+	/// </summary>
     private Transform m_targetTransform;
 
-    void LateUpdate()
+	private void Start()
+	{
+		m_targetTransform = aimTransform;
+	}
+
+	/// <summary>
+	/// All the update about weapon IK should be done after Update(), so use LateUpdate() here
+	/// </summary>
+	void LateUpdate()
     {
-        if (debugTargetTransform == null)
+        if (debugTargetTransform)
         {
-            if (targetter.GetTarget() == null)
-            {
-                m_targetTransform = aimTransform;
-            }
-            else
-            {
-                m_targetTransform = targetter.GetTarget().targetableTransform;
-            }
+			m_targetTransform = debugTargetTransform;
         } 
         else
         {
-            m_targetTransform = debugTargetTransform;
+			var target = targetter.GetTarget();
+			if (target == null)
+            {
+				if (weight > 0f)
+				{
+					weight -= Time.deltaTime;
+				}
+				else
+				{
+					weight = 0f;
+					m_targetTransform = aimTransform;
+				}
+            }
+            else
+            {
+				if (weight < 1.0f)
+				{
+					weight += Time.deltaTime;
+				}
+				else
+				{
+					weight = 1f;
+				}
+				m_targetTransform = target.targetableTransform;
+			}
         }
 
-        Vector3 targetPosition = m_targetTransform.position;
         for (int i = 0; i < iterations; i++)
         {
-            AimAtTarget(bone, targetPosition, weight);
+            AimAtTarget();
         }
     }
 
-    private void AimAtTarget(Transform bone, Vector3 targetPosition, float weight)
+    private void AimAtTarget()
     {
         Vector3 aimDirection = aimTransform.forward;
-        Vector3 targetDirection = targetPosition - aimTransform.position;
+        Vector3 targetDirection = m_targetTransform.position - aimTransform.position;
         Quaternion aimTowards = Quaternion.FromToRotation(aimDirection, targetDirection);
         Quaternion blendedRotation = Quaternion.Slerp(Quaternion.identity, aimTowards, weight);
         bone.rotation = blendedRotation * bone.rotation;

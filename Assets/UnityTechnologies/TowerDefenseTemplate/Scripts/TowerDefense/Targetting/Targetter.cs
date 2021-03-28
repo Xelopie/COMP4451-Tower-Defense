@@ -193,6 +193,7 @@ namespace TowerDefense.Targetting
                 {
                     acquiredTarget(m_CurrrentTargetable);
                 }
+				m_SearchTimer = 1 / searchRate;
             }
         }
 
@@ -301,7 +302,7 @@ namespace TowerDefense.Targetting
 		/// </summary>
 		protected virtual void Start()
 		{
-			m_SearchTimer = searchRate;
+			m_SearchTimer = 1 / searchRate;
 			m_WaitTimer = idleWaitTime;
 		}
 
