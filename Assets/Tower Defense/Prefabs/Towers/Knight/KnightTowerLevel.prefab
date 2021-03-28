@@ -28458,7 +28458,7 @@ MonoBehaviour:
   turret: {fileID: 4108094835507009}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
-  searchRate: 0.1
+  searchRate: 10
   searchControlByAttackSpeed: 0
   idleRotationSpeed: 0
   idleCorrectionTime: 2
@@ -28639,6 +28639,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerGhostPrefab: {fileID: 5898309984369688620, guid: 3c48d835d4583ca438eff3fa5558a685,
     type: 3}
-  buildEffectPrefab: {fileID: 1395313577031670, guid: c559c1920b5d04e6d83aa4464fba5c68,
-    type: 3}
+  buildEffectPrefab: {fileID: 100008, guid: ab8125ffea4d43e4aa9439d5f8fff4c4, type: 3}
   levelData: {fileID: 11400000, guid: c11761343dbb8c642a162d751410f9a2, type: 2}

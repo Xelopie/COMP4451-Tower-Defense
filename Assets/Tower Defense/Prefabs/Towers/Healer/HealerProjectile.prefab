@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8993092901585950313}
   - component: {fileID: 5443932920846594465}
   m_Layer: 12
-  m_Name: RangerProjectile
+  m_Name: HealerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e88b5a37d2f4bc1ad6d6414117ed141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHealAttack: 1
   delay: 0.1
 --- !u!114 &5443932920846594465
 MonoBehaviour:

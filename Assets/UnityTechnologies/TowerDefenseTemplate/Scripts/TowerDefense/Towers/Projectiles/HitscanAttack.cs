@@ -11,6 +11,8 @@ namespace TowerDefense.Towers.Projectiles
 	[RequireComponent(typeof(Damager))]
 	public class HitscanAttack : MonoBehaviour
 	{
+		public bool isHealAttack = false;
+
 		/// <summary>
 		/// The amount of time to delay
 		/// </summary>
@@ -82,13 +84,39 @@ namespace TowerDefense.Towers.Projectiles
 			m_PauseTimer = true;
 		}
 
+		protected void Heal()
+		{
+			Poolable.TryPool(gameObject);
+
+			if (m_Enemy == null)
+			{
+				return;
+			}
+
+			// effects
+			ParticleSystem pfxPrefab = m_Damager.collisionParticles;
+			var attackEffect = Poolable.TryGetPoolable<ParticleSystem>(pfxPrefab.gameObject);
+			attackEffect.transform.position = m_Enemy.position;
+			attackEffect.Play();
+
+			m_Enemy.IncreaseHealth(m_Damager.damage);
+			m_PauseTimer = true;
+		}
+
 		/// <summary>
 		/// Cache the damager component attached to this object
 		/// </summary>
 		protected virtual void Awake()
 		{
 			m_Damager = GetComponent<Damager>();
-			m_Timer = new Timer(delay, DealDamage);
+			if (isHealAttack)
+			{
+				m_Timer = new Timer(delay, Heal);
+			}
+			else
+			{
+				m_Timer = new Timer(delay, DealDamage);
+			}
 		}
 
 		/// <summary>

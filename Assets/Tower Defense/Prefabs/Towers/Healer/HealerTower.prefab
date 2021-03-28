@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 226627077127419701}
   - component: {fileID: 2784293563400073054}
   - component: {fileID: -5078904893039325688}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: HealerTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}

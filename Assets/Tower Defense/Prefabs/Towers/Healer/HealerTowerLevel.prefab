@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3555269191704078682}
-  - component: {fileID: 7007910393071396658}
-  - component: {fileID: 1661345076000122041}
+  - component: {fileID: 4240149108828158132}
   - component: {fileID: 3775361177540694689}
   m_Layer: 16
   m_Name: Targetter
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 8107159216446282189}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7007910393071396658
+--- !u!114 &4240149108828158132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 329906049679467281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e4035901ee40bba7c0866d2c6338a1, type: 3}
+  m_Script: {fileID: 11500000, guid: dd26dc4790af9b34da18242fa1055a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 0}
+  turret: {fileID: 8242395769748448276}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
   searchRate: 20
@@ -54,20 +53,6 @@ MonoBehaviour:
   idleCorrectionTime: 2
   attachedCollider: {fileID: 3775361177540694689}
   idleWaitTime: 2
---- !u!136 &1661345076000122041
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329906049679467281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 2.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &3775361177540694689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28537,9 +28522,9 @@ MonoBehaviour:
   isMultiAttack: 0
   fireRate: 1
   randomAudioSource: {fileID: 3952573662307269564}
-  towerTargetter: {fileID: 7007910393071396658}
+  towerTargetter: {fileID: 4240149108828158132}
   radiusEffectColor: {r: 0.05724919, g: 1, b: 0, a: 1}
-  healerAnimator: {fileID: 0}
+  healerAnimator: {fileID: 7439049676571000063}
 --- !u!1 &8107159216446282187
 GameObject:
   m_ObjectHideFlags: 0
@@ -29898,6 +29883,12 @@ Transform:
 --- !u!4 &7377303320665064193 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4121384614596294, guid: eadd41f7c18839c46a054791e263e18b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7381353782466219463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7439049676571000063 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95427079828222264, guid: eadd41f7c18839c46a054791e263e18b,
     type: 3}
   m_PrefabInstance: {fileID: 7381353782466219463}
   m_PrefabAsset: {fileID: 0}
