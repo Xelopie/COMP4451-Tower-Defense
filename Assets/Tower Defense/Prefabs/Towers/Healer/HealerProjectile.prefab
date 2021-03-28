@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   chanceToSpawnCollisionPrefab: 1
-  collisionParticles: {fileID: 198278080792148898, guid: a4e0e87699dbd400aaf85d616d2618f8,
+  collisionParticles: {fileID: 2335764439921886650, guid: f87e7926fd589094b8a269e14b8bea5e,
     type: 3}
   alignment:
     unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
