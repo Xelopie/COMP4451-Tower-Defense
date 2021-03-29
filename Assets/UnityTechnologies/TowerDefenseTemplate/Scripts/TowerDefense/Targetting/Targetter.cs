@@ -95,7 +95,7 @@ namespace TowerDefense.Targetting
 		/// <summary>
 		/// The current targetable
 		/// </summary>
-		protected Targetable m_CurrrentTargetable;
+		protected Targetable m_CurrentTargetable;
 
 		/// <summary>
 		/// Counter used for x rotation correction
@@ -149,7 +149,7 @@ namespace TowerDefense.Targetting
 		/// </summary>
 		public Targetable GetTarget()
 		{
-			return m_CurrrentTargetable;
+			return m_CurrentTargetable;
 		}
 
 		/// <summary>
@@ -158,7 +158,7 @@ namespace TowerDefense.Targetting
 		public void ResetTargetter()
 		{
 			m_TargetsInRange.Clear();
-			m_CurrrentTargetable = null;
+			m_CurrentTargetable = null;
 
 			targetEntersRange = null;
 			targetExitsRange = null;
@@ -184,18 +184,23 @@ namespace TowerDefense.Targetting
         /// <summary>
         /// Wrap up for the target searching function
         /// </summary>
-        public void SearchForTarget()
+        public virtual void SearchForTarget()
         {
-            m_CurrrentTargetable = GetNearestTargetable();
-            if (m_CurrrentTargetable != null)
-            {
-                if (acquiredTarget != null)
-                {
-                    acquiredTarget(m_CurrrentTargetable);
-                }
-				m_SearchTimer = 1 / searchRate;
-            }
+            m_CurrentTargetable = GetNearestTargetable();
+			OnSearchTarget();
         }
+
+		protected virtual void OnSearchTarget()
+		{
+			if (m_CurrentTargetable != null)
+			{
+				if (acquiredTarget != null)
+				{
+					acquiredTarget(m_CurrentTargetable);
+				}
+				m_SearchTimer = 1 / searchRate;
+			}
+		}
 
 		/// <summary>
 		/// Checks if the targetable is a valid target
@@ -233,7 +238,7 @@ namespace TowerDefense.Targetting
 			{
 				targetExitsRange(targetable);
 			}
-			if (targetable == m_CurrrentTargetable)
+			if (targetable == m_CurrentTargetable)
 			{
 				OnTargetRemoved(targetable);
 			}
@@ -313,14 +318,14 @@ namespace TowerDefense.Targetting
 		{
 			m_SearchTimer -= Time.deltaTime;
 
-			if (m_SearchTimer <= 0.0f && m_CurrrentTargetable == null && m_TargetsInRange.Count > 0 && !searchControlByAttackSpeed)
+			if (m_SearchTimer <= 0.0f && m_CurrentTargetable == null && m_TargetsInRange.Count > 0 && !searchControlByAttackSpeed)
 			{
                 SearchForTarget();
 			}
 
 			AimTurret();
 
-			m_HadTarget = m_CurrrentTargetable != null;
+			m_HadTarget = m_CurrentTargetable != null;
 		}
 
 		/// <summary>
@@ -330,15 +335,15 @@ namespace TowerDefense.Targetting
 		void OnTargetRemoved(DamageableBehaviour target)
 		{
 			target.removed -= OnTargetRemoved;
-			if (m_CurrrentTargetable != null && target.configuration == m_CurrrentTargetable.configuration)
+			if (m_CurrentTargetable != null && target.configuration == m_CurrentTargetable.configuration)
 			{
 				if (lostTarget != null)
 				{
 					lostTarget();
 				}
 				m_HadTarget = false;
-				m_TargetsInRange.Remove(m_CurrrentTargetable);
-				m_CurrrentTargetable = null;
+				m_TargetsInRange.Remove(m_CurrentTargetable);
+				m_CurrentTargetable = null;
 				m_XRotationCorrectionTime = 0.0f;
 			}
 			else //wasnt the current target, find and remove from targets list
@@ -364,7 +369,7 @@ namespace TowerDefense.Targetting
 				return;
 			}
 
-			if (m_CurrrentTargetable == null) // do idle rotation
+			if (m_CurrentTargetable == null) // do idle rotation
 			{
 				if (m_WaitTimer > 0)
 				{
@@ -388,7 +393,7 @@ namespace TowerDefense.Targetting
 			{
 				m_WaitTimer = idleWaitTime;
 
-				Vector3 targetPosition = m_CurrrentTargetable.position;
+				Vector3 targetPosition = m_CurrentTargetable.position;
 				if (onlyYTurretRotation)
 				{
 					targetPosition.y = turret.position.y;

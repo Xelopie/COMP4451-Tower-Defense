@@ -48,7 +48,7 @@ MonoBehaviour:
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
   searchRate: 20
-  searchControlByAttackSpeed: 0
+  searchControlByAttackSpeed: 1
   idleRotationSpeed: 0
   idleCorrectionTime: 2
   attachedCollider: {fileID: 3775361177540694689}
@@ -14471,7 +14471,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.9811321, b: 0.1333885, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -28517,7 +28517,7 @@ MonoBehaviour:
   projectile: {fileID: 8993092901585950317, guid: 89d7699f95a41f746abb21f134609017,
     type: 3}
   projectilePoints:
-  - {fileID: 7377303320665064193}
+  - {fileID: 7385718743368320731}
   epicenter: {fileID: 8242395769748448276}
   isMultiAttack: 0
   fireRate: 1
@@ -28525,6 +28525,7 @@ MonoBehaviour:
   towerTargetter: {fileID: 4240149108828158132}
   radiusEffectColor: {r: 0.05724919, g: 1, b: 0, a: 1}
   healerAnimator: {fileID: 7439049676571000063}
+  attackDelay: 1
 --- !u!1 &8107159216446282187
 GameObject:
   m_ObjectHideFlags: 0
@@ -29880,9 +29881,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7381353782466219463}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7377303320665064193 stripped
+--- !u!4 &7385718743368320731 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4121384614596294, guid: eadd41f7c18839c46a054791e263e18b,
+  m_CorrespondingSourceObject: {fileID: 4659974689737500, guid: eadd41f7c18839c46a054791e263e18b,
     type: 3}
   m_PrefabInstance: {fileID: 7381353782466219463}
   m_PrefabAsset: {fileID: 0}
