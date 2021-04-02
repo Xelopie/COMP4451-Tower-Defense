@@ -1,4 +1,4 @@
-﻿using ActionGameFramework.Health;
+using ActionGameFramework.Health;
 using Core.Utilities;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ namespace TowerDefense.Towers.Projectiles
 	public class HitscanAttack : MonoBehaviour
 	{
 		public bool isHealAttack = false;
+		public bool isMagicAttack = false;
 
 		/// <summary>
 		/// The amount of time to delay
@@ -76,11 +77,14 @@ namespace TowerDefense.Towers.Projectiles
 			
 			// effects
 			ParticleSystem pfxPrefab = m_Damager.collisionParticles;
-			var attackEffect = Poolable.TryGetPoolable<ParticleSystem>(pfxPrefab.gameObject);
-			attackEffect.transform.position = m_Enemy.position;
-			attackEffect.Play();
-			
-			m_Enemy.TakeDamage(m_Damager.damage, m_Enemy.position, m_Damager.alignmentProvider);
+			if (pfxPrefab)
+			{
+				var attackEffect = Poolable.TryGetPoolable<ParticleSystem>(pfxPrefab.gameObject);
+				attackEffect.transform.position = m_Enemy.position;
+				attackEffect.Play();
+			}
+
+			m_Enemy.TakeDamage(m_Damager.damage, m_Enemy.position, m_Damager.alignmentProvider, isMagicAttack);
 			m_PauseTimer = true;
 		}
 
@@ -95,9 +99,12 @@ namespace TowerDefense.Towers.Projectiles
 
 			// effects
 			ParticleSystem pfxPrefab = m_Damager.collisionParticles;
-			var attackEffect = Poolable.TryGetPoolable<ParticleSystem>(pfxPrefab.gameObject);
-			attackEffect.transform.position = m_Enemy.position;
-			attackEffect.Play();
+			if (pfxPrefab)
+			{
+				var attackEffect = Poolable.TryGetPoolable<ParticleSystem>(pfxPrefab.gameObject);
+				attackEffect.transform.position = m_Enemy.position;
+				attackEffect.Play();
+			}
 
 			m_Enemy.IncreaseHealth(m_Damager.damage);
 			m_PauseTimer = true;

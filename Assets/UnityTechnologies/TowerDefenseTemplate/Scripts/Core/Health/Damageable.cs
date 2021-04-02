@@ -14,8 +14,9 @@ namespace Core.Health
 		/// The max health of this instance
 		/// </summary>
 		public float maxHealth;
-		
 		public float startingHealth;
+		public float defense;
+		public float resistance;
 
 		/// <summary>
 		/// The alignment of the damager
@@ -147,7 +148,7 @@ namespace Core.Health
 		/// <value>true if this instance took damage</value>
 		/// <value>false if this instance was already dead, or the alignment did not allow the damage</value>
 		/// </returns>
-		public bool TakeDamage(float damage, IAlignmentProvider damageAlignment, out HealthChangeInfo output)
+		public bool TakeDamage(float damage, IAlignmentProvider damageAlignment, out HealthChangeInfo output, bool isAbsoluteDamage = true, bool isMagicDamage = false)
 		{
 			output = new HealthChangeInfo
 			{
@@ -163,7 +164,24 @@ namespace Core.Health
 				return false;
 			}
 
-			ChangeHealth(-damage, output);
+			float finalDamage = damage;
+			// The damage multiplier formula here; 
+			// if defense = 25, the damage multiplier is 0.8, so damage reduced by 20%
+			if (!isAbsoluteDamage)
+			{
+				if (isMagicDamage)
+				{
+					float damageMultiplier = 100 / (100 + resistance);
+					finalDamage = damage * damageMultiplier;
+				}
+				else
+				{
+					float damageMultiplier = 100 / (100 + defense);
+					finalDamage = damage * damageMultiplier;
+				}
+			}
+			
+			ChangeHealth(-finalDamage, output);
 			SafelyDoAction(damaged, output);
 			if (isDead)
 			{
