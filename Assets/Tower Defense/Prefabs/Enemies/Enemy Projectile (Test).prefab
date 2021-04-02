@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114593574260685338}
   - component: {fileID: 114416803425874578}
   m_Layer: 13
-  m_Name: Enemy Projectile
+  m_Name: Enemy Projectile (Test)
   m_TagString: Untagged
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -63,10 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedeb0b3c5e104ea19d0d4599d22ab97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   chanceToSpawnCollisionPrefab: 1
-  collisionParticles: {fileID: 198278080792148898, guid: a4e0e87699dbd400aaf85d616d2618f8,
-    type: 3}
+  collisionParticles: {fileID: 0}
   alignment:
     unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
       type: 2}

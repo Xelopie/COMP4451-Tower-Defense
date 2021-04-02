@@ -1,4 +1,4 @@
-﻿using ActionGameFramework.Health;
+using ActionGameFramework.Health;
 using System.Collections.Generic;
 using TowerDefense.Affectors;
 using UnityEngine;
@@ -7,7 +7,7 @@ public class HealerAttackAffector : AttackAffector
 {
 	[Header("Customized attributes for Healer")]
 	public Animator healerAnimator;
-	public float attackDelay;
+	public float attackDelay;	// to match the animation
 
 	protected override void OnFireTimer()
 	{

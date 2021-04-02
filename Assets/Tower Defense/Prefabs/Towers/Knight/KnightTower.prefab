@@ -82,6 +82,8 @@ MonoBehaviour:
   configuration:
     maxHealth: 100
     startingHealth: 100
+    defense: 25
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
         type: 2}

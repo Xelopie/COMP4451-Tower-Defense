@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Core.Health
@@ -52,15 +52,12 @@ namespace Core.Health
 		/// <param name="damageValue">Damage value.</param>
 		/// <param name="damagePoint">Damage point.</param>
 		/// <param name="alignment">Alignment value</param>
-		public virtual void TakeDamage(float damageValue, Vector3 damagePoint, IAlignmentProvider alignment)
+		public virtual void TakeDamage(float damageValue, Vector3 damagePoint, IAlignmentProvider alignment, bool isMagicDamage = false)
 		{
 			HealthChangeInfo info;
-			configuration.TakeDamage(damageValue, alignment, out info);
+			configuration.TakeDamage(damageValue, alignment, out info, false, isMagicDamage);
 			var damageInfo = new HitInfo(info, damagePoint);
-			if (hit != null)
-			{
-				hit(damageInfo);
-			}
+			hit?.Invoke(damageInfo);
 		}
 
 		/// <summary>
@@ -84,7 +81,7 @@ namespace Core.Health
 		protected virtual void Kill()
 		{
 			HealthChangeInfo healthChangeInfo;
-			configuration.TakeDamage(configuration.currentHealth, null, out healthChangeInfo);
+			configuration.TakeDamage(configuration.currentHealth, null, out healthChangeInfo, true);
 		}
 
 
