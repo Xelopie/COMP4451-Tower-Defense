@@ -167,10 +167,10 @@ MonoBehaviour:
     m_Bits: 256
   towerSelectionLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 66560
   ghostWorldPlacementMask:
     serializedVersion: 2
-    m_Bits: 4294902271
+    m_Bits: 311
   sphereCastRadius: 1
   radiusVisualizerController: {fileID: 114619876718541084}
   towerUI: {fileID: 0}

@@ -6929,6 +6929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114555595464069464, guid: 28035762430e74813854d9ca46df3ebd,
         type: 3}
+      propertyPath: alwaysShowPlacementArea
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114555595464069464, guid: 28035762430e74813854d9ca46df3ebd,
+        type: 3}
       propertyPath: m_GhostSelectionLayer.m_Bits
       value: 512
       objectReference: {fileID: 0}
