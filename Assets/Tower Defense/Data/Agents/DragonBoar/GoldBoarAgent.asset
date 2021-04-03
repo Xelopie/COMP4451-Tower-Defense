@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GoldBoar
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: ff4cc367a4c38124f9f50ebf7857c9df,
+  agentPrefab: {fileID: 4909086576596995971, guid: ff4cc367a4c38124f9f50ebf7857c9df,
     type: 3}

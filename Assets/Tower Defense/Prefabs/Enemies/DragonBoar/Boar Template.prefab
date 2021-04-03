@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146591508503202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.564, z: 0.249}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066970842593808}
@@ -77,7 +77,7 @@ MonoBehaviour:
   turret: {fileID: 0}
   turretXRotationRange: {x: 0, y: 359}
   onlyYTurretRotation: 0
-  searchRate: 1
+  searchRate: 10
   searchControlByAttackSpeed: 0
   idleRotationSpeed: 0.2
   idleCorrectionTime: 2
@@ -93,8 +93,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.5
-  m_Height: 4
+  m_Radius: 0.8
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1340119094484080
@@ -121,8 +121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340119094484080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7335645, z: 0}
-  m_LocalScale: {x: 3.2677937, y: 3.2677937, z: 3.2677937}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4193058270655844}
   m_RootOrder: 1
@@ -266,10 +266,10 @@ GameObject:
   - component: {fileID: 4066970842593808}
   - component: {fileID: 195748818541008228}
   - component: {fileID: 114982529450900332}
+  - component: {fileID: 7215507338475096904}
   - component: {fileID: 54888612580958166}
   - component: {fileID: 114447009597591512}
   - component: {fileID: 114169816835889762}
-  - component: {fileID: 114847362792086644}
   - component: {fileID: 82094088292764670}
   - component: {fileID: 114755418864449814}
   - component: {fileID: 114378502089070424}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 195080470525353462}
   - component: {fileID: 6872056041010984254}
   m_Layer: 11
-  m_Name: BlueBoar (Test)
+  m_Name: Boar Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 1511114609136056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4952032072423588}
   - {fileID: 4193058270655844}
@@ -317,7 +317,7 @@ NavMeshAgent:
   m_Acceleration: 1.8
   avoidancePriority: 80
   m_AngularSpeed: 360
-  m_StoppingDistance: 0.2
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -349,6 +349,30 @@ MonoBehaviour:
   poolDelay: 2
   appliedEffectOffset: {x: 0, y: 0.5, z: 0}
   appliedEffectScale: 1
+--- !u!114 &7215507338475096904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511114609136056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab436dd8b0b9f8429ba9e6b87f63abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  projectile: {fileID: 1797349743178286, guid: 2d127e573c900d94085fdc9756be5662, type: 3}
+  projectilePoints:
+  - {fileID: 4013251577074370}
+  epicenter: {fileID: 4066970842593808}
+  isMultiAttack: 0
+  fireRate: 1
+  randomAudioSource: {fileID: 114313882177952152}
+  towerTargetter: {fileID: 114921850837260542}
+  radiusEffectColor: {r: 0, g: 0, b: 0, a: 0}
+  controller: {fileID: 195080470525353462}
+  attackDelay: 0.5
 --- !u!54 &54888612580958166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,28 +416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootDropped: 1
---- !u!114 &114847362792086644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511114609136056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4f7293b07e4698a4e3b652679f0c75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: 
-  projectile: {fileID: 1797349743178286, guid: 2d127e573c900d94085fdc9756be5662, type: 3}
-  projectilePoints:
-  - {fileID: 4013251577074370}
-  epicenter: {fileID: 4066970842593808}
-  isMultiAttack: 0
-  fireRate: 1
-  randomAudioSource: {fileID: 114313882177952152}
-  towerTargetter: {fileID: 114921850837260542}
-  radiusEffectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!82 &82094088292764670
 AudioSource:
   m_ObjectHideFlags: 0
@@ -547,7 +549,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.42, z: 0}
@@ -565,7 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
     weightedItems:
-    - clip: {fileID: 8300000, guid: 284169030cdb44ac5aeed3136719a521, type: 3}
+    - clip: {fileID: 8300000, guid: b8c05e6303a8c4126b56d5f4a6a70862, type: 3}
       weight: 1
   playOnEnabled: 0
 --- !u!114 &114711563749760058
@@ -597,6 +599,7 @@ MonoBehaviour:
   damageableBehaviour: {fileID: 114982529450900332}
   moveAnimation: 1
   dieAnimation: 1
+  attackAnimation: 1
 --- !u!114 &6872056041010984254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 1733971432209916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5954210389158469516}
   - {fileID: 4013251577074370}
@@ -797,11 +800,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 113038, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
       propertyPath: m_Name
-      value: BlueBoarPBR
+      value: Test Boar Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 113038, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -813,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 484804, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -847,10 +866,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e9acb7fd5f14ff540a2444b892507daf, type: 2}
-    - target: {fileID: 9593104, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907325ec940ecbf409d1505976f5fcd5, type: 3}
 --- !u!95 &5954210389149227864 stripped

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: RedBoar
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: 195cfafa5d3f7bd43a8773d9f8508914,
+  agentPrefab: {fileID: 348009356350936529, guid: 195cfafa5d3f7bd43a8773d9f8508914,
     type: 3}

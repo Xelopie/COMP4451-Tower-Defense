@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: BlueBoar
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: a515daa6af0d1a749b7e11338bef2069,
+  agentPrefab: {fileID: 7113712543907532679, guid: a515daa6af0d1a749b7e11338bef2069,
     type: 3}
