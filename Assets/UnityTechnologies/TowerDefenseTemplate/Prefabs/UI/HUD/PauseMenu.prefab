@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b166d0838cb4fc0b77377ac9c57d6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoadName: MainMenu
+  sceneToLoadName: TitlePage
 --- !u!1 &1554401066274526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,6 @@ MonoBehaviour:
   levelSelectButton: {fileID: 114138236807949734}
   restartButton: {fileID: 114000278425179766}
   topPanel: {fileID: 114665296660541456}
-  topPanelDisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
 --- !u!82 &82348098231754976
 AudioSource:
   m_ObjectHideFlags: 0
