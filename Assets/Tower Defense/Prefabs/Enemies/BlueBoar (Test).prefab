@@ -266,7 +266,6 @@ GameObject:
   - component: {fileID: 4066970842593808}
   - component: {fileID: 195748818541008228}
   - component: {fileID: 114982529450900332}
-  - component: {fileID: 114045684039755250}
   - component: {fileID: 54888612580958166}
   - component: {fileID: 114447009597591512}
   - component: {fileID: 114169816835889762}
@@ -278,6 +277,7 @@ GameObject:
   - component: {fileID: 114313882177952152}
   - component: {fileID: 114711563749760058}
   - component: {fileID: 195080470525353462}
+  - component: {fileID: 6872056041010984254}
   m_Layer: 11
   m_Name: BlueBoar (Test)
   m_TagString: Untagged
@@ -340,6 +340,8 @@ MonoBehaviour:
   configuration:
     maxHealth: 25
     startingHealth: 25
+    defense: 0
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
         type: 2}
@@ -347,24 +349,6 @@ MonoBehaviour:
   poolDelay: 2
   appliedEffectOffset: {x: 0, y: 0.5, z: 0}
   appliedEffectScale: 1
---- !u!114 &114045684039755250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511114609136056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fedeb0b3c5e104ea19d0d4599d22ab97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  chanceToSpawnCollisionPrefab: 1
-  collisionParticles: {fileID: 0}
-  alignment:
-    unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
-      type: 2}
 --- !u!54 &54888612580958166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -421,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: 
-  projectile: {fileID: 1797349743178286, guid: efcfdd276fd9a4bce9c848912a90dc0b, type: 3}
+  projectile: {fileID: 1797349743178286, guid: 2d127e573c900d94085fdc9756be5662, type: 3}
   projectilePoints:
   - {fileID: 4013251577074370}
   epicenter: {fileID: 4066970842593808}
@@ -613,6 +597,24 @@ MonoBehaviour:
   damageableBehaviour: {fileID: 114982529450900332}
   moveAnimation: 1
   dieAnimation: 1
+--- !u!114 &6872056041010984254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511114609136056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedeb0b3c5e104ea19d0d4599d22ab97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  chanceToSpawnCollisionPrefab: 1
+  collisionParticles: {fileID: 0}
+  alignment:
+    unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
+      type: 2}
 --- !u!1 &1625108262561878
 GameObject:
   m_ObjectHideFlags: 0
