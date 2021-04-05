@@ -87,6 +87,8 @@ namespace TowerDefense.UI.HUD
 		/// </summary>
 		public State state { get; private set; }
 
+		public bool alwaysShowPlacementArea = true;
+
 		/// <summary>
 		/// The currently selected tower
 		/// </summary>
@@ -140,6 +142,8 @@ namespace TowerDefense.UI.HUD
 		/// Fires when a tower is selected/deselected
 		/// </summary>
 		public event Action<Tower> selectionChanged;
+
+		TowerPlacementGrid[] m_PlacementGrids;
 
 		/// <summary>
 		/// Placement area ghost tower is currently on
@@ -208,6 +212,7 @@ namespace TowerDefense.UI.HUD
 			m_CurrentTower = null;
 			SetState(State.Normal);
 			DeselectTower();
+			HidePlacementGrid();
 		}
 
 		/// <summary>
@@ -750,6 +755,31 @@ namespace TowerDefense.UI.HUD
 			}
 		}
 
+		void HidePlacementGrid()
+		{
+			foreach (var placementGrid in m_PlacementGrids)
+			{
+				placementGrid.gameObject.SetActive(false);
+			}
+		}
+
+		void ShowPlacementGrid()
+		{
+			foreach (var placementGrid in m_PlacementGrids)
+			{
+				placementGrid.gameObject.SetActive(true);
+			}
+		}
+
+		protected virtual void Start()
+		{
+			if (!alwaysShowPlacementArea)
+			{
+				m_PlacementGrids = GameObject.FindObjectsOfType<TowerPlacementGrid>();
+				HidePlacementGrid();
+			}
+		}
+
 		/// <summary>
 		/// Set initial values, cache attached components
 		/// and configure the controls
@@ -1027,6 +1057,8 @@ namespace TowerDefense.UI.HUD
 			{
 				buildInfoUI.Show(towerToBuild);
 			}
+
+			ShowPlacementGrid();
 		}
 	}
 }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GreenBoar
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: e9340cfb5beaef64580cc45254d9a9ec,
+  agentPrefab: {fileID: 5704098834318109190, guid: e9340cfb5beaef64580cc45254d9a9ec,
     type: 3}
