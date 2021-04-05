@@ -2376,7 +2376,7 @@ GameObject:
   - component: {fileID: 462936446}
   - component: {fileID: 462936447}
   m_Layer: 0
-  m_Name: TestMonsterWave (1)
+  m_Name: TestMonsterWaveTwoPaths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2413,6 +2413,34 @@ MonoBehaviour:
       type: 2}
     delayToSpawn: 1
     startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
   timeToNextWave: 40
 --- !u!1 &502791342
 GameObject:
