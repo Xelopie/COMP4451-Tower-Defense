@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,5 +11,4 @@ public class Skill : MonoBehaviour
     [TextArea(1, 3)]
     public string skillDes;
     public bool learnt = false;
-    public bool isSelected = false;
 }

@@ -23,6 +23,13 @@ namespace TowerDefense.UI.HUD
 		/// </summary>
 		public LevelSelectScreen levelSelectMenu;
 
+		public SimpleMainMenuPage infoMenu;
+
+		public void ShowInfoMenu()
+		{
+			ChangePage(infoMenu);
+		}
+
 		/// <summary>
 		/// Bring up the options menu
 		/// </summary>
