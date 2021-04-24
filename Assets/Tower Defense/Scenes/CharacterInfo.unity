@@ -280,6 +280,7 @@ MonoBehaviour:
   skillNameText: {fileID: 84172836}
   skillDesText: {fileID: 1589906823}
   skillButtonId: 2
+  characterId: 0
 --- !u!114 &11997432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +297,6 @@ MonoBehaviour:
   skillSprite: {fileID: 21300000, guid: 5e93a13d0aab81048b25143ba568ef1b, type: 3}
   skillDes: Skill 3 Description
   learnt: 0
-  isSelected: 0
 --- !u!114 &11997433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +596,7 @@ MonoBehaviour:
   skillNameText: {fileID: 84172836}
   skillDesText: {fileID: 1589906823}
   skillButtonId: 1
+  characterId: 0
 --- !u!114 &159076649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +613,6 @@ MonoBehaviour:
   skillSprite: {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
   skillDes: Skill 2 Description
   learnt: 0
-  isSelected: 0
 --- !u!114 &159076650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,6 +836,7 @@ MonoBehaviour:
   skillNameText: {fileID: 84172836}
   skillDesText: {fileID: 1589906823}
   skillButtonId: 0
+  characterId: 0
 --- !u!114 &337852671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +853,6 @@ MonoBehaviour:
   skillSprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
   skillDes: Skill 1 Description
   learnt: 0
-  isSelected: 0
 --- !u!114 &337852672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,9 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4717bd3569cb2d4bb67f6acb0c8ad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterSprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
-  CharacterName: Kohaku Otori
-  CharacterStatus: 'HP
+  characterStatus: 'HP
 
     ATK
 
@@ -1035,24 +1033,15 @@ MonoBehaviour:
 
     RES
 
-    BLK
-
     ATKSPD
 
     DPCost
 
     ReDP'
-  skills:
-  - {fileID: 337852671}
-  - {fileID: 159076649}
-  - {fileID: 11997432}
-  - {fileID: 821557734}
-  skillButtons:
-  - {fileID: 337852670}
-  - {fileID: 159076648}
-  - {fileID: 11997431}
-  - {fileID: 11997431}
-  activateSkill: {fileID: 0}
+  characters:
+  - characterSprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
+    characterName: Kohaku Otori
+    infoPanel: {fileID: 918256663}
 --- !u!1 &821557729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1135,7 @@ MonoBehaviour:
   skillNameText: {fileID: 84172836}
   skillDesText: {fileID: 1589906823}
   skillButtonId: 3
+  characterId: 0
 --- !u!114 &821557734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,7 +1152,6 @@ MonoBehaviour:
   skillSprite: {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
   skillDes: Skill 4 Description
   learnt: 0
-  isSelected: 0
 --- !u!114 &821557735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,6 +1217,8 @@ GameObject:
   - component: {fileID: 918256660}
   - component: {fileID: 918256662}
   - component: {fileID: 918256661}
+  - component: {fileID: 918256663}
+  - component: {fileID: 918256664}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1297,6 +1288,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918256659}
   m_CullTransparentMesh: 0
+--- !u!223 &918256663
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918256659}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &918256664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918256659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &933016147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1413,6 @@ GameObject:
   - component: {fileID: 1015958425}
   - component: {fileID: 1015958424}
   - component: {fileID: 1015958423}
-  - component: {fileID: 1015958422}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1392,23 +1420,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1015958422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015958421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1015958423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,8 +1952,6 @@ MonoBehaviour:
     DEF
 
     RES
-
-    BLK
 
     ATKSPD
 
