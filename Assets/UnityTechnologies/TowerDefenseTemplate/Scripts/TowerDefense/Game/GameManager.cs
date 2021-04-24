@@ -1,4 +1,4 @@
-﻿using Core.Data;
+using Core.Data;
 using Core.Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -82,6 +82,16 @@ namespace TowerDefense.Game
 			}
 
 			return m_DataStore.GetNumberOfStarForLevel(levelId);
+		}
+
+		public void QuitGame()
+		{
+			// save any game data here
+#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
 		}
 	}
 }

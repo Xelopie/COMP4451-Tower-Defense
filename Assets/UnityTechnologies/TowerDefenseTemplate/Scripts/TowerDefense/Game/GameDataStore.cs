@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Core.Data;
 using UnityEngine;
 
@@ -13,6 +13,8 @@ namespace TowerDefense.Game
 		/// A list of level IDs for completed levels
 		/// </summary>
 		public List<LevelSaveData> completedLevels = new List<LevelSaveData>();
+
+		public List<CharacterData> characters = new List<CharacterData>();
 
 		/// <summary>
 		/// Outputs to debug
