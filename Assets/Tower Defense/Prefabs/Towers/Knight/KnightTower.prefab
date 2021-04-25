@@ -88,6 +88,8 @@ MonoBehaviour:
       unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
         type: 2}
   targetTransform: {fileID: 7020737672446739574}
+  loadDataFromFile: 1
+  role: 0
   levels:
   - {fileID: 8107159216446282186, guid: 668a1a34a0cd6f7459547566c33f697f, type: 3}
   towerName: Knight

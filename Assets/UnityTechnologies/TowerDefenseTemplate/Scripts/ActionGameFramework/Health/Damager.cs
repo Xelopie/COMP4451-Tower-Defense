@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using Core.Health;
 using Core.Utilities;
+using TowerDefense.Game;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -36,6 +37,17 @@ namespace ActionGameFramework.Health
 		/// The alignment of the damager
 		/// </summary>
 		public SerializableIAlignmentProvider alignment;
+
+		public bool loadDataFromFile = false;
+		public CharacterData.Role role;
+
+		protected void Awake()
+		{
+			if (loadDataFromFile)
+			{
+				damage = GameManager.instance.GetCharacterData(role).attackDamage;
+			}
+		}
 
 		/// <summary>
 		/// Gets the alignment of the damager

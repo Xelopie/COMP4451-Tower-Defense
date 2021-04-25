@@ -52,6 +52,8 @@ MonoBehaviour:
   alignment:
     unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
       type: 2}
+  loadDataFromFile: 1
+  role: 0
 --- !u!114 &8993092901585950313
 MonoBehaviour:
   m_ObjectHideFlags: 0

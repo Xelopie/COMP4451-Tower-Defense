@@ -52,6 +52,8 @@ MonoBehaviour:
   alignment:
     unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
       type: 2}
+  loadDataFromFile: 1
+  role: 3
 --- !u!114 &8993092901585950313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e88b5a37d2f4bc1ad6d6414117ed141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHealAttack: 0
+  isMagicAttack: 0
   delay: 0.1
 --- !u!114 &5443932920846594465
 MonoBehaviour:

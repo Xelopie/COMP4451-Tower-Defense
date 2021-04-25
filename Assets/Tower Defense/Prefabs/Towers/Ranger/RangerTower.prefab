@@ -51,10 +51,14 @@ MonoBehaviour:
   configuration:
     maxHealth: 100
     startingHealth: 100
+    defense: 0
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
         type: 2}
   targetTransform: {fileID: 0}
+  loadDataFromFile: 1
+  role: 3
   levels:
   - {fileID: 8107159216446282186, guid: 8e484d9b9111f3e47b4e3bb64a52073c, type: 3}
   towerName: Ranger
