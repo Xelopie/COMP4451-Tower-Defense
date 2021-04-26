@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 20447090949672786}
   - component: {fileID: 124724692860957684}
   - component: {fileID: 81602249776916600}
-  - component: {fileID: 114348589391522652}
   - component: {fileID: 114491678686253812}
   - component: {fileID: 114555595464069464}
   - component: {fileID: 114147847525236202}
@@ -20,7 +19,6 @@ GameObject:
   - component: {fileID: 114500244925227986}
   - component: {fileID: 114396145335444582}
   - component: {fileID: 114815800152479388}
-  - component: {fileID: 114299858145598432}
   m_Layer: 0
   m_Name: GameCamera
   m_TagString: MainCamera
@@ -35,15 +33,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025302465844600}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 12.900012, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4179388835514998}
   - {fileID: 4018436300913226}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 72, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
 --- !u!20 &20447090949672786
 Camera:
   m_ObjectHideFlags: 0
@@ -68,8 +66,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 35
-  field of view: 55
+  far clip plane: 1000
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -103,34 +101,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025302465844600}
   m_Enabled: 1
---- !u!114 &114348589391522652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025302465844600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2b71c8e1f66d440189e820784fcbdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookDampFactor: 0
-  movementDampFactor: 0
-  nearestZoom: 10
-  furthestZoom: 20
-  maxZoom: 60
-  zoomLogFactor: 10
-  zoomRecoverSpeed: 20
-  floorY: 0
-  zoomedCamAngle: {fileID: 4018436300913226}
-  mapSize:
-    serializedVersion: 2
-    x: -30.294273
-    y: -28.708818
-    width: 38.973705
-    height: 45.237747
-  springyZoom: 0
 --- !u!114 &114491678686253812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +120,7 @@ MonoBehaviour:
   mouseWheelSensitivity: 1
   trackMouseButtons: 2
   flickThreshold: 2
+  enableMouseWheelZoom: 0
 --- !u!114 &114555595464069464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d14ac7f3a784ccc8759eb93dd7be791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alwaysShowPlacementArea: 0
   placementAreaMask:
     serializedVersion: 2
     m_Bits: 256
@@ -187,7 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1de20cdb664794a821b0f620812408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRig: {fileID: 114348589391522652}
+  cameraRig: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
+    type: 3}
   nearZoomPanSpeedModifier: 0.5
   screenPanThreshold: 40
   mouseEdgePanSpeed: 30
@@ -204,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9307288a6cd8a4302be1aa1c6c94be26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRig: {fileID: 114348589391522652}
+  cameraRig: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
+    type: 3}
   nearZoomPanSpeedModifier: 0.5
   panSpeed: 15
   flickDecayFactor: 0.2
@@ -250,20 +224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highQualityProfile: {fileID: 11400000, guid: 557cba3a8a67841dfbd3c5d06bf4f2b2, type: 2}
   lowQualityProfile: {fileID: 11400000, guid: 268808a5589c44cc0949038f87d065b3, type: 2}
---- !u!114 &114299858145598432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025302465844600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7812be11b7491c9092a3ac2ddf75ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startZoomMode: 1
-  initialLookAt: {fileID: 0}
 --- !u!1 &1615022176278094
 GameObject:
   m_ObjectHideFlags: 0

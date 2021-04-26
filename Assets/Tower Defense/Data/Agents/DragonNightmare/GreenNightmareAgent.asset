@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GreenNightmare
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: 0de62f13596233a47934d57eabe74aea,
+  agentPrefab: {fileID: 7678312297211217420, guid: 24af524826d28304a91be3db9eb62a0e,
     type: 3}

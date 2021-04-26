@@ -54,6 +54,8 @@ namespace Core.Input
 		/// </summary>
 		public float flickThreshold = 2f;
 
+		public bool enableMouseWheelZoom = false;
+
 		/// <summary>
 		/// All the touches we're tracking
 		/// </summary>
@@ -304,14 +306,17 @@ namespace Core.Input
 			}
 
 			// Mouse wheel
-			if (Mathf.Abs(UnityInput.GetAxis("Mouse ScrollWheel")) > Mathf.Epsilon)
+			if (enableMouseWheelZoom)
 			{
-				if (spunWheel != null)
+				if (Mathf.Abs(UnityInput.GetAxis("Mouse ScrollWheel")) > Mathf.Epsilon)
 				{
-					spunWheel(new WheelInfo
+					if (spunWheel != null)
 					{
-						zoomAmount = UnityInput.GetAxis("Mouse ScrollWheel") * mouseWheelSensitivity
-					});
+						spunWheel(new WheelInfo
+						{
+							zoomAmount = UnityInput.GetAxis("Mouse ScrollWheel") * mouseWheelSensitivity
+						});
+					}
 				}
 			}
 		}

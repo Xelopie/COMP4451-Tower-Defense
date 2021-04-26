@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: DarkBlueNightmare
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: 9ed16b5db3a3e51478cba1d2aa3033de,
+  agentPrefab: {fileID: 7678312297211217420, guid: 483d8536dac470443ab991608973cb7b,
     type: 3}

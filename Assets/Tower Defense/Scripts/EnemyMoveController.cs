@@ -10,6 +10,7 @@ public class EnemyMoveController : MonoBehaviour
     public bool moveAnimation = true;
     public bool dieAnimation = true;
 	public bool attackAnimation = true;
+	public bool strafeAnimation = false;
 
 	// Return true if the attack animation can be triggered
 	public bool TriggerAttack()
@@ -43,7 +44,19 @@ public class EnemyMoveController : MonoBehaviour
             var agent = GetComponent<NavMeshAgent>();
             var maxSpeed = agent.speed;
             var currentSpeed = agent.velocity.magnitude;
-            enemyAnimator.SetFloat("Speed", currentSpeed / maxSpeed);
-        }
+            
+			if (strafeAnimation)
+			{
+				var inputX = Vector3.Dot(agent.velocity, transform.forward);
+				var inputY = Vector3.Dot(agent.velocity, transform.right);
+				enemyAnimator.SetFloat("InputX", inputX / maxSpeed);
+				enemyAnimator.SetFloat("InputY", inputY / maxSpeed);
+			}
+			else
+			{
+				enemyAnimator.SetFloat("Speed", currentSpeed / maxSpeed);
+			}
+		}
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using TowerDefense.Affectors;
 
 public class RangerAttackAffector : AttackAffector
@@ -16,7 +16,10 @@ public class RangerAttackAffector : AttackAffector
             }
         }
 
-        if (m_TrackingEnemy != null)
+		Transform projectilePoint = projectilePoints[0];
+		int layerMask = 1 << 11;
+		layerMask = ~layerMask;
+		if (m_TrackingEnemy != null && Physics.Raycast(projectilePoint.position, projectilePoint.forward, Mathf.Infinity, layerMask))
         {
             FireProjectile();
             rangerAnimator.SetTrigger("Attack");
