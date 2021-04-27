@@ -32,6 +32,31 @@ namespace TowerDefense.Game
 			Debug.Log("[GAME] Loaded Game");
 		}
 
+		public void SetCharacterData(CharacterData data)
+		{
+			foreach (var character in characters)
+			{
+				if (data.role == character.role)
+				{
+					character.SetCharacterData(data);
+					return;
+				}
+			}
+			characters.Add(data);
+		}
+
+		public CharacterData GetCharacterData(CharacterData.Role role)
+		{
+			foreach (var character in characters)
+			{
+				if (role == character.role)
+				{
+					return character;
+				}
+			}
+			return null;
+		}
+
 		/// <summary>
 		/// Marks a level complete
 		/// </summary>

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: BlueNightmare
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: ff695e0d03cb4b54989a21967d664f74,
+  agentPrefab: {fileID: 7678312297211217420, guid: d1f14f9e007d2214f9e7d918da6ea6c1,
     type: 3}

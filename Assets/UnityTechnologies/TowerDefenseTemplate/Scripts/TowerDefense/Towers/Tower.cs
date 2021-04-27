@@ -1,6 +1,7 @@
 using System;
 using ActionGameFramework.Health;
 using Core.Utilities;
+using TowerDefense.Game;
 using TowerDefense.Level;
 using TowerDefense.Towers.Placement;
 using TowerDefense.UI.HUD;
@@ -13,6 +14,9 @@ namespace TowerDefense.Towers
 	/// </summary>
 	public class Tower : Targetable
 	{
+		public bool loadDataFromFile = false;
+		public CharacterData.Role role;
+
 		/// <summary>
 		/// The tower levels associated with this tower
 		/// </summary>
@@ -32,6 +36,8 @@ namespace TowerDefense.Towers
 		/// The physics mask the tower searches on
 		/// </summary>
 		public LayerMask enemyLayerMask;
+
+		protected float m_hpData;
 
 		/// <summary>
 		/// The current level of the tower
@@ -227,6 +233,18 @@ namespace TowerDefense.Towers
 			Destroy(gameObject);
 		}
 
+		protected override void Awake()
+		{
+			base.Awake();
+			if (loadDataFromFile)
+			{
+				var data = GameManager.instance.GetCharacterData(role);
+				m_hpData = data.healthPoint;
+				configuration.defense = data.defense;
+				configuration.resistance = data.resistance;
+			}
+		}
+
 		/// <summary>
 		/// unsubsribe when necessary
 		/// </summary>
@@ -274,11 +292,15 @@ namespace TowerDefense.Towers
 		/// </summary>
 		protected virtual void ScaleHealth()
 		{
-			configuration.SetMaxHealth(currentTowerLevel.maxHealth);
+			if (!loadDataFromFile)
+			{
+				m_hpData = currentTowerLevel.maxHealth;
+			}
+			configuration.SetMaxHealth(m_hpData);
 			
 			if (currentLevel == 0)
 			{
-				configuration.SetHealth(currentTowerLevel.maxHealth);
+				configuration.SetHealth(m_hpData);
 			}
 			else
 			{

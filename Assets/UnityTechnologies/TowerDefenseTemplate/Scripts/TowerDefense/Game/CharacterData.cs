@@ -8,34 +8,38 @@ namespace TowerDefense.Game
 	[Serializable]
 	public class CharacterData
 	{
-		public enum CharacterClass {
+		public enum Role {
 			Knight,
 			Mage,
 			Healer,
 			Ranger,
 			Support,
 		}
-		public CharacterClass characterClass;
-		public int healthPoint = 100;
-		public int attackDamage;
-		public int defense;
-		public int resistance;
-		public int attackSpeed;
-		public int cost;
-		public int redeployTime;
-		public int experience;
+		public Role role;
+		public float healthPoint = 100;
+		public float attackDamage;
+		public float defense;
+		public float resistance;
+		public float experience;
 
-		public CharacterData(CharacterClass characterClass, int healthPoint, int attackDamage, int defense, int resistance, int attackSpeed, int cost, int redeployTime, int experience)
+		public CharacterData(Role role, float healthPoint, float attackDamage, float defense, float resistance, float experience)
 		{
-			this.characterClass = characterClass;
+			this.role = role;
 			this.healthPoint = healthPoint;
 			this.attackDamage = attackDamage;
 			this.defense = defense;
 			this.resistance = resistance;
-			this.attackSpeed = attackSpeed;
-			this.cost = cost;
-			this.redeployTime = redeployTime;
 			this.experience = experience;
+		}
+
+		public void SetCharacterData(CharacterData characterData)
+		{
+			if (characterData.role != role) return;
+			this.healthPoint = characterData.healthPoint;
+			this.attackDamage = characterData.attackDamage;
+			this.defense = characterData.defense;
+			this.resistance = characterData.resistance;
+			this.experience = characterData.experience;
 		}
 	}
 }

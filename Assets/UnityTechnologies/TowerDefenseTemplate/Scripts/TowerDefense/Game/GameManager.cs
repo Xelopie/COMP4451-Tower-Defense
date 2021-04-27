@@ -1,5 +1,8 @@
+using ActionGameFramework.Health;
 using Core.Data;
 using Core.Game;
+using System;
+using TowerDefense.Towers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +26,29 @@ namespace TowerDefense.Game
 		{
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
 			base.Awake();
+		}
+
+		public CharacterData GetCharacterData(CharacterData.Role role)
+		{
+			var data = m_DataStore.GetCharacterData(role);
+			if (data == null)
+			{
+				// Set character data using default data;
+				data = new CharacterData(role,
+					100f,
+					10f,
+					25f,
+					25f,
+					100);
+				m_DataStore.SetCharacterData(data);
+				SaveData();
+			}
+			return data;
+		}
+
+		public void SetCharacterData(CharacterData data)
+		{
+
 		}
 
 		/// <summary>

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: AlbinoNightmare
   agentDescription: 
-  agentPrefab: {fileID: 114982529450900332, guid: 25405672d6d49b44e88f11196877b4f7,
+  agentPrefab: {fileID: 7678312297211217420, guid: 25405672d6d49b44e88f11196877b4f7,
     type: 3}
