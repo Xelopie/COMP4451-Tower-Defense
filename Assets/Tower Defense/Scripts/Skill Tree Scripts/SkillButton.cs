@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class SkillButton : MonoBehaviour
 {
-	public Image skillImage;
-	public Text skillNameText;
-	public Text skillDesText;
-
-	public int skillButtonId; // Each Button has one unique Button id correspond with the same order as the Skill array
-	public int characterId;
-
 	// This method will be called when we press each skill
 	public void PressSkillButton()
 	{
@@ -34,5 +27,12 @@ public class SkillButton : MonoBehaviour
 			skillDesText.text = SkillManager.instance.characterStatus;
 		}
 	}
+
+	public Image skillImage;
+	public Text skillNameText;
+	public Text skillDesText;
+
+	public int skillButtonId; // Each Button has one unique Button id correspond with the same order as the Skill array
+	public int characterId;
 }
 
