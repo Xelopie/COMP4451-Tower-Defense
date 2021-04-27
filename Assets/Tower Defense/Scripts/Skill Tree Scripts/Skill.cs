@@ -4,7 +4,16 @@ using UnityEngine;
 
 // Skill Detail information
 public class Skill : MonoBehaviour
-{
+{    
+    public void UnlockSkill()
+    {
+        if (SkillManager.instance.characters[0].activateSkill)
+        {
+            if (!SkillManager.instance.characters[0].activateSkill.learnt)
+                SkillManager.instance.characters[0].activateSkill.learnt = true;
+        }
+    }
+
     public string skillName;
     public Sprite skillSprite;
 

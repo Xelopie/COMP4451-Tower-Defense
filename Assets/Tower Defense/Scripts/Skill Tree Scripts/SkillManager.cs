@@ -8,13 +8,19 @@ public class CharacterInfo
 {
 	public Sprite characterSprite;
 	public string characterName;
-	public Canvas infoPanel;
+	public Transform infoPanel;
 	[NonSerialized]
 	public Skill[] skills = new Skill[4]; // skills[0]
 	[NonSerialized]
 	public SkillButton[] skillButtons = new SkillButton[4]; // skillButtons[0]
 	[NonSerialized]
 	public Skill activateSkill;
+	[NonSerialized]
+	public int LV, EXPToLvUp;
+	[NonSerialized]
+	public int HP, ATK, DEF, RES, DPCost, ReDP;
+	[NonSerialized]
+	public float ATKSPD;
 }
 
 public class SkillManager : MonoBehaviour
@@ -39,6 +45,9 @@ public class SkillManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+		characters[0].LV = 1; characters[0].EXPToLvUp = 10; characters[0].HP = 500; characters[0].ATK = 100; characters[0].DEF = 50;
+		characters[0].RES = 10;	characters[0].ATKSPD = 1.2f; characters[0].DPCost = 20; characters[0].ReDP = 60;
 
 		foreach (var characterInfo in characters)
 		{
