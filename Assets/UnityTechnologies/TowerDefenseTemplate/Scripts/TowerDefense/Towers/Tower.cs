@@ -239,9 +239,9 @@ namespace TowerDefense.Towers
 			if (loadDataFromFile)
 			{
 				var data = GameManager.instance.GetCharacterData(role);
-				m_hpData = data.healthPoint;
-				configuration.defense = data.defense;
-				configuration.resistance = data.resistance;
+				m_hpData = data.HP;
+				configuration.defense = data.DEF;
+				configuration.resistance = data.RES;
 			}
 		}
 

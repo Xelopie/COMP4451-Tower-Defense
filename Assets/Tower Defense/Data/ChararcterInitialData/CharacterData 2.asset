@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 910bcb715cd3344619df786cb0658efb, type: 3}
-  m_Name: BlueTerrorBringerAgent
+  m_Script: {fileID: 11500000, guid: 3f6e7d9289266354b9a60bb5edf2ef41, type: 3}
+  m_Name: CharacterData 2
   m_EditorClassIdentifier: 
-  agentName: BlueTerrorBringer
-  agentDescription: 
-  agentPrefab: {fileID: 704119556095690491, guid: 90039ff04fe18f64384e9d4c5444a15a,
-    type: 3}
+  role: 1
+  LV: 1
+  HP: 100
+  ATK: 10
+  DEF: 25
+  RES: 25
+  EXP: 100

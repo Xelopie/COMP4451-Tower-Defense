@@ -45,7 +45,7 @@ namespace ActionGameFramework.Health
 		{
 			if (loadDataFromFile)
 			{
-				damage = GameManager.instance.GetCharacterData(role).attackDamage;
+				damage = GameManager.instance.GetCharacterData(role).ATK;
 			}
 		}
 

@@ -16,30 +16,44 @@ namespace TowerDefense.Game
 			Support,
 		}
 		public Role role;
-		public float healthPoint = 100;
-		public float attackDamage;
-		public float defense;
-		public float resistance;
-		public float experience;
+		public int LV;
+		public float HP;
+		public float ATK;
+		public float DEF;
+		public float RES;
+		public float EXP;
 
-		public CharacterData(Role role, float healthPoint, float attackDamage, float defense, float resistance, float experience)
+		public CharacterData(Role role, int LV, float HP, float ATK, float DEF, float RES, float EXP)
 		{
 			this.role = role;
-			this.healthPoint = healthPoint;
-			this.attackDamage = attackDamage;
-			this.defense = defense;
-			this.resistance = resistance;
-			this.experience = experience;
+			this.LV = LV;
+			this.HP = HP;
+			this.ATK = ATK;
+			this.DEF = DEF;
+			this.RES = RES;
+			this.EXP = EXP;
 		}
 
-		public void SetCharacterData(CharacterData characterData)
+		public CharacterData(CharacterInitialData data)
 		{
-			if (characterData.role != role) return;
-			this.healthPoint = characterData.healthPoint;
-			this.attackDamage = characterData.attackDamage;
-			this.defense = characterData.defense;
-			this.resistance = characterData.resistance;
-			this.experience = characterData.experience;
+			this.role = data.role;
+			this.LV = data.LV;
+			this.HP = data.HP;
+			this.ATK = data.ATK;
+			this.DEF = data.DEF;
+			this.RES = data.RES;
+			this.EXP = data.EXP;
+		}
+
+		public void SetCharacterData(CharacterData data)
+		{
+			if (data.role != role) return;
+			this.LV = data.LV;
+			this.HP = data.HP;
+			this.ATK = data.ATK;
+			this.DEF = data.DEF;
+			this.RES = data.RES;
+			this.EXP = data.EXP;
 		}
 	}
 }

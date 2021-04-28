@@ -19,6 +19,8 @@ namespace TowerDefense.Game
 		/// </summary>
 		public LevelList levelList;
 
+		public CharacterInitialData[] characterInitialData;
+
 		/// <summary>
 		/// Set sleep timeout to never sleep
 		/// </summary>
@@ -30,11 +32,20 @@ namespace TowerDefense.Game
 
 		public CharacterData GetCharacterData(CharacterData.Role role)
 		{
+			LoadData();
 			var data = m_DataStore.GetCharacterData(role);
 			if (data == null)
 			{
+				foreach (CharacterInitialData item in characterInitialData)
+				{
+					data = new CharacterData(item);
+					m_DataStore.SetCharacterData(data);
+					SaveData();
+					return data;
+				}
 				// Set character data using default data;
 				data = new CharacterData(role,
+					1,
 					100f,
 					10f,
 					25f,
@@ -48,7 +59,8 @@ namespace TowerDefense.Game
 
 		public void SetCharacterData(CharacterData data)
 		{
-
+			m_DataStore.SetCharacterData(data);
+			SaveData();
 		}
 
 		/// <summary>
