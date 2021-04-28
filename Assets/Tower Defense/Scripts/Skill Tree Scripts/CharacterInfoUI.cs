@@ -13,12 +13,11 @@ public class CharacterInfoUI : MonoBehaviour
 	public CharacterData.Role role;
 	public Sprite characterSprite;
 	public string characterName;
-	public Canvas infoPanel;
 	public Text skillNameText;
 	public Text skillDescriptionText;
 	public Image skillImage;
 
-	public Button[] skillButtons;
+	public SkillButton[] skillButtons;
 
 	protected Skill m_ActivateSkill = null;
 
@@ -47,7 +46,7 @@ public class CharacterInfoUI : MonoBehaviour
 	{
 		foreach (var skillButton in skillButtons)
 		{
-			
+			skillButton.CharacterInfoUI = this;
 		}	
 	}
 }

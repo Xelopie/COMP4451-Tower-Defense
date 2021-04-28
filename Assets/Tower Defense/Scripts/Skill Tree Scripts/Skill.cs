@@ -6,15 +6,6 @@ using UnityEngine;
 [Serializable]
 public class Skill
 {
-	public void UnlockSkill()
-	{
-		if (SkillManager.instance.characters[0].ActivateSkill != null)
-		{
-			if (!SkillManager.instance.characters[0].ActivateSkill.learnt)
-				SkillManager.instance.characters[0].ActivateSkill.learnt = true;
-		}
-	}
-
 	public string skillName;
 	public Sprite skillSprite;
 
