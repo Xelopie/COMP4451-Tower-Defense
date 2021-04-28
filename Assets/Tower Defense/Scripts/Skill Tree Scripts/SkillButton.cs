@@ -5,40 +5,35 @@ using TowerDefense.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class SkillButton : MonoBehaviour
 {
 	public Skill skill;
-	public CharacterData.Role role;
 
-	// This method will be called when we press each skill
-	public void PressSkillButton()
-	{
-		if (SkillManager.instance.GetCharacterInfo(role).ActivateSkill != skill)
-		{
-			SkillManager.instance.GetCharacterInfo(role).ActivateSkill = skill;
-		}
-		else
-		{
-			SkillManager.instance.GetCharacterInfo(role).ActivateSkill = null;
-		}
-	}
+	private CharacterInfoUI m_CharacterInfoUI;
+	private CharacterLevelUpUI m_CharacterLevelUpUI;
+
+	public CharacterLevelUpUI CharacterLevelUpUI { get => m_CharacterLevelUpUI; set => m_CharacterLevelUpUI = value; }
+	public CharacterInfoUI CharacterInfoUI { get => m_CharacterInfoUI; set => m_CharacterInfoUI = value; }
 
 	// This method will be called when we press each skill for info display
-	//public void InfoDisplay()
-	//{
-	//	if (CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill != skill)
-	//	{
-	//		CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill = skill;
-	//	}
-	//	else
-	//	{
-	//		CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill = null;
-	//	}
-	//}
+	public void SetActivateSkill()
+	{
+		if (m_CharacterInfoUI)
+		{
+			m_CharacterInfoUI.ActivateSkill = (m_CharacterInfoUI.ActivateSkill != skill) ? skill : null;
+		}
+
+		if (m_CharacterLevelUpUI)
+		{
+			m_CharacterLevelUpUI.ActivateSkill = (m_CharacterLevelUpUI.ActivateSkill != skill) ? skill : null;
+		}
+	}
 
 	private void Awake()
 	{
 		skill.skillSprite = GetComponent<Image>().sprite;
+		GetComponent<Button>().onClick.AddListener(SetActivateSkill);
 	}
 }
 

@@ -77,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50LV
+  m_Text: 10LV
 --- !u!1 &7084371817225446903
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +171,6 @@ MonoBehaviour:
     skillSprite: {fileID: 0}
     skillDes: Skill Description
     learnt: 0
-  role: 0
 --- !u!114 &7084371817225446905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,18 +213,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7084371817225446908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7084371817225446906}
-        m_MethodName: InfoDisplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7084371817341671006
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +394,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7084371817791103469}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -541,14 +529,17 @@ MonoBehaviour:
     DPCost
 
     ReDP'
-  characters:
-  - role: 0
-    characterSprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
-    characterName: Kohaku Otori
-    infoPanel: {fileID: 0}
-    skillNameText: {fileID: 7084371817850141087}
-    skillDescriptionText: {fileID: 7084371818832507036}
-    skillImage: {fileID: 7084371818753265645}
+  role: 0
+  characterSprite: {fileID: 21300000, guid: bdc4d706b42d1d6459bea2fc206450af, type: 3}
+  characterName: Kohaku Otori
+  skillNameText: {fileID: 7084371817850141087}
+  skillDescriptionText: {fileID: 7084371818832507036}
+  skillImage: {fileID: 7084371818753265645}
+  skillButtons:
+  - {fileID: 7084371817225446906}
+  - {fileID: 7084371818626705436}
+  - {fileID: 7084371818576087873}
+  - {fileID: 7084371818168584097}
 --- !u!1 &7084371817850141084
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +711,6 @@ MonoBehaviour:
     skillSprite: {fileID: 0}
     skillDes: Skill Description
     learnt: 0
-  role: 0
 --- !u!114 &7084371818168584096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,18 +753,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7084371818168584099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7084371818168584097}
-        m_MethodName: InfoDisplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7084371818196290547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,8 +1004,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: LoadScene
-        m_Mode: 1
+        m_MethodName: ShowLevelUpMenu
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1202,7 +1181,6 @@ MonoBehaviour:
     skillSprite: {fileID: 0}
     skillDes: Skill Description
     learnt: 0
-  role: 0
 --- !u!114 &7084371818576087872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,18 +1223,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7084371818576087875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7084371818576087873}
-        m_MethodName: InfoDisplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7084371818626705433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1317,6 @@ MonoBehaviour:
     skillSprite: {fileID: 0}
     skillDes: Skill Description
     learnt: 0
-  role: 0
 --- !u!114 &7084371818626705435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,18 +1359,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7084371818626705438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7084371818626705436}
-        m_MethodName: InfoDisplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7084371818753265642
 GameObject:
   m_ObjectHideFlags: 0
