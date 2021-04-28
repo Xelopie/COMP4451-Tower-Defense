@@ -1,4 +1,5 @@
 using Core.UI;
+using TowerDefense.Game;
 using UnityEngine;
 
 namespace TowerDefense.UI.HUD
@@ -23,11 +24,12 @@ namespace TowerDefense.UI.HUD
 		/// </summary>
 		public LevelSelectScreen levelSelectMenu;
 
-		public SimpleMainMenuPage infoMenu;
+		public SimpleMainMenuPage[] infoMenu;
+		public SimpleMainMenuPage[] levelUpMenu;
 
-		public void ShowInfoMenu()
+		public void ShowInfoMenu(int index)
 		{
-			ChangePage(infoMenu);
+			ChangePage(infoMenu[index]);
 		}
 
 		/// <summary>

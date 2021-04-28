@@ -1,38 +1,44 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefense.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillButton : MonoBehaviour
 {
+	public Skill skill;
+	public CharacterData.Role role;
+
 	// This method will be called when we press each skill
 	public void PressSkillButton()
 	{
-		Skill selectedSkill = transform.GetComponent<Skill>();
-
-		if (SkillManager.instance.characters[0].activateSkill != selectedSkill)
+		if (SkillManager.instance.GetCharacterInfo(role).ActivateSkill != skill)
 		{
-			SkillManager.instance.characters[0].activateSkill = selectedSkill;
-
-			skillImage.sprite = SkillManager.instance.characters[0].skills[skillButtonId].skillSprite;
-			skillNameText.text = SkillManager.instance.characters[0].skills[skillButtonId].skillName;
-			skillDesText.text = SkillManager.instance.characters[0].skills[skillButtonId].skillDes;
+			SkillManager.instance.GetCharacterInfo(role).ActivateSkill = skill;
 		}
 		else
 		{
-			SkillManager.instance.characters[0].activateSkill = null;
-
-			skillImage.sprite = SkillManager.instance.characters[0].characterSprite;
-			skillNameText.text = SkillManager.instance.characters[0].characterName;
-			skillDesText.text = SkillManager.instance.characterStatus;
+			SkillManager.instance.GetCharacterInfo(role).ActivateSkill = null;
 		}
 	}
 
-	public Image skillImage;
-	public Text skillNameText;
-	public Text skillDesText;
+	// This method will be called when we press each skill for info display
+	//public void InfoDisplay()
+	//{
+	//	if (CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill != skill)
+	//	{
+	//		CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill = skill;
+	//	}
+	//	else
+	//	{
+	//		CharacterInfoUI.instance.GetCharacterInfo(role).ActivateSkill = null;
+	//	}
+	//}
 
-	public int skillButtonId; // Each Button has one unique Button id correspond with the same order as the Skill array
-	public int characterId;
+	private void Awake()
+	{
+		skill.skillSprite = GetComponent<Image>().sprite;
+	}
 }
 

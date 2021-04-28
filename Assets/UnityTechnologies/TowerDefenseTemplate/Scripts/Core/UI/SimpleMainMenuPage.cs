@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Core.UI
 {
@@ -11,7 +11,15 @@ namespace Core.UI
 		/// Canvas to disable. If this object is set, then the canvas is disabled instead of the game object 
 		/// </summary>
 		public Canvas canvas;
-		
+
+		protected void Awake()
+		{
+			if (canvas == null)
+			{
+				canvas = GetComponent<Canvas>();
+			}
+		}
+
 		/// <summary>
 		/// Deactivates this page
 		/// </summary>

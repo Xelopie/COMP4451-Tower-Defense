@@ -3848,6 +3848,7 @@ Transform:
   - {fileID: 1229790323}
   - {fileID: 462936446}
   - {fileID: 1217885585}
+  - {fileID: 798016893}
   m_Father: {fileID: 1018309220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4728,6 +4729,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 794193387}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &798016892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 798016893}
+  - component: {fileID: 798016894}
+  m_Layer: 0
+  m_Name: TestSingleTerrorBringer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &798016893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798016892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 693399236}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &798016894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798016892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dbbe0a9162d4ea08b6fb9ee3a23ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInstructions:
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  timeToNextWave: 40
 --- !u!1001 &801736939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8436,7 +8486,7 @@ MonoBehaviour:
   - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
       type: 2}
     delayToSpawn: 1
-    startingNode: {fileID: 1134052312}
+    startingNode: {fileID: 632872063}
   - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
       type: 2}
     delayToSpawn: 1
@@ -8444,7 +8494,7 @@ MonoBehaviour:
   - agentConfiguration: {fileID: 11400000, guid: 122f1ab51cce9e7409c152b45327e771,
       type: 2}
     delayToSpawn: 1
-    startingNode: {fileID: 1134052312}
+    startingNode: {fileID: 632872063}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 1
@@ -8456,11 +8506,19 @@ MonoBehaviour:
   - agentConfiguration: {fileID: 11400000, guid: f93b9464593488d4090e1af0df756d95,
       type: 2}
     delayToSpawn: 1
-    startingNode: {fileID: 1134052312}
+    startingNode: {fileID: 632872063}
   - agentConfiguration: {fileID: 11400000, guid: d199eba0354cabe4eb56c5d8a020b786,
       type: 2}
     delayToSpawn: 1
     startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 632872063}
   timeToNextWave: 40
 --- !u!1001 &1527245110
 PrefabInstance:
