@@ -24,8 +24,14 @@ namespace TowerDefense.UI.HUD
 		/// </summary>
 		public LevelSelectScreen levelSelectMenu;
 
+		public SimpleMainMenuPage characterMenu;
 		public SimpleMainMenuPage[] infoMenu;
 		public SimpleMainMenuPage[] levelUpMenu;
+
+		public void ShowCharacterMenu()
+        {
+			ChangePage(characterMenu);
+        }
 
 		public void ShowInfoMenu(int index)
 		{
