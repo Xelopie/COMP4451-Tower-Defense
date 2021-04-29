@@ -11,12 +11,11 @@ public class CharacterLevelUpUI : MonoBehaviour
 	const int MAX_LEVEL = 10;
 
 	[Serializable]
-	public enum ButtonState
+	public enum PreviewState
 	{
 		Default,
 		PreviewNormal,
 		PreviewMax,
-		SkillView
 	}
 
 	[Header("Preview")]
@@ -33,7 +32,47 @@ public class CharacterLevelUpUI : MonoBehaviour
 	public Button levelUpButton;
 	public Button levelDownButton;
 
-	private ButtonState m_ButtonState;
+	[Header("Skill Tree")]
+	public Canvas skillPanel;
+	public Text skillNameText;
+	public Text skillDescriptionText;
+	public Button closeButton;
+	public Button unlockButton;
+	public SkillButton[] skillButtons;
+
+	protected Skill m_ActivateSkill = null;
+
+	public virtual Skill ActivateSkill
+	{
+		get { return m_ActivateSkill; }
+		set
+		{
+			m_ActivateSkill = value;
+			if (m_ActivateSkill != null)
+			{
+				skillNameText.text = m_ActivateSkill.skillName;
+				skillDescriptionText.text = m_ActivateSkill.skillDes;
+				skillPanel.enabled = true;
+
+				unlockButton.gameObject.SetActive(true);
+				if (ActivateSkill.learnt)
+				{
+					unlockButton.interactable = false;
+				}
+				else
+				{
+					unlockButton.interactable = true;
+				}
+			}
+			else
+			{
+				skillPanel.enabled = false;
+				unlockButton.gameObject.SetActive(false);
+			}
+		}
+	}
+
+	private PreviewState m_PreviewState;
 	private CharacterData m_Data;
 
 	public int previewHP
@@ -81,11 +120,15 @@ public class CharacterLevelUpUI : MonoBehaviour
 		}
 	}
 
-	public void SetButtonState(ButtonState newState)
+	/// <summary>
+	/// Control related buttons' behaviours
+	/// </summary>
+	/// <param name="newState"></param>
+	private void SetButtonState(PreviewState newState)
 	{
 		switch (newState)
 		{
-			case ButtonState.Default:
+			case PreviewState.Default:
 				ResetPreview();
 				previewCanvas.enabled = false;
 				currentStatsCanvas.enabled = true;
@@ -93,31 +136,25 @@ public class CharacterLevelUpUI : MonoBehaviour
 				confirmButton.interactable = false;
 				levelUpButton.interactable = m_Data.LV == MAX_LEVEL ? false : true;
 				break;
-			case ButtonState.PreviewNormal:
+			case PreviewState.PreviewNormal:
+				previewCanvas.enabled = true;
 				levelUpButton.interactable = true;
 				levelDownButton.interactable = true;
 				confirmButton.interactable = true;
 				break;
-			case ButtonState.PreviewMax:
+			case PreviewState.PreviewMax:
+				previewCanvas.enabled = true;
 				levelUpButton.interactable = false;
 				levelDownButton.interactable = true;
 				confirmButton.interactable = true;
 				break;
-			case ButtonState.SkillView:
-				ResetPreview();
-				previewCanvas.enabled = false;
-				currentStatsCanvas.enabled = false;
-				levelUpButton.interactable = false;
-				levelDownButton.interactable = false;
-				confirmButton.interactable = false;
-				break;
 			default:
 				break;
 		}
-		m_ButtonState = newState;
+		m_PreviewState = newState;
 	}
 
-	public void LevelUpPreview()
+	private void LevelUpPreview()
 	{
 		if (previewLV >= MAX_LEVEL) return;
 		previewLV += 1;
@@ -128,16 +165,16 @@ public class CharacterLevelUpUI : MonoBehaviour
 
 		if (previewLV == MAX_LEVEL)
 		{
-			SetButtonState(ButtonState.PreviewMax);
+			SetButtonState(PreviewState.PreviewMax);
 		}
 		else
 		{
-			SetButtonState(ButtonState.PreviewNormal);
+			SetButtonState(PreviewState.PreviewNormal);
 		}
 		
 	}
 
-	public void LevelDownPreview()
+	private void LevelDownPreview()
 	{
 		if (previewLV <= m_Data.LV) return;
 		previewHP -= previewLV * 2;
@@ -148,15 +185,32 @@ public class CharacterLevelUpUI : MonoBehaviour
 
 		if (previewLV == m_Data.LV)
 		{
-			SetButtonState(ButtonState.Default);
+			SetButtonState(PreviewState.Default);
 		}
 		else
 		{
-			SetButtonState(ButtonState.PreviewNormal);
+			SetButtonState(PreviewState.PreviewNormal);
 		}
 	}
 
-	public void ResetPreview()
+	/// <summary>
+	/// Reload the data from file, update it to text fields
+	/// </summary>
+	private void ReloadCharacterData()
+	{
+		m_Data = GameManager.instance.GetCharacterData(role);
+
+		LVText.text = m_Data.LV.ToString();
+		HPText.text = m_Data.HP.ToString();
+		ATKText.text = m_Data.ATK.ToString();
+		DEFText.text = m_Data.DEF.ToString();
+		RESText.text = m_Data.RES.ToString();
+	}
+
+	/// <summary>
+	/// Update preview level text fields
+	/// </summary>
+	private void ResetPreview()
 	{
 		previewLV = m_Data.LV;
 		previewHP = (int)m_Data.HP;
@@ -165,58 +219,57 @@ public class CharacterLevelUpUI : MonoBehaviour
 		previewRES = (int)m_Data.RES;
 	}
 
-	public void ShowPreviewCanvas()
-	{
-		previewCanvas.enabled = true;
-	}
-
-	public void HidePreviewCanvas()
-	{
-		previewCanvas.enabled = false;
-	}
-
-	// The following functions are called after entering lv up UI scene
-	public void ConfirmLevelUp()
+	/// <summary>
+	/// Called by "Confirm Button" when leveling up
+	/// </summary>
+	private void ConfirmLevelUp()
 	{
 		var data = new CharacterData(role, previewLV, previewHP, previewATK, previewDEF, previewRES, 1);
 		GameManager.instance.SetCharacterData(data);
-		m_Data = GameManager.instance.GetCharacterData(role);
 
-		LVText.text = m_Data.LV.ToString();
-		HPText.text = m_Data.HP.ToString();
-		ATKText.text = m_Data.ATK.ToString();
-		DEFText.text = m_Data.DEF.ToString();
-		RESText.text = m_Data.RES.ToString();
-
-		SetButtonState(ButtonState.Default);
+		ReloadCharacterData();
+		SetButtonState(PreviewState.Default);
 	}
 
-	private void ChangeToSkillView()
+	/// <summary>
+	/// Called by "Close button" when displaying skill panel
+	/// </summary>
+	private void ResetActivateSkill()
 	{
-		SetButtonState(ButtonState.SkillView);
+		ActivateSkill = null;
+	}
+
+	private void UnlockSkill()
+	{
+		if (ActivateSkill != null)
+		{
+			ActivateSkill.learnt = true;
+		}
 	}
 
 	private void Start()
 	{
-		m_Data = GameManager.instance.GetCharacterData(role);
-
-		SetButtonState(ButtonState.Default);
-
-		LVText.text = m_Data.LV.ToString();
-		HPText.text = m_Data.HP.ToString();
-		ATKText.text = m_Data.ATK.ToString();
-		DEFText.text = m_Data.DEF.ToString();
-		RESText.text = m_Data.RES.ToString();
-
-		previewLV = m_Data.LV;
-		previewHP = (int)m_Data.HP;
-		previewATK = (int)m_Data.ATK;
-		previewDEF = (int)m_Data.DEF;
-		previewRES = (int)m_Data.RES;
-
-		levelUpButton.onClick.AddListener(ShowPreviewCanvas);
+		ReloadCharacterData();
+		
 		levelUpButton.onClick.AddListener(LevelUpPreview);
 		levelDownButton.onClick.AddListener(LevelDownPreview);
 		confirmButton.onClick.AddListener(ConfirmLevelUp);
+		closeButton.onClick.AddListener(ResetActivateSkill);
+		unlockButton.onClick.AddListener(UnlockSkill);
+
+		Reset();
+
+		foreach (var item in skillButtons)
+		{
+			item.CharacterLevelUpUI = this;
+		}
+	}
+
+	public void Reset()
+	{
+		SetButtonState(PreviewState.Default);
+		ResetPreview();
+		ResetActivateSkill();
+		skillPanel.enabled = false;
 	}
 }

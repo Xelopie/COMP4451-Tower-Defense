@@ -32,6 +32,11 @@ namespace TowerDefense.UI.HUD
         {
 			ChangePage(characterMenu);
         }
+		
+		public void ShowLevelUpMenu(int index)
+		{
+			ChangePage(levelUpMenu[index]);
+		}
 
 		public void ShowInfoMenu(int index)
 		{
