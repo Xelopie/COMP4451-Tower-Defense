@@ -27,12 +27,14 @@ namespace TowerDefense.UI.HUD
 		public SimpleMainMenuPage characterMenu;
 		public SimpleMainMenuPage[] infoMenu;
 		public SimpleMainMenuPage[] levelUpMenu;
+		public GameObject characterModel;
 
 		public void ShowCharacterMenu()
         {
 			ChangePage(characterMenu);
-        }
-		
+			characterModel.SetActive(false);
+		}
+
 		public void ShowLevelUpMenu(int index)
 		{
 			ChangePage(levelUpMenu[index]);
@@ -49,22 +51,25 @@ namespace TowerDefense.UI.HUD
 		public void ShowOptionsMenu()
 		{
 			ChangePage(optionsMenu);
+			characterModel.SetActive(false);
 		}
-		
+
 		/// <summary>
 		/// Bring up the options menu
 		/// </summary>
 		public void ShowLevelSelectMenu()
 		{
 			ChangePage(levelSelectMenu);
+			characterModel.SetActive(false);
 		}
-		
+
 		/// <summary>
 		/// Returns to the title screen
 		/// </summary>
 		public void ShowTitleScreen()
 		{
 			Back(titleMenu);
+			characterModel.SetActive(true);
 		}
 
 		/// <summary>
