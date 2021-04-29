@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3504d76a9eb9e0b4a834dc0fd0cac583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 297079e2500d68041873f5c3b5f3fe00, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
   - {fileID: 114109544468132408}
   - {fileID: 114747987344405596}
   - {fileID: 114606837930296906}
-  achievedStarSprite: {fileID: 21300000, guid: 3504d76a9eb9e0b4a834dc0fd0cac583, type: 3}
+  achievedStarSprite: {fileID: 21300000, guid: 82e6cc727d5640543bb8f9fd28a24ebe, type: 3}
 --- !u!114 &114320275863288724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: kxbkscubsckb
 --- !u!1 &1535006603250148
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3504d76a9eb9e0b4a834dc0fd0cac583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 297079e2500d68041873f5c3b5f3fe00, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -909,7 +909,7 @@ MonoBehaviour:
   endGameCanvas: {fileID: 223019906111977400}
   endGameMessageText: {fileID: 114444767888515022}
   scorePanel: {fileID: 114753625047177706}
-  menuSceneName: TitlePage
+  menuSceneName: MainMenu
   levelCompleteText: '{0} COMPLETE!'
   levelFailedText: '{0} FAILED!'
   background: {fileID: 114977527437981662}
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3504d76a9eb9e0b4a834dc0fd0cac583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 297079e2500d68041873f5c3b5f3fe00, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
