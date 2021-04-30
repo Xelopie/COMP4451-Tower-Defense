@@ -17,6 +17,7 @@ MonoBehaviour:
     LV: 1
     HP: 100
     ATK: 10
-    DEF: 25
-    RES: 25
-    EXP: 1
+    DEF: 0
+    RES: 0
+    EXP: 50
+    skills: 00000000
