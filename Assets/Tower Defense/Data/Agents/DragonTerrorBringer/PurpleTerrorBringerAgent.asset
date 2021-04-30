@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: PurpleTerrorBringer
   agentDescription: 
-  agentPrefab: {fileID: 114786861591068548, guid: 1cd12b442096fb44a9cb1156e5b50477,
+  agentPrefab: {fileID: 4399998655742099326, guid: 7f1daaf5d98a9434fa973f94149dc5e1,
     type: 3}

@@ -3888,7 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWavesOnAwake: 0
   waves:
-  - {fileID: 1472584866}
+  - {fileID: 798016894}
   - {fileID: 1229790325}
 --- !u!1001 &697692524
 PrefabInstance:
@@ -4740,7 +4740,7 @@ GameObject:
   - component: {fileID: 798016893}
   - component: {fileID: 798016894}
   m_Layer: 0
-  m_Name: TestSingleTerrorBringer
+  m_Name: TestTerrorBringer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4773,6 +4773,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
   - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 1
@@ -8515,10 +8527,18 @@ MonoBehaviour:
       type: 2}
     delayToSpawn: 1
     startingNode: {fileID: 632872063}
-  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+  - agentConfiguration: {fileID: 11400000, guid: 94028419bd879d64d8ad9ccdd476d13d,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
+  - agentConfiguration: {fileID: 11400000, guid: 3f7c57d65ac4a4d43922f1471335fee6,
       type: 2}
     delayToSpawn: 1
     startingNode: {fileID: 632872063}
+  - agentConfiguration: {fileID: 11400000, guid: 6e90fa01e7f41db47b4e3cf45b1721cd,
+      type: 2}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
   timeToNextWave: 40
 --- !u!1001 &1527245110
 PrefabInstance:

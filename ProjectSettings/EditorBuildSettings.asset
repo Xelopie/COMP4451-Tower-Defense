@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Tower Defense/Scenes/TitlePage.unity
     guid: 2af77cb6f60d25a4cb0ce1bad2e4adf8
   - enabled: 1
-    path: Assets/Tower Defense/Scenes/CharacterLvUp.unity
-    guid: 8b1028ccec490704b8a93292b16bb034
-  - enabled: 1
     path: Assets/Tower Defense/Scenes/Stage1.unity
     guid: fad02fe6eb18e6045826ed02a60a3d86
   - enabled: 1

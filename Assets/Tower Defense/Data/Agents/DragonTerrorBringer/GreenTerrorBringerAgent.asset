@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GreenTerrorBringer
   agentDescription: 
-  agentPrefab: {fileID: 114786861591068548, guid: 3876d8504a86a3a4289599eb99f4d39a,
+  agentPrefab: {fileID: 4399998655742099326, guid: 28f6843ac85fabe4cb2db0f901a30668,
     type: 3}

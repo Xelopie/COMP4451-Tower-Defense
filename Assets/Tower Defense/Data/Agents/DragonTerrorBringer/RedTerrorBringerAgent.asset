@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: RedTerrorBringer
   agentDescription: 
-  agentPrefab: {fileID: 114786861591068548, guid: e3032c09dd9f7bd469c1511b6104cf86,
+  agentPrefab: {fileID: 4399998655742099326, guid: c62c2da793a8ce142a2305ca5f089bb4,
     type: 3}
