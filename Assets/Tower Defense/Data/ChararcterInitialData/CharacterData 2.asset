@@ -19,4 +19,5 @@ MonoBehaviour:
     ATK: 10
     DEF: 25
     RES: 25
-    EXP: 1
+    EXP: 100
+    skills: 00000000

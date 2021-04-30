@@ -17,6 +17,7 @@ namespace TowerDefense.Game
 		}
 		public Role role;
 		public int LV;
+		public int SP;
 		public float HP;
 		public float ATK;
 		public float DEF;
@@ -24,7 +25,7 @@ namespace TowerDefense.Game
 		public float EXP;
 		public bool[] skills;
 
-		public CharacterData(Role role, int LV, float HP, float ATK, float DEF, float RES, float EXP, bool[] skills = null)
+		public CharacterData(Role role, int LV, float HP, float ATK, float DEF, float RES, float EXP, bool[] skills = null, int SP = 0)
 		{
 			this.role = role;
 			this.LV = LV;
@@ -33,6 +34,7 @@ namespace TowerDefense.Game
 			this.DEF = DEF;
 			this.RES = RES;
 			this.EXP = EXP;
+			this.SP = SP;
 
 			this.skills = new bool[4];
 			if (skills != null && skills.Length == 4)
@@ -53,6 +55,7 @@ namespace TowerDefense.Game
 			this.DEF = data.DEF;
 			this.RES = data.RES;
 			this.EXP = data.EXP;
+			this.SP = data.SP;
 
 			// Deep copy
 			this.skills = new bool[4];
@@ -71,6 +74,7 @@ namespace TowerDefense.Game
 			this.DEF = data.DEF;
 			this.RES = data.RES;
 			this.EXP = data.EXP;
+			this.SP = data.SP;
 
 			this.skills = new bool[4];
 			for (int i = 0; i < skills.Length; i++)
