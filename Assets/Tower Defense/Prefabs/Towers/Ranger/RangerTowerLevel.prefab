@@ -28650,8 +28650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerGhostPrefab: {fileID: 5898309984369688620, guid: f52d32afe85949046a37f3f4a05a5d63,
     type: 3}
-  buildEffectPrefab: {fileID: 1395313577031670, guid: c559c1920b5d04e6d83aa4464fba5c68,
-    type: 3}
+  buildEffectPrefab: {fileID: 100014, guid: 3aa143f52a2c20e45bf4bc03a7e127fd, type: 3}
   levelData: {fileID: 11400000, guid: 1f21f7fd14c2d9244aa5faa5b589b23b, type: 2}
 --- !u!1001 &3595040674429618568
 PrefabInstance:
