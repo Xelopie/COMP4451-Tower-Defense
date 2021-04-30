@@ -50,7 +50,7 @@ MonoBehaviour:
   levelList: {fileID: 11400000, guid: bd74d68ece99a42fe8d32a39ff8e7949, type: 2}
   characterInitialData:
   - {fileID: 11400000, guid: da880caf595fc6f42906e233ccb2c719, type: 2}
-  - {fileID: 11400000, guid: 2017213839c651247a7dba65787bc20f, type: 2}
-  - {fileID: 11400000, guid: 890467cc8945b374d8a61a7b7ef6fe87, type: 2}
-  - {fileID: 11400000, guid: b9f422085a7429f4486e7058ad64cf70, type: 2}
-  - {fileID: 11400000, guid: b5a4c9c9441c79e4ab03065fc9255757, type: 2}
+  - {fileID: 11400000, guid: 3302da61bafcb134a8b7baa70bda0dd1, type: 2}
+  - {fileID: 11400000, guid: c82ec5c85a55ac04296ba016fbdc624e, type: 2}
+  - {fileID: 11400000, guid: be8f337d4a1b7b14092bd90dea22b96d, type: 2}
+  - {fileID: 11400000, guid: 81cf8a9f2ac8d144296a5fdcce78e1be, type: 2}
