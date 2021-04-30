@@ -205,6 +205,11 @@ public class CharacterLevelUpUI : MonoBehaviour
 		ATKText.text = m_Data.ATK.ToString();
 		DEFText.text = m_Data.DEF.ToString();
 		RESText.text = m_Data.RES.ToString();
+
+		for (int i = 0; i < 4; i++)
+		{
+			skillButtons[i].skill.learnt = m_Data.skills[i];
+		}
 	}
 
 	/// <summary>
@@ -224,7 +229,12 @@ public class CharacterLevelUpUI : MonoBehaviour
 	/// </summary>
 	private void ConfirmLevelUp()
 	{
-		var data = new CharacterData(role, previewLV, previewHP, previewATK, previewDEF, previewRES, 1);
+		bool[] skills = new bool[4];
+		for (int i = 0; i < skills.Length; i++)
+		{
+			skills[i] = skillButtons[i].skill.learnt;
+		}
+		var data = new CharacterData(role, previewLV, previewHP, previewATK, previewDEF, previewRES, 1, skills);
 		GameManager.instance.SetCharacterData(data);
 
 		ReloadCharacterData();
@@ -244,6 +254,17 @@ public class CharacterLevelUpUI : MonoBehaviour
 		if (ActivateSkill != null)
 		{
 			ActivateSkill.learnt = true;
+
+			bool[] skills = new bool[4];
+			for (int i = 0; i < skills.Length; i++)
+			{
+				skills[i] = skillButtons[i].skill.learnt;
+			}
+
+			var data = new CharacterData(role, m_Data.LV, m_Data.HP, m_Data.ATK, m_Data.DEF, m_Data.RES, m_Data.EXP, skills);
+
+			GameManager.instance.SetCharacterData(data);
+			ReloadCharacterData();
 		}
 	}
 
