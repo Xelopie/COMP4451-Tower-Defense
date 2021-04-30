@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6e7d9289266354b9a60bb5edf2ef41, type: 3}
   m_Name: CharacterData 5
   m_EditorClassIdentifier: 
-  role: 4
-  LV: 1
-  HP: 100
-  ATK: 10
-  DEF: 25
-  RES: 25
-  EXP: 100
+  data:
+    role: 4
+    LV: 1
+    HP: 100
+    ATK: 10
+    DEF: 25
+    RES: 25
+    EXP: 1

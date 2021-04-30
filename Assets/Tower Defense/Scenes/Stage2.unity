@@ -1506,6 +1506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &243648488
@@ -1676,6 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &247033186
@@ -1860,6 +1862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &271594949
@@ -3206,7 +3209,6 @@ GameObject:
   - component: {fileID: 351561156}
   - component: {fileID: 351561159}
   - component: {fileID: 351561158}
-  - component: {fileID: 351561157}
   m_Layer: 0
   m_Name: Stage2WaveManager
   m_TagString: Untagged
@@ -3232,19 +3234,6 @@ Transform:
   m_Father: {fileID: 1681660084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &351561157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351561155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e63bc83a198441a486e431e5e3ce61a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 1
 --- !u!114 &351561158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3257,8 +3246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2606dbebfdb6b46c589727f8cd7021ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intro: {fileID: 351561157}
-  towerLibrary: {fileID: 11400000, guid: f9a88c696ebce45318e1ae33adc9cfbc, type: 2}
+  intro: {fileID: 0}
+  towerLibrary: {fileID: 11400000, guid: 00845f86418bc2b4f9d43a2ce90709ad, type: 2}
   startingCurrency: 10
   currencyGainer:
     constantCurrencyAddition: 1
@@ -3714,6 +3703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &443892253
@@ -4504,6 +4494,8 @@ MonoBehaviour:
   configuration:
     maxHealth: 9999
     startingHealth: 9999
+    defense: 0
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
         type: 2}
@@ -4550,6 +4542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &570324547
@@ -5047,6 +5040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &635774123
@@ -7737,6 +7731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &920697127
@@ -8486,6 +8481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1 &1064865564
@@ -8905,6 +8901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &1098834581
@@ -9302,6 +9299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &1163077657
@@ -14101,6 +14099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &1725191076
@@ -14633,6 +14632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &1804591572
@@ -15653,6 +15653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!114 &1897564744
@@ -15670,6 +15671,8 @@ MonoBehaviour:
   configuration:
     maxHealth: 9999
     startingHealth: 9999
+    defense: 0
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 2e20cdb38c63f4edf8ee385c50c089ce,
         type: 2}
@@ -15952,6 +15955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &1966648686
@@ -16497,6 +16501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfcc2c7442e48d7892db93d6807a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  compareTransform: 0
   areaMesh: {fileID: 0}
   weight: 1
 --- !u!1001 &2035856385

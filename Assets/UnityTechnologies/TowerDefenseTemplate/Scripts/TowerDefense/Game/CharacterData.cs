@@ -34,7 +34,7 @@ namespace TowerDefense.Game
 			this.EXP = EXP;
 		}
 
-		public CharacterData(CharacterInitialData data)
+		public CharacterData(CharacterData data)
 		{
 			this.role = data.role;
 			this.LV = data.LV;

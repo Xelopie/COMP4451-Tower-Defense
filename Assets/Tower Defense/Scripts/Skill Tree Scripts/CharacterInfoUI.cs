@@ -7,19 +7,21 @@ using TowerDefense.Game;
 
 public class CharacterInfoUI : MonoBehaviour
 {
-	[TextArea(3, 10)]
-	public string characterStatus;
-
+	[Header("Character")]
 	public CharacterData.Role role;
-	public Sprite characterSprite;
 	public string characterName;
+	public Canvas statsPanel;
+	public Text HPText, ATKText, DEFText, RESText, LVText;
+	public Button refreshButton;
+
+	[Header("Skills")]
 	public Text skillNameText;
 	public Text skillDescriptionText;
-	public Image skillImage;
-
 	public SkillButton[] skillButtons;
 
 	protected Skill m_ActivateSkill = null;
+	protected CharacterData m_Data;
+	protected string m_CharacterStatus;
 
 	public Skill ActivateSkill
 	{
@@ -31,15 +33,28 @@ public class CharacterInfoUI : MonoBehaviour
 			{
 				skillNameText.text = m_ActivateSkill.skillName;
 				skillDescriptionText.text = m_ActivateSkill.skillDes;
-				skillImage.sprite = m_ActivateSkill.skillSprite;
+				statsPanel.enabled = false;
 			}
 			else
 			{
 				skillNameText.text = characterName;
-				skillDescriptionText.text = characterStatus;
-				skillImage.sprite = characterSprite;
+				skillDescriptionText.text = m_CharacterStatus;
+				statsPanel.enabled = true;
 			}
 		}
+	}
+
+	public void Refresh()
+	{
+		m_Data = GameManager.instance.GetCharacterData(role);
+
+		LVText.text = m_Data.LV.ToString();
+		HPText.text = m_Data.HP.ToString();
+		ATKText.text = m_Data.ATK.ToString();
+		DEFText.text = m_Data.DEF.ToString();
+		RESText.text = m_Data.RES.ToString();
+
+		ActivateSkill = null;
 	}
 
 	protected void Awake()
@@ -47,6 +62,8 @@ public class CharacterInfoUI : MonoBehaviour
 		foreach (var skillButton in skillButtons)
 		{
 			skillButton.CharacterInfoUI = this;
-		}	
+		}
+		refreshButton.onClick.AddListener(Refresh);
+		m_CharacterStatus = skillDescriptionText.text;
 	}
 }

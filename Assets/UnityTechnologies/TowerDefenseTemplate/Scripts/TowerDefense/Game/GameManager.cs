@@ -38,19 +38,12 @@ namespace TowerDefense.Game
 			{
 				foreach (CharacterInitialData item in characterInitialData)
 				{
-					data = new CharacterData(item);
-					m_DataStore.SetCharacterData(data);
-					SaveData();
-					return data;
+					if (item.data.role == role)
+					{
+						data = new CharacterData(item.data);
+						break;
+					}
 				}
-				// Set character data using default data;
-				data = new CharacterData(role,
-					1,
-					100f,
-					10f,
-					25f,
-					25f,
-					100);
 				m_DataStore.SetCharacterData(data);
 				SaveData();
 			}
