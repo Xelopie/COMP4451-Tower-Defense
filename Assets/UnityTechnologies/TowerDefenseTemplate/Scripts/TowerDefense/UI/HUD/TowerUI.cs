@@ -42,7 +42,7 @@ namespace TowerDefense.UI.HUD
 
 		public GameObject[] confirmationButtons;
 
-		public Image[] skillImages;
+		public SkillButton[] skillButtons;
 
 		/// <summary>
 		/// The main game camera

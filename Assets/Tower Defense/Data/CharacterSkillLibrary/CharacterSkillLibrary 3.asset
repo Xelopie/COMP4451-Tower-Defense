@@ -18,3 +18,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 05e2d6af00483bc42a42f768f4505213, type: 3}
   - {fileID: 21300000, guid: 7f44e5d4df72d7448af30e9e916a1009, type: 3}
   - {fileID: 21300000, guid: b9c61c6896eff5b43ae44d047f49b31d, type: 3}
+  skills:
+  - skillName: Healing Ray
+    skillSprite: {fileID: 21300000, guid: 4cff4ef634be5d64e9dda2bee5118ed1, type: 3}
+    skillDes: (Active Skill)
+    learnt: 0
+  - skillName: Healing Wave
+    skillSprite: {fileID: 21300000, guid: 05e2d6af00483bc42a42f768f4505213, type: 3}
+    skillDes: (Active Skill)
+    learnt: 0
+  - skillName: Heart of Healer
+    skillSprite: {fileID: 21300000, guid: b9c61c6896eff5b43ae44d047f49b31d, type: 3}
+    skillDes: (Passive Skill)
+    learnt: 0
+  - skillName: Essence of Healer
+    skillSprite: {fileID: 21300000, guid: 29ee0544a9e494645b9cc843ef664252, type: 3}
+    skillDes: (Passive Skill)
+    learnt: 0

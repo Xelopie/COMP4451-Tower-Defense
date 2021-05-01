@@ -4438,6 +4438,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 103852428582926133, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 352882966506452481, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4551,6 +4556,26 @@ PrefabInstance:
     - target: {fileID: 2739061572868523960, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756478905613906691, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756478905613906691, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804430975161670453, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: True Power Within
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377652812636718904, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6233,6 +6258,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468688801}
     m_Modifications:
+    - target: {fileID: 7084371817791103249, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7084371817791103469, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
       propertyPath: m_Name
@@ -6347,11 +6377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084371817850141085, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7084371817850141087, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
@@ -11195,6 +11220,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468688801}
     m_Modifications:
+    - target: {fileID: 7084371817791103249, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7084371817791103469, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
       propertyPath: m_Name

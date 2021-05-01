@@ -1382,20 +1382,9 @@ MonoBehaviour:
   panelRectTransform: {fileID: 224032478147228008}
   confirmationButtons:
   - {fileID: 1618134585188398}
-  skillImages:
-  - {fileID: 5351274582060110059}
-  - {fileID: 2020706591858316071}
-  skillSprites:
-  - {fileID: 21300000, guid: b9c61c6896eff5b43ae44d047f49b31d, type: 3}
-  - {fileID: 21300000, guid: 05e2d6af00483bc42a42f768f4505213, type: 3}
-  - {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
-  - {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
-  - {fileID: 21300000, guid: 4ec98da35265dc54f8f4a4d5609f90c1, type: 3}
-  - {fileID: 21300000, guid: 88c47ee50e9dfe240b499f761f7eda42, type: 3}
-  - {fileID: 21300000, guid: 9f922002032136c4687b8dced9bc624c, type: 3}
-  - {fileID: 21300000, guid: 3e79c5a2eb174e046a22b7ae22e3200b, type: 3}
-  - {fileID: 21300000, guid: 954cdace6e17b3d4890cbbbfe98ef2fe, type: 3}
-  - {fileID: 21300000, guid: f85ea78a8f8f76546a8d8affdc6d19aa, type: 3}
+  skillButtons:
+  - {fileID: 7038634901624505465}
+  - {fileID: 918594539681872724}
 --- !u!114 &114190039087685638
 MonoBehaviour:
   m_ObjectHideFlags: 0

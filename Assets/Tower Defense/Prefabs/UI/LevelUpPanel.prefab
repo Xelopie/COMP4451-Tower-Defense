@@ -1077,11 +1077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 2
-    skillSprite: {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
-    skillDes: Skill 2 Description
-    learnt: 0
   skillButton: {fileID: 7493875426511298174}
 --- !u!114 &8261021768315546335
 MonoBehaviour:
@@ -1748,11 +1743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 3
-    skillSprite: {fileID: 21300000, guid: 5e93a13d0aab81048b25143ba568ef1b, type: 3}
-    skillDes: Skill 3 Description
-    learnt: 0
   skillButton: {fileID: 0}
 --- !u!114 &7074124508966339610
 MonoBehaviour:
@@ -2841,8 +2831,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 231}
-  m_SizeDelta: {x: 500, y: 50}
+  m_AnchoredPosition: {x: 33, y: 234}
+  m_SizeDelta: {x: 385, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6825413819156574110
 CanvasRenderer:
@@ -2873,8 +2863,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b18d62a784517d24c9986b30ee589aae, type: 3}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_FontSize: 30
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 128
@@ -2976,11 +2966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 1
-    skillSprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
-    skillDes: Skill 1 Description
-    learnt: 0
   skillButton: {fileID: 0}
 --- !u!114 &1088514055120101239
 MonoBehaviour:
@@ -3770,11 +3755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 4
-    skillSprite: {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
-    skillDes: Skill 4 Description
-    learnt: 0
   skillButton: {fileID: 1044212253560507869}
 --- !u!114 &8573922891293115956
 MonoBehaviour:
@@ -3959,7 +3939,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b18d62a784517d24c9986b30ee589aae, type: 3}
-    m_FontSize: 40
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3

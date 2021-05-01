@@ -7,5 +7,5 @@ using UnityEngine;
 public class CharacterSkillLibrary : ScriptableObject
 {
 	public CharacterData.Role role;
-	public Sprite[] skillSprites;
+	public Skill[] skills;
 }

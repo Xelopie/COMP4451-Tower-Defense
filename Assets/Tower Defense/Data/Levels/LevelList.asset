@@ -21,3 +21,7 @@ MonoBehaviour:
     name: Stage 2
     description: Prepare yourself
     sceneName: Stage2
+  - id: 3
+    name: Stage 3
+    description: Try two ways
+    sceneName: Stage3

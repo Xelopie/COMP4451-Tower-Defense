@@ -5,11 +5,10 @@ using TowerDefense.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(Button)), RequireComponent(typeof(Image))]
 public class SkillButton : MonoBehaviour
 {
 	public Skill skill;
-
 	[Header("Used in skill tree, set the prerequisite skill")]
 	public SkillButton skillButton;
 
@@ -18,6 +17,7 @@ public class SkillButton : MonoBehaviour
 
 	public CharacterLevelUpUI CharacterLevelUpUI { get => m_CharacterLevelUpUI; set => m_CharacterLevelUpUI = value; }
 	public CharacterInfoUI CharacterInfoUI { get => m_CharacterInfoUI; set => m_CharacterInfoUI = value; }
+
 
 	// This method will be called when we press each skill for info display
 	public void SetActivateSkill()
@@ -35,9 +35,7 @@ public class SkillButton : MonoBehaviour
 
 	private void Awake()
 	{
-		skill.skillSprite = GetComponent<Image>().sprite;
 		skill.Prerequisite = skillButton?.skill;
-
 		GetComponent<Button>().onClick.AddListener(SetActivateSkill);
 	}
 }
