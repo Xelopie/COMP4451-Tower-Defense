@@ -1,4 +1,4 @@
-﻿using TowerDefense.Level;
+using TowerDefense.Level;
 using TowerDefense.Towers;
 using UnityEngine;
 using UnityEngine.UI;
@@ -212,6 +212,33 @@ namespace TowerDefense.UI.HUD
 			Vector3 point = m_GameCamera.WorldToScreenPoint(m_Tower.position);
 			point.z = 0;
 			panelRectTransform.transform.position = point;
+
+			Vector3[] panelCorners = new Vector3[4];
+			Vector3[] screenCorners = new Vector3[4];
+
+			panelRectTransform.GetWorldCorners(panelCorners);
+			GetComponent<RectTransform>().GetWorldCorners(screenCorners);
+
+			if (screenCorners[0].x > panelCorners[0].x)
+			{
+				point.x += screenCorners[0].x - panelCorners[0].x;
+				panelRectTransform.transform.position = point;
+			}
+			if (screenCorners[0].y > panelCorners[0].y)
+			{
+				point.y += screenCorners[0].y - panelCorners[0].y;
+				panelRectTransform.transform.position = point;
+			}
+			if (screenCorners[2].x < panelCorners[2].x)
+			{
+				point.x -= panelCorners[2].x - screenCorners[2].x;
+				panelRectTransform.transform.position = point;
+			}
+			if (screenCorners[2].y < panelCorners[2].y)
+			{
+				point.y -= panelCorners[2].y - screenCorners[2].y;
+				panelRectTransform.transform.position = point;
+			}
 		}
 
 		/// <summary>
