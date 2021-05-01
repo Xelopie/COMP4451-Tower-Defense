@@ -447,27 +447,63 @@ namespace TowerDefense.UI.HUD
 			}
 
 			var selectedTower = GameUI.instance.currentSelectedTower;
+			var instance = TowerDefense.Game.GameManager.instance;
 			switch (selectedTower.role)
 			{
 				case Game.CharacterData.Role.Healer:
 					towerUI.skillImages[0].sprite = towerUI.skillSprites[0];
 					towerUI.skillImages[1].sprite = towerUI.skillSprites[1];
+					for (int i = 0; i < 2; i++)
+					{
+						if (instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[i])
+							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
+						else
+							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
+					}
 					break;
 				case Game.CharacterData.Role.Knight:
 					towerUI.skillImages[0].sprite = towerUI.skillSprites[2];
 					towerUI.skillImages[1].sprite = towerUI.skillSprites[3];
-					break;
+					for (int i = 0; i < 2; i++)
+					{
+						if (instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[i])
+							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
+						else
+							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
+					}
+						break;
 				case Game.CharacterData.Role.Mage:
 					towerUI.skillImages[0].sprite = towerUI.skillSprites[4];
 					towerUI.skillImages[1].sprite = towerUI.skillSprites[5];
+					for (int i = 0; i < 2; i++)
+					{
+						if (instance.GetCharacterData(Game.CharacterData.Role.Mage).skills[i])
+							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
+						else
+							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
+					}
 					break;
 				case Game.CharacterData.Role.Ranger:
 					towerUI.skillImages[0].sprite = towerUI.skillSprites[6];
 					towerUI.skillImages[1].sprite = towerUI.skillSprites[7];
+					for (int i = 0; i < 2; i++)
+					{
+						if (instance.GetCharacterData(Game.CharacterData.Role.Ranger).skills[i])
+							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
+						else
+							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
+					}
 					break;
 				case Game.CharacterData.Role.Support:
 					towerUI.skillImages[0].sprite = towerUI.skillSprites[8];
 					towerUI.skillImages[1].sprite = towerUI.skillSprites[9];
+					for (int i = 0; i < 2; i++)
+					{
+						if (instance.GetCharacterData(Game.CharacterData.Role.Support).skills[i])
+							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
+						else
+							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
+					}
 					break;
 			}
 		}
@@ -1092,13 +1128,11 @@ namespace TowerDefense.UI.HUD
 			switch (currentSelectedTower.role)
             {
 				case Game.CharacterData.Role.Healer:
-					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[0])
-						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.maxHealth * 1.2f);
+					currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.maxHealth * 1.2f);
 					break;
 				case Game.CharacterData.Role.Knight:
-					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[0])
-						Debug.Log("Knight Skill 1 Casting");
-						break;
+					Debug.Log("Knight Skill 1 Casting");
+					break;
 				case Game.CharacterData.Role.Mage:
 
 					break;
@@ -1116,12 +1150,10 @@ namespace TowerDefense.UI.HUD
 			switch (currentSelectedTower.role)
 			{
 				case Game.CharacterData.Role.Healer:
-					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[1])
-						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.defense * 1.1f);
+					currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.defense * 1.1f);
 					break;
 				case Game.CharacterData.Role.Knight:
-					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[1])
-						Debug.Log("Knight Skill 2 Casting");
+					Debug.Log("Knight Skill 2 Casting");
 					break;
 				case Game.CharacterData.Role.Mage:
 

@@ -75,8 +75,6 @@ namespace TowerDefense.Game
 			this.RES = data.RES;
 			this.EXP = data.EXP;
 			this.SP = data.SP;
-
-			this.skills = new bool[4];
 			for (int i = 0; i < skills.Length; i++)
 			{
 				skills[i] = data.skills[i];

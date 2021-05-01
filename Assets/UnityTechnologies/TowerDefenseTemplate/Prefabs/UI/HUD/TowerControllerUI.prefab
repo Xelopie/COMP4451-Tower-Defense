@@ -1386,8 +1386,16 @@ MonoBehaviour:
   - {fileID: 5351274582060110059}
   - {fileID: 2020706591858316071}
   skillSprites:
+  - {fileID: 21300000, guid: b9c61c6896eff5b43ae44d047f49b31d, type: 3}
+  - {fileID: 21300000, guid: 05e2d6af00483bc42a42f768f4505213, type: 3}
   - {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
   - {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
+  - {fileID: 21300000, guid: 4ec98da35265dc54f8f4a4d5609f90c1, type: 3}
+  - {fileID: 21300000, guid: 88c47ee50e9dfe240b499f761f7eda42, type: 3}
+  - {fileID: 21300000, guid: 9f922002032136c4687b8dced9bc624c, type: 3}
+  - {fileID: 21300000, guid: 3e79c5a2eb174e046a22b7ae22e3200b, type: 3}
+  - {fileID: 21300000, guid: 954cdace6e17b3d4890cbbbfe98ef2fe, type: 3}
+  - {fileID: 21300000, guid: f85ea78a8f8f76546a8d8affdc6d19aa, type: 3}
 --- !u!114 &114190039087685638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,8 +2056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148.05002, y: -105.4}
-  m_SizeDelta: {x: 67, y: 67}
+  m_AnchoredPosition: {x: 129.10005, y: 121.00001}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6371044395525932371
 CanvasRenderer:
@@ -2130,7 +2138,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5351274582060110059}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114623870853810010}
+        m_MethodName: SkillButtonClick1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7038634901624505465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2185,8 +2204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.7, y: -105.399994}
-  m_SizeDelta: {x: 67, y: 67}
+  m_AnchoredPosition: {x: 129.1, y: 37.5}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2214927215911377805
 CanvasRenderer:
@@ -2267,7 +2286,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2020706591858316071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114623870853810010}
+        m_MethodName: SkillButtonClick2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &918594539681872724
 MonoBehaviour:
   m_ObjectHideFlags: 0
