@@ -70,4 +70,9 @@ public class CharacterInfoUI : MonoBehaviour
 		refreshButton.onClick.AddListener(Refresh);
 		m_CharacterStatus = skillDescriptionText.text;
 	}
+
+	protected void Start()
+	{
+		Refresh();
+	}
 }

@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tower Defense/Scenes/Stage3.unity
     guid: eadba2627c39d964986ccd0a298e40ec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Tower Defense/Scenes/Stage4.unity
     guid: f85d9745775691347a945931a0bdeb23
-  - enabled: 1
+  - enabled: 0
     path: Assets/Tower Defense/Scenes/Stage5.unity
     guid: 5954bc00f1e00ed4a8c212bc19a35381
   m_configObjects: {}
