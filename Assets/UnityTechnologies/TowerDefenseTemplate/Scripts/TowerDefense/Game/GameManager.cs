@@ -22,6 +22,8 @@ namespace TowerDefense.Game
 
 		public CharacterInitialData[] characterInitialData;
 
+		public CharacterSkillLibrary[] characterSkillLibraries;
+
 		/// <summary>
 		/// Set sleep timeout to never sleep
 		/// </summary>
@@ -29,6 +31,19 @@ namespace TowerDefense.Game
 		{
 			Screen.sleepTimeout = SleepTimeout.NeverSleep;
 			base.Awake();
+		}
+
+		public CharacterSkillLibrary GetCharacterSkillLibrary(CharacterData.Role role)
+		{
+			foreach (CharacterSkillLibrary item in characterSkillLibraries)
+			{
+				if (item.role == role)
+				{
+					Debug.Log(role);
+					return item;
+				}
+			}
+			return null;
 		}
 
 		public CharacterData GetCharacterData(CharacterData.Role role)

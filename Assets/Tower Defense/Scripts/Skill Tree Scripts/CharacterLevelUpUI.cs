@@ -391,8 +391,13 @@ public class CharacterLevelUpUI : MonoBehaviour
 
 	private void Start()
 	{
-		ReloadCharacterData();
+		var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(role);
+		for (int i = 0; i < skillButtons.Length; i++)
+		{
+			skillButtons[i].GetComponent<Image>().sprite = skillLibrary.skillSprites[i];
+		}
 
+		ReloadCharacterData();
 		Reset();
 	}
 

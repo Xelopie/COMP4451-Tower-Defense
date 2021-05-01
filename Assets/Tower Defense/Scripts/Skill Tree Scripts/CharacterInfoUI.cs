@@ -59,11 +59,22 @@ public class CharacterInfoUI : MonoBehaviour
 
 	protected void Awake()
 	{
-		foreach (var skillButton in skillButtons)
+		for (int i = 0; i < skillButtons.Length; i++)
 		{
+			var skillButton = skillButtons[i];
 			skillButton.CharacterInfoUI = this;
 		}
 		refreshButton.onClick.AddListener(Refresh);
 		m_CharacterStatus = skillDescriptionText.text;
+	}
+
+	protected void Start()
+	{
+		var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(role);
+		for (int i = 0; i < skillButtons.Length; i++)
+		{
+			var skillButton = skillButtons[i];
+			skillButton.GetComponent<Image>().sprite = skillLibrary.skillSprites[i];
+		}
 	}
 }
