@@ -42,6 +42,10 @@ namespace TowerDefense.UI.HUD
 
 		public GameObject[] confirmationButtons;
 
+		public Image[] skillImages;
+
+		public Sprite[] skillSprites;
+
 		/// <summary>
 		/// The main game camera
 		/// </summary>
@@ -127,6 +131,16 @@ namespace TowerDefense.UI.HUD
 		public void SellButtonClick()
 		{
 			GameUI.instance.SellSelectedTower();
+		}
+
+		public void SkillButtonClick1()
+        {
+			GameUI.instance.OnSkillCast1();
+        }
+
+		public void SkillButtonClick2()
+		{
+			GameUI.instance.OnSkillCast2();
 		}
 
 		/// <summary>
