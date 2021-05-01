@@ -159,8 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1de20cdb664794a821b0f620812408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRig: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
-    type: 3}
+  cameraRig: {fileID: 0}
   nearZoomPanSpeedModifier: 0.5
   screenPanThreshold: 40
   mouseEdgePanSpeed: 30
@@ -177,8 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9307288a6cd8a4302be1aa1c6c94be26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRig: {fileID: 114348589391522652, guid: 28035762430e74813854d9ca46df3ebd,
-    type: 3}
+  cameraRig: {fileID: 0}
   nearZoomPanSpeedModifier: 0.5
   panSpeed: 15
   flickDecayFactor: 0.2
