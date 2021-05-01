@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 114085267584061984}
   - {fileID: 114817115293875482}
   - {fileID: 114098644691483150}
-  achievedStarSprite: {fileID: 21300000, guid: 6476fa37afe8f46a7825bf79a9e5d28d, type: 3}
+  achievedStarSprite: {fileID: 21300000, guid: 513c8e3fb1f9f2341979382cef0fa3e0, type: 3}
 --- !u!114 &114937795433705872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleDisplay: {fileID: 114065155388689190}
   description: {fileID: 114868375962087470}
-  starAchieved: {fileID: 21300000, guid: 1361a7ad4c5a14db584c87ffddd81b29, type: 3}
+  starAchieved: {fileID: 21300000, guid: 513c8e3fb1f9f2341979382cef0fa3e0, type: 3}
   stars:
   - {fileID: 114085267584061984}
   - {fileID: 114817115293875482}

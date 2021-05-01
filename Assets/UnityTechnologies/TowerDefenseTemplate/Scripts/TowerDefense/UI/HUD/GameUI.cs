@@ -8,6 +8,7 @@ using TowerDefense.Towers;
 using TowerDefense.Towers.Placement;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace TowerDefense.UI.HUD
 {
@@ -443,6 +444,31 @@ namespace TowerDefense.UI.HUD
 			if (selectionChanged != null)
 			{
 				selectionChanged(tower);
+			}
+
+			var selectedTower = GameUI.instance.currentSelectedTower;
+			switch (selectedTower.role)
+			{
+				case Game.CharacterData.Role.Healer:
+					towerUI.skillImages[0].sprite = towerUI.skillSprites[0];
+					towerUI.skillImages[1].sprite = towerUI.skillSprites[1];
+					break;
+				case Game.CharacterData.Role.Knight:
+					towerUI.skillImages[0].sprite = towerUI.skillSprites[2];
+					towerUI.skillImages[1].sprite = towerUI.skillSprites[3];
+					break;
+				case Game.CharacterData.Role.Mage:
+					towerUI.skillImages[0].sprite = towerUI.skillSprites[4];
+					towerUI.skillImages[1].sprite = towerUI.skillSprites[5];
+					break;
+				case Game.CharacterData.Role.Ranger:
+					towerUI.skillImages[0].sprite = towerUI.skillSprites[6];
+					towerUI.skillImages[1].sprite = towerUI.skillSprites[7];
+					break;
+				case Game.CharacterData.Role.Support:
+					towerUI.skillImages[0].sprite = towerUI.skillSprites[8];
+					towerUI.skillImages[1].sprite = towerUI.skillSprites[9];
+					break;
 			}
 		}
 
@@ -1059,6 +1085,79 @@ namespace TowerDefense.UI.HUD
 			}
 
 			ShowPlacementGrid();
+		}
+
+		public void OnSkillCast1()
+        {
+			switch (currentSelectedTower.role)
+            {
+				case Game.CharacterData.Role.Healer:
+					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[0])
+						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.maxHealth * 1.2f);
+					break;
+				case Game.CharacterData.Role.Knight:
+					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[0])
+						Debug.Log("Knight Skill 1 Casting");
+						break;
+				case Game.CharacterData.Role.Mage:
+
+					break;
+				case Game.CharacterData.Role.Ranger:
+
+					break;
+				case Game.CharacterData.Role.Support:
+
+					break;
+			}
+        }
+
+		public void OnSkillCast2()
+		{
+			switch (currentSelectedTower.role)
+			{
+				case Game.CharacterData.Role.Healer:
+					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[1])
+						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.defense * 1.1f);
+					break;
+				case Game.CharacterData.Role.Knight:
+					if (TowerDefense.Game.GameManager.instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[1])
+						Debug.Log("Knight Skill 2 Casting");
+					break;
+				case Game.CharacterData.Role.Mage:
+
+					break;
+				case Game.CharacterData.Role.Ranger:
+
+					break;
+				case Game.CharacterData.Role.Support:
+
+					break;
+			}
+		}
+
+		public void EndSkillCast(Game.CharacterData.Role role, bool skillNumber)
+        {
+			switch (role)
+			{
+				case Game.CharacterData.Role.Healer:
+					if (!skillNumber)
+						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.maxHealth / 1.2f);
+					else
+						currentSelectedTower.configuration.SetMaxHealth(currentSelectedTower.configuration.defense / 1.1f);
+					break;
+				case Game.CharacterData.Role.Knight:
+
+					break;
+				case Game.CharacterData.Role.Mage:
+
+					break;
+				case Game.CharacterData.Role.Ranger:
+
+					break;
+				case Game.CharacterData.Role.Support:
+
+					break;
+			}
 		}
 	}
 }
