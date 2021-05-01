@@ -1082,6 +1082,7 @@ MonoBehaviour:
     skillSprite: {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
     skillDes: Skill 2 Description
     learnt: 0
+  skillButton: {fileID: 7493875426511298174}
 --- !u!114 &8261021768315546335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,6 +1753,7 @@ MonoBehaviour:
     skillSprite: {fileID: 21300000, guid: 5e93a13d0aab81048b25143ba568ef1b, type: 3}
     skillDes: Skill 3 Description
     learnt: 0
+  skillButton: {fileID: 0}
 --- !u!114 &7074124508966339610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,6 +2981,7 @@ MonoBehaviour:
     skillSprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
     skillDes: Skill 1 Description
     learnt: 0
+  skillButton: {fileID: 0}
 --- !u!114 &1088514055120101239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3772,6 +3775,7 @@ MonoBehaviour:
     skillSprite: {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
     skillDes: Skill 4 Description
     learnt: 0
+  skillButton: {fileID: 1044212253560507869}
 --- !u!114 &8573922891293115956
 MonoBehaviour:
   m_ObjectHideFlags: 0

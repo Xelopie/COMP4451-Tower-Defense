@@ -10,6 +10,9 @@ public class SkillButton : MonoBehaviour
 {
 	public Skill skill;
 
+	[Header("Used in skill tree, set the prerequisite skill")]
+	public SkillButton skillButton;
+
 	private CharacterInfoUI m_CharacterInfoUI;
 	private CharacterLevelUpUI m_CharacterLevelUpUI;
 
@@ -33,6 +36,8 @@ public class SkillButton : MonoBehaviour
 	private void Awake()
 	{
 		skill.skillSprite = GetComponent<Image>().sprite;
+		skill.Prerequisite = skillButton?.skill;
+
 		GetComponent<Button>().onClick.AddListener(SetActivateSkill);
 	}
 }

@@ -12,5 +12,9 @@ public class Skill
 	[TextArea(1, 3)]
 	public string skillDes;
 	public bool learnt = false;
+
+	private Skill m_Prerequisite;
+
+	public Skill Prerequisite { get => m_Prerequisite; set => m_Prerequisite = value; }
 }
 
