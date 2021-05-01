@@ -90,6 +90,23 @@ MonoBehaviour:
   targetTransform: {fileID: 7020737672446739574}
   loadDataFromFile: 1
   role: 0
+  skills:
+  - skillName: 
+    skillSprite: {fileID: 0}
+    skillDes: 
+    learnt: 0
+  - skillName: 
+    skillSprite: {fileID: 0}
+    skillDes: 
+    learnt: 0
+  - skillName: 
+    skillSprite: {fileID: 0}
+    skillDes: 
+    learnt: 0
+  - skillName: 
+    skillSprite: {fileID: 0}
+    skillDes: 
+    learnt: 0
   levels:
   - {fileID: 8107159216446282186, guid: 668a1a34a0cd6f7459547566c33f697f, type: 3}
   towerName: Knight
