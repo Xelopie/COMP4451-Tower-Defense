@@ -378,9 +378,14 @@ public class CharacterLevelUpUI : MonoBehaviour
 		unlockButton.onClick.AddListener(UnlockSkill);
 
 		m_LockImages = new Image[skillButtons.Length];
+
+		var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(role);
 		for (int i = 0; i < skillButtons.Length; i++)
 		{
+			skillButtons[i].skill = skillLibrary.skills[i];
+			skillButtons[i].GetComponent<Image>().sprite = skillLibrary.skills[i].skillSprite;
 			m_LockImages[i] = skillButtons[i].transform.Find("Lock").GetComponent<Image>();
+			
 		}
 
 		foreach (var item in skillButtons)
@@ -391,12 +396,6 @@ public class CharacterLevelUpUI : MonoBehaviour
 
 	private void Start()
 	{
-		var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(role);
-		for (int i = 0; i < skillButtons.Length; i++)
-		{
-			skillButtons[i].GetComponent<Image>().sprite = skillLibrary.skillSprites[i];
-		}
-
 		ReloadCharacterData();
 		Reset();
 	}

@@ -100,6 +100,15 @@ namespace TowerDefense.UI.HUD
 			{
 				Debug.LogWarning("[Tower Spawn Button] No level manager to get currency object");
 			}
+
+			if (TowerManager.instanceExists)
+			{
+				TowerManager.instance.onChangeBinding.AddListener(UpdateButton);
+			}
+			else
+			{
+				Debug.LogWarning("[Tower Spawn Button] No level manager to get currency object");
+			}
 			UpdateButton();
 		}
 
@@ -143,16 +152,32 @@ namespace TowerDefense.UI.HUD
 				return;
 			}
 
-			// Enable button
-			if (m_Currency.CanAfford(m_Tower.purchaseCost) && !buyButton.interactable)
+			//// Enable button
+			//if (m_Currency.CanAfford(m_Tower.purchaseCost) && !buyButton.interactable)
+			//{
+			//	buyButton.interactable = true;
+			//	energyIcon.color = energyDefaultColor;
+			//}
+			//else if (!m_Currency.CanAfford(m_Tower.purchaseCost) && buyButton.interactable)
+			//{
+			//	buyButton.interactable = false;
+			//	energyIcon.color = energyInvalidColor;
+			//}
+
+			if (m_Currency.CanAfford(m_Tower.purchaseCost) && !TowerManager.instance.IsCharacterAlive(m_Tower.role))
 			{
 				buyButton.interactable = true;
 				energyIcon.color = energyDefaultColor;
 			}
-			else if (!m_Currency.CanAfford(m_Tower.purchaseCost) && buyButton.interactable)
+			else if (!m_Currency.CanAfford(m_Tower.purchaseCost))
 			{
 				buyButton.interactable = false;
 				energyIcon.color = energyInvalidColor;
+			}
+			else
+			{
+				buyButton.interactable = false;
+				energyIcon.color = energyDefaultColor;
 			}
 		}
 	}

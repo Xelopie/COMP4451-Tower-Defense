@@ -449,9 +449,18 @@ namespace TowerDefense.UI.HUD
 
 			var selectedTower = GameUI.instance.currentSelectedTower;
 			var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(selectedTower.role);
-			for (int i = 0; i < towerUI.skillImages.Length; i++)
+			for (int i = 0; i < towerUI.skillButtons.Length; i++)
 			{
-				towerUI.skillImages[i].sprite = skillLibrary.skillSprites[i];
+				towerUI.skillButtons[i].GetComponent<Image>().sprite = skillLibrary.skills[i].skillSprite;
+
+				if (GameManager.instance.GetCharacterData(selectedTower.role).skills[i])
+				{
+					towerUI.skillButtons[i].GetComponent<Button>().interactable = true;
+				}
+				else
+				{
+					towerUI.skillButtons[i].GetComponent<Button>().interactable = false;
+				}
 			}
 		}
 
@@ -985,7 +994,7 @@ namespace TowerDefense.UI.HUD
 
 					Tower createdTower = Instantiate(controller);
 					createdTower.Initialize(m_CurrentArea, m_GridPosition);
-
+					TowerManager.instance.BindTower(createdTower.role, createdTower);
 					CancelGhostPlacement();
 				}
 			}

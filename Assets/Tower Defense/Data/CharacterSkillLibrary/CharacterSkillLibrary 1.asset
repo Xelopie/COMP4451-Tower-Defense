@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: CharacterSkillLibrary 1
   m_EditorClassIdentifier: 
   role: 0
-  skillSprites:
-  - {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
-  - {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
-  - {fileID: 21300000, guid: 5e93a13d0aab81048b25143ba568ef1b, type: 3}
-  - {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
+  skills:
+  - skillName: Steel Attack
+    skillSprite: {fileID: 21300000, guid: 8cc7ca0e29ced7b4f84e8c4ef7deb28b, type: 3}
+    skillDes: (Active Skill)
+    learnt: 0
+  - skillName: Magic Reinforce
+    skillSprite: {fileID: 21300000, guid: fccc7156f5a20d847b6f18880c73d76d, type: 3}
+    skillDes: (Active Skill)
+    learnt: 0
+  - skillName: Harden Armor
+    skillSprite: {fileID: 21300000, guid: fed4337445ffcb6438005f1a27d01035, type: 3}
+    skillDes: '(Passive Skill) '
+    learnt: 0
+  - skillName: True Power Within
+    skillSprite: {fileID: 21300000, guid: 8d41c4d75ffb95449ad8cdbfefa74218, type: 3}
+    skillDes: (Passive Skill)
+    learnt: 0

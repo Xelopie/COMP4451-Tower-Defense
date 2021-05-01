@@ -228,7 +228,7 @@ namespace TowerDefense.Towers
 		public override void Remove()
 		{
 			base.Remove();
-			
+			TowerManager.instance.UnbindTower(role);
 			placementArea.Clear(gridPosition, dimensions);
 			Destroy(gameObject);
 		}

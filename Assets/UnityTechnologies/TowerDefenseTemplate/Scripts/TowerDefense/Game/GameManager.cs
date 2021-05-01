@@ -39,7 +39,6 @@ namespace TowerDefense.Game
 			{
 				if (item.role == role)
 				{
-					Debug.Log(role);
 					return item;
 				}
 			}

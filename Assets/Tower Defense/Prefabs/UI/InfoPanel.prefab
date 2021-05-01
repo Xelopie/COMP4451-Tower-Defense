@@ -972,11 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 1
-    skillSprite: {fileID: 0}
-    skillDes: Skill Description
-    learnt: 0
+  skillButton: {fileID: 0}
 --- !u!114 &7084371817225446905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,8 +1369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 277}
-  m_SizeDelta: {x: 380, y: 50}
+  m_AnchoredPosition: {x: -3, y: 277}
+  m_SizeDelta: {x: 460, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7084371817850141086
 CanvasRenderer:
@@ -1505,11 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 4
-    skillSprite: {fileID: 0}
-    skillDes: Skill Description
-    learnt: 0
+  skillButton: {fileID: 7084371818576087873}
 --- !u!114 &7084371818168584096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1976,11 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 3
-    skillSprite: {fileID: 0}
-    skillDes: Skill Description
-    learnt: 0
+  skillButton: {fileID: 0}
 --- !u!114 &7084371818576087872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,11 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140f79407e0f03948b5c02e579aba8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill:
-    skillName: Skill 2
-    skillSprite: {fileID: 0}
-    skillDes: Skill Description
-    learnt: 0
+  skillButton: {fileID: 7084371817225446906}
 --- !u!114 &7084371818626705435
 MonoBehaviour:
   m_ObjectHideFlags: 0
