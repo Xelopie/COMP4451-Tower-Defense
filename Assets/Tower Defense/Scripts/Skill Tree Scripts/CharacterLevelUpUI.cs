@@ -61,7 +61,8 @@ public class CharacterLevelUpUI : MonoBehaviour
 				skillPanel.enabled = true;
 
 				unlockButton.gameObject.SetActive(true);
-				if (ActivateSkill.learnt || SP < 1)
+				var canLearn = m_ActivateSkill.Prerequisite != null ? m_ActivateSkill.Prerequisite.learnt : true;
+				if (m_ActivateSkill.learnt || SP < 1 || !canLearn)
 				{
 					unlockButton.interactable = false;
 				}
