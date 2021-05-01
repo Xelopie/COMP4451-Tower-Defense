@@ -47,7 +47,7 @@ MonoBehaviour:
   masterVolumeParameter: MasterVolume
   sfxVolumeParameter: SFXVolume
   musicVolumeParameter: MusicVolume
-  levelList: {fileID: 11400000, guid: bd74d68ece99a42fe8d32a39ff8e7949, type: 2}
+  levelList: {fileID: 11400000, guid: 77dbaf621022c304a8c5f18fd982e02c, type: 2}
   characterInitialData:
   - {fileID: 11400000, guid: da880caf595fc6f42906e233ccb2c719, type: 2}
   - {fileID: 11400000, guid: 3302da61bafcb134a8b7baa70bda0dd1, type: 2}

@@ -3888,7 +3888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWavesOnAwake: 0
   waves:
-  - {fileID: 798016894}
   - {fileID: 1229790325}
 --- !u!1001 &697692524
 PrefabInstance:
@@ -7684,22 +7683,10 @@ MonoBehaviour:
       type: 2}
     delayToSpawn: 0
     startingNode: {fileID: 632872063}
-  - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 632872063}
-  - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
-      type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 632872063}
-  - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
-      type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 632872063}
-  - agentConfiguration: {fileID: 11400000, guid: c0581f9f6dafe3d4d8268f2027d92339,
-      type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 632872063}
+    delayToSpawn: 1
+    startingNode: {fileID: 1134052312}
 --- !u!1001 &1230051309
 PrefabInstance:
   m_ObjectHideFlags: 0

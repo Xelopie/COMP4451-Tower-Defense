@@ -909,7 +909,7 @@ MonoBehaviour:
   endGameCanvas: {fileID: 223019906111977400}
   endGameMessageText: {fileID: 114444767888515022}
   scorePanel: {fileID: 114753625047177706}
-  menuSceneName: MainMenu
+  menuSceneName: TitlePage
   levelCompleteText: '{0} COMPLETE!'
   levelFailedText: '{0} FAILED!'
   background: {fileID: 114977527437981662}

@@ -2,6 +2,7 @@ using ActionGameFramework.Health;
 using Core.Data;
 using Core.Game;
 using System;
+using System.Linq;
 using TowerDefense.Towers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,7 +33,6 @@ namespace TowerDefense.Game
 
 		public CharacterData GetCharacterData(CharacterData.Role role)
 		{
-			LoadData();
 			var data = m_DataStore.GetCharacterData(role);
 			if (data == null)
 			{
@@ -44,8 +44,7 @@ namespace TowerDefense.Game
 						break;
 					}
 				}
-				m_DataStore.SetCharacterData(data);
-				SaveData();
+				SetCharacterData(data);
 			}
 			return data;
 		}
@@ -70,6 +69,14 @@ namespace TowerDefense.Game
 			}
 
 			m_DataStore.CompleteLevel(levelId, starsEarned);
+			//SaveData();
+			// Save exp data
+			foreach (var role in Enum.GetValues(typeof(CharacterData.Role)).Cast<CharacterData.Role>())
+			{
+				var data = GetCharacterData(role);
+				data.EXP += 50 * starsEarned;
+				SetCharacterData(data);
+			}
 			SaveData();
 		}
 
