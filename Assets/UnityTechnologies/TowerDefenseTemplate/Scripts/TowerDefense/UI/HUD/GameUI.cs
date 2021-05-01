@@ -3,6 +3,7 @@ using Core.Health;
 using Core.Input;
 using Core.Utilities;
 using JetBrains.Annotations;
+using TowerDefense.Game;
 using TowerDefense.Level;
 using TowerDefense.Towers;
 using TowerDefense.Towers.Placement;
@@ -447,64 +448,10 @@ namespace TowerDefense.UI.HUD
 			}
 
 			var selectedTower = GameUI.instance.currentSelectedTower;
-			var instance = TowerDefense.Game.GameManager.instance;
-			switch (selectedTower.role)
+			var skillLibrary = GameManager.instance.GetCharacterSkillLibrary(selectedTower.role);
+			for (int i = 0; i < towerUI.skillImages.Length; i++)
 			{
-				case Game.CharacterData.Role.Healer:
-					towerUI.skillImages[0].sprite = towerUI.skillSprites[0];
-					towerUI.skillImages[1].sprite = towerUI.skillSprites[1];
-					for (int i = 0; i < 2; i++)
-					{
-						if (instance.GetCharacterData(Game.CharacterData.Role.Healer).skills[i])
-							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
-						else
-							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
-					}
-					break;
-				case Game.CharacterData.Role.Knight:
-					towerUI.skillImages[0].sprite = towerUI.skillSprites[2];
-					towerUI.skillImages[1].sprite = towerUI.skillSprites[3];
-					for (int i = 0; i < 2; i++)
-					{
-						if (instance.GetCharacterData(Game.CharacterData.Role.Knight).skills[i])
-							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
-						else
-							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
-					}
-						break;
-				case Game.CharacterData.Role.Mage:
-					towerUI.skillImages[0].sprite = towerUI.skillSprites[4];
-					towerUI.skillImages[1].sprite = towerUI.skillSprites[5];
-					for (int i = 0; i < 2; i++)
-					{
-						if (instance.GetCharacterData(Game.CharacterData.Role.Mage).skills[i])
-							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
-						else
-							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
-					}
-					break;
-				case Game.CharacterData.Role.Ranger:
-					towerUI.skillImages[0].sprite = towerUI.skillSprites[6];
-					towerUI.skillImages[1].sprite = towerUI.skillSprites[7];
-					for (int i = 0; i < 2; i++)
-					{
-						if (instance.GetCharacterData(Game.CharacterData.Role.Ranger).skills[i])
-							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
-						else
-							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
-					}
-					break;
-				case Game.CharacterData.Role.Support:
-					towerUI.skillImages[0].sprite = towerUI.skillSprites[8];
-					towerUI.skillImages[1].sprite = towerUI.skillSprites[9];
-					for (int i = 0; i < 2; i++)
-					{
-						if (instance.GetCharacterData(Game.CharacterData.Role.Support).skills[i])
-							towerUI.skillImages[i].GetComponent<Button>().interactable = true;
-						else
-							towerUI.skillImages[i].GetComponent<Button>().interactable = false;
-					}
-					break;
+				towerUI.skillImages[i].sprite = skillLibrary.skillSprites[i];
 			}
 		}
 

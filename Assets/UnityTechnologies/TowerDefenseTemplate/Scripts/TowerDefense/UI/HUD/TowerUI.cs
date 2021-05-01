@@ -44,8 +44,6 @@ namespace TowerDefense.UI.HUD
 
 		public Image[] skillImages;
 
-		public Sprite[] skillSprites;
-
 		/// <summary>
 		/// The main game camera
 		/// </summary>

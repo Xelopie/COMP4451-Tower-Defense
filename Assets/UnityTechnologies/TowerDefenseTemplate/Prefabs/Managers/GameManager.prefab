@@ -54,3 +54,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c82ec5c85a55ac04296ba016fbdc624e, type: 2}
   - {fileID: 11400000, guid: be8f337d4a1b7b14092bd90dea22b96d, type: 2}
   - {fileID: 11400000, guid: 81cf8a9f2ac8d144296a5fdcce78e1be, type: 2}
+  characterSkillLibraries:
+  - {fileID: 11400000, guid: 21f262963ee269f48ab1004c69f4aa17, type: 2}
+  - {fileID: 11400000, guid: 9495cbed5c7e6114d95247e687d269a3, type: 2}
+  - {fileID: 11400000, guid: 9738b49ffa7bf1742ab0893b66576905, type: 2}
