@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146591508503202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066970842593808}
@@ -152,8 +152,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356296590854906}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.55, z: -0.2}
-  m_LocalScale: {x: 0.5884258, y: 0.07829758, z: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: -0.2}
+  m_LocalScale: {x: 2, y: 0.07829758, z: 1}
   m_Children:
   - {fileID: 4213428961054356}
   - {fileID: 4170109201421712}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 195080470525353462}
   - component: {fileID: 6872056041010984254}
   m_Layer: 14
-  m_Name: TerrorBringer Template
+  m_Name: Usurper Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,10 +338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configuration:
-    maxHealth: 120
-    startingHealth: 120
-    defense: 0
-    resistance: 0
+    maxHealth: 500
+    startingHealth: 500
+    defense: 150
+    resistance: 150
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
         type: 2}
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: 
-  projectile: {fileID: 1797349743178286, guid: 1310b84d7c2b5de4e9ed3b90a04207ee, type: 3}
+  projectile: {fileID: 1797349743178286, guid: 6bb11702599ed5843aa4d83cf2cd851b, type: 3}
   projectilePoints:
   - {fileID: 4013251577074370}
   epicenter: {fileID: 4066970842593808}
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedeb0b3c5e104ea19d0d4599d22ab97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
   chanceToSpawnCollisionPrefab: 1
   collisionParticles: {fileID: 0}
   alignment:

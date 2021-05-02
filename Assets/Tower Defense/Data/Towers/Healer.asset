@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Healer
   upgradeDescription: 
-  cost: 10
-  sell: 5
+  cost: 15
+  sell: 7
   maxHealth: 100
   startingHealth: 100
   icon: {fileID: 21300000, guid: 174f75348091a24468cb6ccefba30d04, type: 3}

@@ -28420,7 +28420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3555269191704078682}
   - component: {fileID: 7007910393071396658}
-  - component: {fileID: 4454847198438639370}
   - component: {fileID: 3891928263296804552}
   m_Layer: 10
   m_Name: Targetter
@@ -28458,26 +28457,12 @@ MonoBehaviour:
   turret: {fileID: 4108094835507009}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
-  searchRate: 10
+  searchRate: 5
   searchControlByAttackSpeed: 0
   idleRotationSpeed: 0
   idleCorrectionTime: 2
   attachedCollider: {fileID: 3891928263296804552}
   idleWaitTime: 2
---- !u!136 &4454847198438639370
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329906049679467281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 1.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &3891928263296804552
 BoxCollider:
   m_ObjectHideFlags: 0
