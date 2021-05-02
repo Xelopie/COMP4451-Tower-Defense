@@ -1,4 +1,4 @@
-﻿
+
 using Core.Game;
 using Core.Health;
 using TowerDefense.Game;
@@ -285,12 +285,28 @@ namespace TowerDefense.UI
 
 			float totalRemainingHealth = 0f;
 			float totalBaseHealth = 0f;
-			for (int i = 0; i < homeBaseCount; i++)
+
+			if (LevelManager.instance.overrideHomebaseHealth)
 			{
-				Damageable config = homeBases[i].configuration;
-				totalRemainingHealth += config.currentHealth;
-				totalBaseHealth += config.maxHealth;
+				float totalLoseHealth = 0f;
+				totalBaseHealth = LevelManager.instance.homebaseHealth;
+				for (int i = 0; i < homeBaseCount; i++)
+				{
+					Damageable config = homeBases[i].configuration;
+					totalLoseHealth += config.maxHealth - config.currentHealth;
+				}
+				totalRemainingHealth = totalBaseHealth - totalLoseHealth;
 			}
+			else
+			{
+				for (int i = 0; i < homeBaseCount; i++)
+				{
+					Damageable config = homeBases[i].configuration;
+					totalRemainingHealth += config.currentHealth;
+					totalBaseHealth += config.maxHealth;
+				}
+			}
+
 			int score = CalculateScore(totalRemainingHealth, totalBaseHealth);
 			return score;
 		}

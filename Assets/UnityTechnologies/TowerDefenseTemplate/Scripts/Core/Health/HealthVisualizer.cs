@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Core.Health
 {
@@ -58,7 +58,7 @@ namespace Core.Health
 				backgroundBar.transform.localScale = scale;
 			}
 
-			SetVisible(showWhenFull || normalizedHealth < 1.0f);
+			SetVisible((showWhenFull || normalizedHealth < 1.0f) && normalizedHealth > 0.0f);
 		}
 
 		/// <summary>

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 910bcb715cd3344619df786cb0658efb, type: 3}
-  m_Name: RedSoulEater
+  m_Name: RedSoulEaterAgent
   m_EditorClassIdentifier: 
   agentName: RedSoulEater
   agentDescription: 
-  agentPrefab: {fileID: 114975712440518228, guid: 8da93bbd16f2c104c9d8f04ce025fde5,
+  agentPrefab: {fileID: 4766970266902305763, guid: 10577d83dd8d0fc4c94a9d07ec191ed7,
     type: 3}

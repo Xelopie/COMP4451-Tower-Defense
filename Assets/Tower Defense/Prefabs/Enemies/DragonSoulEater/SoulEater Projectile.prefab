@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114593574260685338}
   - component: {fileID: 114416803425874578}
   m_Layer: 13
-  m_Name: Nightmare Attack Projectile
+  m_Name: SoulEater Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedeb0b3c5e104ea19d0d4599d22ab97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 40
   chanceToSpawnCollisionPrefab: 1
   collisionParticles: {fileID: 0}
   alignment:

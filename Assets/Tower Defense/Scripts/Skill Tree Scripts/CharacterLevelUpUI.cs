@@ -8,6 +8,10 @@ using System;
 
 public class CharacterLevelUpUI : MonoBehaviour
 {
+	const int HP_PER_LEVEL = 10;
+	const int ATK_PER_LEVEL = 2;
+	const int DEF_PER_LEVEL = 10;
+	const int RES_PER_LEVEL = 10;
 	const int MAX_LEVEL = 10;
 
 	[Serializable]
@@ -218,10 +222,10 @@ public class CharacterLevelUpUI : MonoBehaviour
 	{
 		if (previewLV >= MAX_LEVEL) return;
 		previewLV += 1;
-		previewHP += 10;
-		previewATK += 1;
-		previewDEF += 5;
-		previewRES += 5;
+		previewHP += HP_PER_LEVEL;
+		previewATK += ATK_PER_LEVEL;
+		previewDEF += DEF_PER_LEVEL;
+		previewRES += RES_PER_LEVEL;
 
 		currentEXP -= requireEXP;
 		requireEXP = previewLV * 100;
@@ -240,10 +244,10 @@ public class CharacterLevelUpUI : MonoBehaviour
 	private void LevelDownPreview()
 	{
 		if (previewLV <= m_Data.LV) return;
-		previewHP -= 10;
-		previewATK -= 1;
-		previewDEF -= 5;
-		previewRES -= 5;
+		previewHP -= HP_PER_LEVEL;
+		previewATK -= ATK_PER_LEVEL;
+		previewDEF -= DEF_PER_LEVEL;
+		previewRES -= RES_PER_LEVEL;
 		previewLV -= 1;
 
 		requireEXP = previewLV * 100;

@@ -47,7 +47,7 @@ MonoBehaviour:
   turret: {fileID: 8242395769748448276}
   turretXRotationRange: {x: 0, y: 0}
   onlyYTurretRotation: 1
-  searchRate: 20
+  searchRate: 10
   searchControlByAttackSpeed: 1
   idleRotationSpeed: 0
   idleCorrectionTime: 2
@@ -28520,7 +28520,7 @@ MonoBehaviour:
   - {fileID: 7385718743368320731}
   epicenter: {fileID: 8242395769748448276}
   isMultiAttack: 0
-  fireRate: 1
+  fireRate: 3
   randomAudioSource: {fileID: 3952573662307269564}
   towerTargetter: {fileID: 4240149108828158132}
   radiusEffectColor: {r: 0.05724919, g: 1, b: 0, a: 1}

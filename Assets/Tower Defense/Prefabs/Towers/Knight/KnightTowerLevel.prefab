@@ -28586,12 +28586,12 @@ MonoBehaviour:
   - {fileID: 4108094835507009}
   epicenter: {fileID: 4108094835507009}
   isMultiAttack: 1
-  fireRate: 1
+  fireRate: 3
   randomAudioSource: {fileID: 0}
   towerTargetter: {fileID: 7007910393071396658}
   radiusEffectColor: {r: 0, g: 1, b: 0.91210127, a: 0.24705882}
   knightAnimator: {fileID: 95887088428975379}
-  attackDelay: 0.8
+  attackDelay: 0
 --- !u!1 &8107159216446282187
 GameObject:
   m_ObjectHideFlags: 0

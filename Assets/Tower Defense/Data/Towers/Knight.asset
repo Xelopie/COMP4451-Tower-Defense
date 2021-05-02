@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: High damage, short range, low attack speed
   upgradeDescription: 
-  cost: 10
-  sell: 5
+  cost: 18
+  sell: 9
   maxHealth: 100
   startingHealth: 100
   icon: {fileID: 21300000, guid: c9ac86eabaa80034fb0c99810f877e69, type: 3}
