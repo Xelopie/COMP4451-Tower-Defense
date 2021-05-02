@@ -475,7 +475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: kxbkscubsckb
+  m_Text: 
 --- !u!1 &1535006603250148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: acf4716a8fa254a2589ba008c867a3bc, type: 3}
+    m_Font: {fileID: 12800000, guid: b18d62a784517d24c9986b30ee589aae, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
