@@ -88,6 +88,7 @@ namespace TowerDefense.Level
 			if (startWavesOnAwake)
 			{
 				StartWaves();
+				LevelManager.instance.BuildingCompleted();
 			}
 		}
 

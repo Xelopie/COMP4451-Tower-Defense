@@ -488,11 +488,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 3a24f7c04035a904d960fa2b79dcb253,
       type: 2}
     delayToSpawn: 0
     startingNode: {fileID: 1724428218}
-  timeToNextWave: 10
+  - agentConfiguration: {fileID: 11400000, guid: 3a24f7c04035a904d960fa2b79dcb253,
+      type: 2}
+    delayToSpawn: 10
+    startingNode: {fileID: 1724428218}
+  - agentConfiguration: {fileID: 11400000, guid: 3a24f7c04035a904d960fa2b79dcb253,
+      type: 2}
+    delayToSpawn: 10
+    startingNode: {fileID: 1724428218}
+  - agentConfiguration: {fileID: 11400000, guid: 3a24f7c04035a904d960fa2b79dcb253,
+      type: 2}
+    delayToSpawn: 10
+    startingNode: {fileID: 1724428218}
+  - agentConfiguration: {fileID: 11400000, guid: 3a24f7c04035a904d960fa2b79dcb253,
+      type: 2}
+    delayToSpawn: 0
+    startingNode: {fileID: 1724428218}
+  timeToNextWave: 30
 --- !u!1001 &110271676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3504,6 +3520,7 @@ MonoBehaviour:
     constantCurrencyGainRate: 1
   alwaysGainCurrency: 0
   homeBases:
+  - {fileID: 567541882}
   - {fileID: 1897564744}
   environmentColliders: []
 --- !u!114 &351561159
@@ -4546,9 +4563,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 9e3d2a08720555946be0fdeabb5c101c,
       type: 2}
     delayToSpawn: 0
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 9e3d2a08720555946be0fdeabb5c101c,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 9e3d2a08720555946be0fdeabb5c101c,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 9e3d2a08720555946be0fdeabb5c101c,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 9e3d2a08720555946be0fdeabb5c101c,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 07dcdc1560e472d458dacbabc90cad96,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 07dcdc1560e472d458dacbabc90cad96,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 07dcdc1560e472d458dacbabc90cad96,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 07dcdc1560e472d458dacbabc90cad96,
+      type: 2}
+    delayToSpawn: 8
+    startingNode: {fileID: 629311394}
+  - agentConfiguration: {fileID: 11400000, guid: 07dcdc1560e472d458dacbabc90cad96,
+      type: 2}
+    delayToSpawn: 8
     startingNode: {fileID: 629311394}
 --- !u!1001 &564630242
 PrefabInstance:
@@ -4766,8 +4819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configuration:
-    maxHealth: 9999
-    startingHealth: 9999
+    maxHealth: 3
+    startingHealth: 3
     defense: 0
     resistance: 0
     alignment:
@@ -9002,27 +9055,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
     delayToSpawn: 0
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 2028860870}
-  timeToNextWave: 30
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 2
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 4
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 4
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 4
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 4
+    startingNode: {fileID: 2028860870}
+  timeToNextWave: 50
 --- !u!1001 &1076481455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13002,43 +13095,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
     delayToSpawn: 10
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
-  - agentConfiguration: {fileID: 11400000, guid: 92fe7f83a28b131468cea2a13a675169,
+  - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 919380629}
@@ -16117,8 +16210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configuration:
-    maxHealth: 9999
-    startingHealth: 9999
+    maxHealth: 3
+    startingHealth: 3
     defense: 0
     resistance: 0
     alignment:
@@ -17185,7 +17278,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolables:
-  - {fileID: 114378502089070424, guid: 60373dd212878c1498deab1388c62ab9, type: 3}
+  - {fileID: 7112909470562739123, guid: a515daa6af0d1a749b7e11338bef2069, type: 3}
+  - {fileID: 7674137056065874488, guid: 25405672d6d49b44e88f11196877b4f7, type: 3}
+  - {fileID: 7674137056065874488, guid: d1f14f9e007d2214f9e7d918da6ea6c1, type: 3}
+  - {fileID: 4912950690261623735, guid: ff4cc367a4c38124f9f50ebf7857c9df, type: 3}
+  - {fileID: 705749736388520655, guid: 90039ff04fe18f64384e9d4c5444a15a, type: 3}
+  - {fileID: 114348681867643788, guid: 471d1ea320d8e064b905f7eae09c3316, type: 3}
+  - {fileID: 114348681867643788, guid: 39a4c6c48bceebc4ea5c55f1da52370b, type: 3}
+  - {fileID: 114313870498114478, guid: f4a4a28807004674cbeb9c095a82421b, type: 3}
 --- !u!4 &2057876108
 Transform:
   m_ObjectHideFlags: 0
