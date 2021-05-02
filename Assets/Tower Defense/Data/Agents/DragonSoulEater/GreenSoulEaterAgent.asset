@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GreenSoulEater
   agentDescription: 
-  agentPrefab: {fileID: 114975712440518228, guid: 39a4c6c48bceebc4ea5c55f1da52370b,
+  agentPrefab: {fileID: 4766970266902305763, guid: 43f45ab5522f845488e496c28e53c56f,
     type: 3}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Core.Economy;
 using Core.Health;
 using Core.Utilities;
@@ -46,6 +46,9 @@ namespace TowerDefense.Level
 		public PlayerHomeBase[] homeBases;
 
 		public Collider[] environmentColliders;
+
+		public bool overrideHomebaseHealth = false;
+		public int homebaseHealth;
 
 		/// <summary>
 		/// The attached wave manager
@@ -133,11 +136,22 @@ namespace TowerDefense.Level
 		public float GetAllHomeBasesHealth()
 		{
 			float health = 0.0f;
-			foreach (PlayerHomeBase homebase in homeBases)
+
+			if (overrideHomebaseHealth)
 			{
-				health += homebase.configuration.currentHealth;
+				health = homebaseHealth;
+				foreach (PlayerHomeBase homebase in homeBases)
+				{
+					health -= homebase.configuration.maxHealth - homebase.configuration.currentHealth;
+				}
 			}
-			health -= (homeBases.Length - 1) * homeBases[0].configuration.startingHealth;
+			else
+			{
+				foreach (PlayerHomeBase homebase in homeBases)
+				{
+					health += homebase.configuration.currentHealth;
+				}
+			}
 			return health;
 		}
 
@@ -199,9 +213,19 @@ namespace TowerDefense.Level
 			// Iterate through home bases and subscribe
 			numberOfHomeBases = homeBases.Length;
 			numberOfHomeBasesLeft = numberOfHomeBases;
-			for (int i = 0; i < numberOfHomeBases; i++)
+			if (overrideHomebaseHealth)
 			{
-				homeBases[i].died += OnHomeBaseDestroyed;
+				for (int i = 0; i < numberOfHomeBases; i++)
+				{
+					homeBases[i].hit += CheckRemainingHealth;
+				}
+			}
+			else
+			{
+				for (int i = 0; i < numberOfHomeBases; i++)
+				{
+					homeBases[i].died += OnHomeBaseDestroyed;
+				}
 			}
 		}
 
@@ -292,6 +316,17 @@ namespace TowerDefense.Level
 				case LevelState.Win:
 					SafelyCallLevelCompleted();
 					break;
+			}
+		}
+
+		protected virtual void CheckRemainingHealth(HitInfo dummy)
+		{
+			if (GetAllHomeBasesHealth() <= 0)
+			{
+				if (!isGameOver)
+				{
+					ChangeLevelState(LevelState.Lose);
+				}
 			}
 		}
 

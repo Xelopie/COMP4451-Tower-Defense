@@ -15,9 +15,10 @@ MonoBehaviour:
   data:
     role: 3
     LV: 1
+    SP: 0
     HP: 100
     ATK: 10
     DEF: 10
     RES: 10
-    EXP: 50
+    EXP: 10000
     skills: 00000000

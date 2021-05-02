@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHealAttack: 0
   isMagicAttack: 0
-  delay: 0
+  delay: 0.7
 --- !u!114 &5443932920846594465
 MonoBehaviour:
   m_ObjectHideFlags: 0
