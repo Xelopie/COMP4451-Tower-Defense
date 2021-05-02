@@ -32,7 +32,8 @@ namespace TowerDefense.UI.HUD
 		protected virtual void Start()
 		{
 			m_Canvas = GetComponent<Canvas>();
-			m_Canvas.enabled = false;
+			if (!LevelManager.instance.waveManager.startWavesOnAwake)
+				m_Canvas.enabled = false;
 			m_TotalWaves = LevelManager.instance.waveManager.totalWaves;
 			LevelManager.instance.waveManager.waveChanged += UpdateDisplay;
 		}

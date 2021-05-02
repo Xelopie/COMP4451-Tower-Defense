@@ -30,6 +30,8 @@ namespace TowerDefense.UI.HUD
 				button.buttonTapped += OnButtonTapped;
 				button.draggedOff += OnButtonDraggedOff;
 			}
+			if (LevelManager.instance.waveManager.startWavesOnAwake)
+				GameObject.Find("StartWaveButton").gameObject.SetActive(false);
 		}
 
 		/// <summary>
