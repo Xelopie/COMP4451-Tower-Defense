@@ -1866,7 +1866,7 @@ PrefabInstance:
     - target: {fileID: 224969066576691682, guid: 4eadf710c1ae841f9aea598e5ca2f8c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224969066576691682, guid: 4eadf710c1ae841f9aea598e5ca2f8c7,
         type: 3}
@@ -3955,7 +3955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f6b517889714918b16fb770dc1db77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWavesOnAwake: 0
+  startWavesOnAwake: 1
   waves:
   - {fileID: 335983149}
   - {fileID: 1229790325}
@@ -10763,7 +10763,7 @@ PrefabInstance:
     - target: {fileID: 224671183341218448, guid: f2c84fb68fbea4461b4b20d53d70213c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224671183341218448, guid: f2c84fb68fbea4461b4b20d53d70213c,
         type: 3}
