@@ -3955,7 +3955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f6b517889714918b16fb770dc1db77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWavesOnAwake: 1
+  startWavesOnAwake: 0
   waves:
   - {fileID: 335983149}
   - {fileID: 1229790325}
