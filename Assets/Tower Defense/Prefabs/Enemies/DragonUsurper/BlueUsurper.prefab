@@ -28645,10 +28645,13 @@ MonoBehaviour:
   configuration:
     maxHealth: 32
     startingHealth: 32
+    defense: 0
+    resistance: 0
     alignment:
       unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
         type: 2}
   targetTransform: {fileID: 4700067048751242}
+  poolDelay: 0
   appliedEffectOffset: {x: 0, y: 1.5, z: 0}
   appliedEffectScale: 1
 --- !u!114 &114948497807355484
@@ -28669,6 +28672,8 @@ MonoBehaviour:
   alignment:
     unityObjectReference: {fileID: 11400000, guid: 9dc4735bf52f547d59ebe1007e9a0e7f,
       type: 2}
+  loadDataFromFile: 0
+  role: 0
 --- !u!54 &54135300629997764
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -43183,6 +43188,7 @@ MonoBehaviour:
   turretXRotationRange: {x: 0, y: 359}
   onlyYTurretRotation: 0
   searchRate: 1
+  searchControlByAttackSpeed: 0
   idleRotationSpeed: 0.2
   idleCorrectionTime: 2
   attachedCollider: {fileID: 135029919260774750}

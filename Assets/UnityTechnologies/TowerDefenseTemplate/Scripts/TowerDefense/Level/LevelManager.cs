@@ -137,6 +137,7 @@ namespace TowerDefense.Level
 			{
 				health += homebase.configuration.currentHealth;
 			}
+			health -= (homeBases.Length - 1) * homeBases[0].configuration.startingHealth;
 			return health;
 		}
 
@@ -309,7 +310,7 @@ namespace TowerDefense.Level
 			}
 
 			// If there are no home bases left and the level is not over then set the level to lost
-			if ((numberOfHomeBasesLeft == 0) && !isGameOver)
+			if (!isGameOver)
 			{
 				ChangeLevelState(LevelState.Lose);
 			}

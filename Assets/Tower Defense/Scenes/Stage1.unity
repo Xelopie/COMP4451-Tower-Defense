@@ -1111,8 +1111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   configuration:
-    maxHealth: 9999
-    startingHealth: 9999
+    maxHealth: 3
+    startingHealth: 3
     defense: 0
     resistance: 0
     alignment:
