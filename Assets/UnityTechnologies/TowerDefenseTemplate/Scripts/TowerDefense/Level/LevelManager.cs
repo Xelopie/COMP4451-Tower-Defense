@@ -213,9 +213,19 @@ namespace TowerDefense.Level
 			// Iterate through home bases and subscribe
 			numberOfHomeBases = homeBases.Length;
 			numberOfHomeBasesLeft = numberOfHomeBases;
-			for (int i = 0; i < numberOfHomeBases; i++)
+			if (overrideHomebaseHealth)
 			{
-				homeBases[i].died += OnHomeBaseDestroyed;
+				for (int i = 0; i < numberOfHomeBases; i++)
+				{
+					homeBases[i].hit += CheckRemainingHealth;
+				}
+			}
+			else
+			{
+				for (int i = 0; i < numberOfHomeBases; i++)
+				{
+					homeBases[i].died += OnHomeBaseDestroyed;
+				}
 			}
 		}
 
@@ -306,6 +316,17 @@ namespace TowerDefense.Level
 				case LevelState.Win:
 					SafelyCallLevelCompleted();
 					break;
+			}
+		}
+
+		protected virtual void CheckRemainingHealth(HitInfo dummy)
+		{
+			if (GetAllHomeBasesHealth() <= 0)
+			{
+				if (!isGameOver)
+				{
+					ChangeLevelState(LevelState.Lose);
+				}
 			}
 		}
 

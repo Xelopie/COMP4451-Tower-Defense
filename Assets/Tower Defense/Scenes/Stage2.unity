@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWavesOnAwake: 0
   waves:
-  - {fileID: 1524047291}
+  - {fileID: 1064865566}
   - {fileID: 1064865566}
   - {fileID: 97843780}
   - {fileID: 563744370}
@@ -9119,66 +9119,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInstructions:
-  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 0
     startingNode: {fileID: 2028860870}
   - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 0.8
     startingNode: {fileID: 2028860870}
   - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 0.8
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
+  - agentConfiguration: {fileID: 11400000, guid: 94028419bd879d64d8ad9ccdd476d13d,
       type: 2}
     delayToSpawn: 2
     startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 134ab41daadb4514f8770bd19bfdab12,
+  - agentConfiguration: {fileID: 11400000, guid: d199eba0354cabe4eb56c5d8a020b786,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 0.8
+    startingNode: {fileID: 2028860870}
+  - agentConfiguration: {fileID: 11400000, guid: d199eba0354cabe4eb56c5d8a020b786,
+      type: 2}
+    delayToSpawn: 0.8
     startingNode: {fileID: 2028860870}
   - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
       type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
+    delayToSpawn: 5
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
       type: 2}
     delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
       type: 2}
     delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
       type: 2}
     delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: 0c4a4a413dc2cba418e12d57bd8fa680,
-      type: 2}
-    delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 2
-    startingNode: {fileID: 2028860870}
-  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
-      type: 2}
-    delayToSpawn: 4
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 4
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 4
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
       type: 2}
     delayToSpawn: 4
-    startingNode: {fileID: 2028860870}
+    startingNode: {fileID: 919380629}
+  - agentConfiguration: {fileID: 11400000, guid: bfeb72c2caf9548498905df12aba01ca,
+      type: 2}
+    delayToSpawn: 4
+    startingNode: {fileID: 919380629}
   timeToNextWave: 50
 --- !u!1001 &1076481455
 PrefabInstance:
@@ -9230,6 +9230,71 @@ PrefabInstance:
       objectReference: {fileID: 1878720221}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28035762430e74813854d9ca46df3ebd, type: 3}
+--- !u!1 &1080651224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080651225}
+  - component: {fileID: 1080651227}
+  - component: {fileID: 1080651226}
+  m_Layer: 8
+  m_Name: Grid (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080651225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080651224}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1483186928}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1080651226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080651224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6047b4caea1744b999805dd16c51366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementTilePrefab: {fileID: 114496876178851720, guid: 8ce97201eea4a404b86d7d0906b89847,
+    type: 3}
+  placementTilePrefabMobile: {fileID: 114496876178851720, guid: 18a440af7ac5d46c8af359534286c4bf,
+    type: 3}
+  dimensions:
+    x: 1
+    y: 1
+  gridSize: 1
+--- !u!65 &1080651227
+BoxCollider:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080651224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0, z: 1}
+  m_Center: {x: 0.5, y: 0, z: 0.5}
 --- !u!1001 &1086531991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12813,6 +12878,7 @@ Transform:
   - {fileID: 232086957}
   - {fileID: 1892439495}
   - {fileID: 817136635}
+  - {fileID: 1080651225}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13161,45 +13227,45 @@ MonoBehaviour:
   spawnInstructions:
   - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1.8
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1.8
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1.8
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: f4868156b5918b9438f85a9a43c89d2b,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1.8
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 4
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1
     startingNode: {fileID: 919380629}
   - agentConfiguration: {fileID: 11400000, guid: 70cc3f29cc17e834780d30997c78cb8f,
       type: 2}
-    delayToSpawn: 2
+    delayToSpawn: 1
     startingNode: {fileID: 919380629}
-  timeToNextWave: 40
+  timeToNextWave: 30
 --- !u!1001 &1539853428
 PrefabInstance:
   m_ObjectHideFlags: 0
