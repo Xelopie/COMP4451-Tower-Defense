@@ -7,11 +7,15 @@ using TowerDefense.Towers;
 using System;
 using UnityEngine.Events;
 
+[Serializable]
+public class UnBindTower : UnityEvent<CharacterData.Role> { };
+
 public class TowerManager : Singleton<TowerManager>
 {
 	public Tower[] towers;
-
+	public UnBindTower onUnbindTower;
 	public UnityEvent onChangeBinding;
+
 
 	protected override void Awake()
 	{
@@ -30,6 +34,7 @@ public class TowerManager : Singleton<TowerManager>
 	{
 		towers[(int)role] = null;
 		onChangeBinding.Invoke();
+		onUnbindTower.Invoke(role);
 	}
 
 	public bool IsCharacterAlive(CharacterData.Role role)

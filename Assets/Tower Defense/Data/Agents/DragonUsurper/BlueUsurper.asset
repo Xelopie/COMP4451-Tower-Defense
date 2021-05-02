@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: BlueUsurper
   agentDescription: 
-  agentPrefab: {fileID: 114786861591068548, guid: f4a4a28807004674cbeb9c095a82421b,
+  agentPrefab: {fileID: 3475110997093485805, guid: 154ae87673da9714982f42620804b237,
     type: 3}

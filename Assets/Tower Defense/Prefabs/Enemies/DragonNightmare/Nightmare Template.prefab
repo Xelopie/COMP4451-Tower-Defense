@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6b59d40564378ba0b1580a4a9dd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootDropped: 1
+  lootDropped: 0
 --- !u!82 &82094088292764670
 AudioSource:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d007c1fe5e41c1888e4af3392f8676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPoolCapacity: 10
+  initialPoolCapacity: 4
 --- !u!136 &136866353072794800
 CapsuleCollider:
   m_ObjectHideFlags: 0

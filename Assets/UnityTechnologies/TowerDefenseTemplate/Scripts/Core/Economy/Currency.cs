@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Core.Economy
 {
@@ -67,6 +67,7 @@ namespace Core.Economy
 			if (increment != 0)
 			{
 				currentCurrency += increment;
+				if (currentCurrency >= 100) currentCurrency = 100;
 				if (currencyChanged != null)
 				{
 					currencyChanged();

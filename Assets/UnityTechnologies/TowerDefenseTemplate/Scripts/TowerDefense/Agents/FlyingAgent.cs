@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 
 namespace TowerDefense.Agents
@@ -63,6 +63,7 @@ namespace TowerDefense.Agents
 		/// </summary>
 		protected void PushingThrough()
 		{
+			if (isDead) return;
 			m_CurrentWaitTime -= Time.deltaTime;
 
 			// Move the agent, overriding its NavMeshAgent until it reaches its destination

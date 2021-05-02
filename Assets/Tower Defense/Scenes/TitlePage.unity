@@ -831,6 +831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUpPanel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1189144443107603747, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 4 / s
+      objectReference: {fileID: 0}
     - target: {fileID: 2061678076570924759, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: role
@@ -840,6 +845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397054534216883521, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 5 s
       objectReference: {fileID: 0}
     - target: {fileID: 5301817161554928838, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
@@ -2632,6 +2642,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468688801}
     m_Modifications:
+    - target: {fileID: 563674383, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 5 s
+      objectReference: {fileID: 0}
+    - target: {fileID: 963891018, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 0.5 / s
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099328401, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7084371817791103249, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
       propertyPath: m_Enabled
@@ -4456,7 +4478,7 @@ PrefabInstance:
     - target: {fileID: 103852428582926133, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 352882966506452481, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
@@ -4568,10 +4590,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUpPanel (0)
       objectReference: {fileID: 0}
+    - target: {fileID: 1189144443107603747, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 0.83 / s
+      objectReference: {fileID: 0}
     - target: {fileID: 2739061572868523960, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397054534216883521, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 5 s
       objectReference: {fileID: 0}
     - target: {fileID: 6756478905613906691, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
@@ -4592,6 +4624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527564420051914436, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c422f1e6677b84db0d35dae7d0cafd, type: 3}
@@ -5334,6 +5371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUpPanel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1189144443107603747, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 0.5 / s
+      objectReference: {fileID: 0}
     - target: {fileID: 2061678076570924759, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
       propertyPath: role
@@ -5343,6 +5385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397054534216883521, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 5 s
       objectReference: {fileID: 0}
     - target: {fileID: 5301817161554928838, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
@@ -5364,6 +5411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -422
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527564420051914436, guid: c6c422f1e6677b84db0d35dae7d0cafd,
+        type: 3}
+      propertyPath: m_Text
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8671219610755152942, guid: c6c422f1e6677b84db0d35dae7d0cafd,
         type: 3}
@@ -6273,6 +6325,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468688801}
     m_Modifications:
+    - target: {fileID: 563674383, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 5 s
+      objectReference: {fileID: 0}
+    - target: {fileID: 963891018, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 4 / s
+      objectReference: {fileID: 0}
     - target: {fileID: 7084371817791103249, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
       propertyPath: m_Enabled
@@ -11275,6 +11335,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468688801}
     m_Modifications:
+    - target: {fileID: 563674383, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 5 s
+      objectReference: {fileID: 0}
+    - target: {fileID: 963891018, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 0.83 / s
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099328401, guid: 6fbd191de4a47b94cac83ceaa3b630d0, type: 3}
+      propertyPath: m_Text
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7084371817791103249, guid: 6fbd191de4a47b94cac83ceaa3b630d0,
         type: 3}
       propertyPath: m_Enabled

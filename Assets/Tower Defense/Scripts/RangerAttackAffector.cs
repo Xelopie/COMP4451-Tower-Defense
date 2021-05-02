@@ -19,7 +19,8 @@ public class RangerAttackAffector : AttackAffector
 		Transform projectilePoint = projectilePoints[0];
 		int layerMask = 1 << 11;
 		layerMask = ~layerMask;
-		if (m_TrackingEnemy != null && Physics.Raycast(projectilePoint.position, projectilePoint.forward, Mathf.Infinity, layerMask))
+		// Physics.Raycast(projectilePoint.position, projectilePoint.forward, Mathf.Infinity, layerMask)
+		if (m_TrackingEnemy != null)
         {
             FireProjectile();
             rangerAnimator.SetTrigger("Attack");

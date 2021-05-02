@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentName: GreenUsurper
   agentDescription: 
-  agentPrefab: {fileID: 114786861591068548, guid: c23accd45a42a9d46885d66cc4b3789e,
+  agentPrefab: {fileID: 3475110997093485805, guid: 1612acecb70b75646b733a817a471dcc,
     type: 3}

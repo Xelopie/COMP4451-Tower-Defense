@@ -1,5 +1,6 @@
 using System;
 using Core.Economy;
+using TowerDefense.Game;
 using TowerDefense.Level;
 using TowerDefense.Towers;
 using UnityEngine;
@@ -28,6 +29,9 @@ namespace TowerDefense.UI.HUD
 		public Color energyDefaultColor;
 		
 		public Color energyInvalidColor;
+
+		public GameObject blocker;
+		public Text blockerText;
 
 		/// <summary>
 		/// Fires when the button is tapped
@@ -104,6 +108,7 @@ namespace TowerDefense.UI.HUD
 			if (TowerManager.instanceExists)
 			{
 				TowerManager.instance.onChangeBinding.AddListener(UpdateButton);
+				TowerManager.instance.onUnbindTower.AddListener(UpdateBlocker);
 			}
 			else
 			{
@@ -118,6 +123,7 @@ namespace TowerDefense.UI.HUD
 		protected virtual void Awake()
 		{
 			m_RectTransform = (RectTransform) transform;
+			blocker.SetActive(false);
 		}
 
 		/// <summary>
@@ -139,6 +145,28 @@ namespace TowerDefense.UI.HUD
 			if (buttonTapped != null)
 			{
 				buttonTapped(m_Tower);
+			}
+		}
+
+		void UpdateBlocker(CharacterData.Role role)
+		{
+			if (role != m_Tower.role) return;
+			blocker.SetActive(true);
+			blockerText.text = "-5";
+			InvokeRepeating(nameof(CountDown), 0, 1.0f);
+		}
+
+		void CountDown()
+		{
+			var currentCount = int.Parse(blockerText.text);
+			if (currentCount != 0)
+			{
+				blockerText.text = (currentCount + 1).ToString();
+			}
+			else
+			{
+				blocker.SetActive(false);
+				CancelInvoke();
 			}
 		}
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using ActionGameFramework.Health;
 using Core.Utilities;
@@ -127,7 +127,15 @@ namespace TowerDefense.Agents
 		/// </value>
 		protected virtual bool isPathBlocked
 		{
-			get { return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial; }
+			get
+			{
+				//if (m_NavMeshAgent.isOnNavMesh)
+				//{
+				//	var validDestination = m_NavMeshAgent.CalculatePath(m_Destination, new NavMeshPath());
+				//	return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial || !validDestination;
+				//}
+				return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial;
+			}
 		}
 
 		/// <summary>

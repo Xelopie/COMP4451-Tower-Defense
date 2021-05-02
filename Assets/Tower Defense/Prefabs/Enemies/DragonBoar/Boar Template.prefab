@@ -312,7 +312,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1511114609136056}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.2
+  m_Radius: 0.1
   m_Speed: 1
   m_Acceleration: 1.8
   avoidancePriority: 80
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d007c1fe5e41c1888e4af3392f8676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPoolCapacity: 10
+  initialPoolCapacity: 4
 --- !u!136 &136866353072794800
 CapsuleCollider:
   m_ObjectHideFlags: 0
