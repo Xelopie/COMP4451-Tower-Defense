@@ -274,7 +274,6 @@ GameObject:
   - component: {fileID: 114755418864449814}
   - component: {fileID: 114378502089070424}
   - component: {fileID: 136866353072794800}
-  - component: {fileID: 114313882177952152}
   - component: {fileID: 114711563749760058}
   - component: {fileID: 195080470525353462}
   - component: {fileID: 6872056041010984254}
@@ -368,7 +367,7 @@ MonoBehaviour:
   epicenter: {fileID: 4066970842593808}
   isMultiAttack: 0
   fireRate: 1
-  randomAudioSource: {fileID: 114313882177952152}
+  randomAudioSource: {fileID: 0}
   towerTargetter: {fileID: 114921850837260542}
   radiusEffectColor: {r: 0, g: 0, b: 0, a: 0}
   controller: {fileID: 195080470525353462}
@@ -425,13 +424,13 @@ AudioSource:
   m_GameObject: {fileID: 1511114609136056}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243247032315055076, guid: c40bed98f23a748f89472abe9c1a6871,
+  OutputAudioMixerGroup: {fileID: 243567727944115826, guid: c40bed98f23a748f89472abe9c1a6871,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5ca1c7b56e224434ca2a97b9c64f4e08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 492b418e5780c7242a372eccab222b14, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -553,23 +552,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.42, z: 0}
---- !u!114 &114313882177952152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511114609136056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e11f03a17effc4238ba95c5b616ee02c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips:
-    weightedItems:
-    - clip: {fileID: 8300000, guid: b8c05e6303a8c4126b56d5f4a6a70862, type: 3}
-      weight: 1
-  playOnEnabled: 0
 --- !u!114 &114711563749760058
 MonoBehaviour:
   m_ObjectHideFlags: 0

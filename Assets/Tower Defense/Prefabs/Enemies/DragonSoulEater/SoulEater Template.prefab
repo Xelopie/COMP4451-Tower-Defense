@@ -567,7 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
     weightedItems:
-    - clip: {fileID: 8300000, guid: b8c05e6303a8c4126b56d5f4a6a70862, type: 3}
+    - clip: {fileID: 8300000, guid: 8f7482a196c48d24a9b231f0907f29b1, type: 3}
       weight: 1
   playOnEnabled: 0
 --- !u!114 &114711563749760058
