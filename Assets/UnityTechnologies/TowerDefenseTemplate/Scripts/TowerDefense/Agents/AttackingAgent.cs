@@ -59,6 +59,7 @@ namespace TowerDefense.Agents
 		/// <returns>The closest tower</returns>
 		protected Tower GetClosestTower()
 		{
+			m_AttackAffector.towerTargetter.SearchForTarget();
 			var towerController = m_AttackAffector.towerTargetter.GetTarget() as Tower;
 			return towerController;
 		}
@@ -112,8 +113,15 @@ namespace TowerDefense.Agents
 		{
 			if (isPathBlocked)
 			{
-				var destination = GetClosestTower().GetComponent<Collider>().ClosestPoint(transform.position);
-				NavigateTo(destination);
+				m_AttackAffector.towerTargetter.transform.position = m_CurrentNode.transform.position;
+				Debug.Log(m_CurrentNode.transform.position);
+				if (GetClosestTower())
+				{
+					Debug.Log(GetClosestTower());
+					var destination = GetClosestTower().GetComponent<Collider>().ClosestPoint(transform.position);
+					NavigateTo(destination);
+				}
+				
 				state = State.OnPartialPath;
 			}
 		}
