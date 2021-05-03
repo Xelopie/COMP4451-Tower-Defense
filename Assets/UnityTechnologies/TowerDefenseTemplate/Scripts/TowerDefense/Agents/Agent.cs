@@ -129,11 +129,11 @@ namespace TowerDefense.Agents
 		{
 			get
 			{
-				//if (m_NavMeshAgent.isOnNavMesh)
-				//{
-				//	var validDestination = m_NavMeshAgent.CalculatePath(m_Destination, new NavMeshPath());
-				//	return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial || !validDestination;
-				//}
+				if (m_NavMeshAgent.isOnNavMesh)
+				{
+					var validDestination = m_NavMeshAgent.CalculatePath(m_Destination, new NavMeshPath());
+					return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial || !validDestination;
+				}
 				return m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathPartial;
 			}
 		}
