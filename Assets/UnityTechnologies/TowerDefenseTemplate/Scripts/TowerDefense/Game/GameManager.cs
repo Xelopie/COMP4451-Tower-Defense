@@ -88,7 +88,7 @@ namespace TowerDefense.Game
 			foreach (var role in Enum.GetValues(typeof(CharacterData.Role)).Cast<CharacterData.Role>())
 			{
 				var data = GetCharacterData(role);
-				data.EXP += 50 * starsEarned;
+				data.EXP += 50 * starsEarned * int.Parse(levelId);
 				SetCharacterData(data);
 			}
 			SaveData();

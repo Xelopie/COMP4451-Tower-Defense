@@ -285,6 +285,7 @@ namespace TowerDefense.Agents
 				else
 				{
 					// Otherwise try repath
+					if (state == State.Attacking) return;
 					m_NavMeshAgent.SetDestination(m_Destination);
 				}
 			}

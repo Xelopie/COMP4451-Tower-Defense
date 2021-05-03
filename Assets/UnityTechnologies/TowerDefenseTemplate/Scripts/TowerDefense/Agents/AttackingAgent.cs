@@ -1,4 +1,4 @@
-﻿using Core.Health;
+using Core.Health;
 using TowerDefense.Affectors;
 using TowerDefense.Towers;
 using UnityEngine;
@@ -59,6 +59,7 @@ namespace TowerDefense.Agents
 		/// <returns>The closest tower</returns>
 		protected Tower GetClosestTower()
 		{
+			m_AttackAffector.towerTargetter.SearchForTarget();
 			var towerController = m_AttackAffector.towerTargetter.GetTarget() as Tower;
 			return towerController;
 		}
@@ -107,7 +108,23 @@ namespace TowerDefense.Agents
 					break;
 			}
 		}
-		
+
+		protected override void OnCompletePathUpdate()
+		{
+			if (isPathBlocked)
+			{
+				m_AttackAffector.towerTargetter.transform.position = m_CurrentNode.transform.position;
+				var closestTower = GetClosestTower();
+				if (closestTower)
+				{
+					var destination = closestTower.GetComponent<Collider>().ClosestPoint(transform.position);
+					NavigateTo(destination);
+				}
+				
+				state = State.OnPartialPath;
+			}
+		}
+
 		/// <summary>
 		/// Change to <see cref="Agent.State.OnCompletePath" /> when path is no longer blocked or to
 		/// <see cref="Agent.State.Attacking" /> when the agent reaches <see cref="AttackingAgent.m_TargetTower" />
@@ -119,7 +136,6 @@ namespace TowerDefense.Agents
 				state = State.OnCompletePath;
 				return;
 			}
-
 			// Check for closest tower at the end of the partial path
 			m_AttackAffector.towerTargetter.transform.position = m_NavMeshAgent.pathEndPosition;
 			Tower tower = GetClosestTower();

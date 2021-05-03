@@ -28,10 +28,12 @@ namespace TowerDefense.Agents
 				state = State.OnCompletePath;
 				return;
 			}
-			if (!isAtDestination)
-			{
-				return;
-			}
+
+			//if (!isAtDestination)
+			//{
+			//	return;
+			//}
+
 			m_NavMeshAgent.enabled = false;
 			m_CurrentWaitTime = m_WaitTime;
 			state = State.PushingThrough;
@@ -54,6 +56,15 @@ namespace TowerDefense.Agents
 				case State.PushingThrough:
 					PushingThrough();
 					break;
+			}
+		}
+
+		protected override void OnCompletePathUpdate()
+		{
+			if (isPathBlocked)
+			{
+				NavigateTo((m_Destination + transform.position) / 2);
+				state = State.OnPartialPath;
 			}
 		}
 
