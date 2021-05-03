@@ -114,11 +114,10 @@ namespace TowerDefense.Agents
 			if (isPathBlocked)
 			{
 				m_AttackAffector.towerTargetter.transform.position = m_CurrentNode.transform.position;
-				Debug.Log(m_CurrentNode.transform.position);
-				if (GetClosestTower())
+				var closestTower = GetClosestTower();
+				if (closestTower)
 				{
-					Debug.Log(GetClosestTower());
-					var destination = GetClosestTower().GetComponent<Collider>().ClosestPoint(transform.position);
+					var destination = closestTower.GetComponent<Collider>().ClosestPoint(transform.position);
 					NavigateTo(destination);
 				}
 				
@@ -137,7 +136,6 @@ namespace TowerDefense.Agents
 				state = State.OnCompletePath;
 				return;
 			}
-
 			// Check for closest tower at the end of the partial path
 			m_AttackAffector.towerTargetter.transform.position = m_NavMeshAgent.pathEndPosition;
 			Tower tower = GetClosestTower();
