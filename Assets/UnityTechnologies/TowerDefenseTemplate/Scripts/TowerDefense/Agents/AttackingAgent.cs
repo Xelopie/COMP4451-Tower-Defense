@@ -1,4 +1,4 @@
-﻿using Core.Health;
+using Core.Health;
 using TowerDefense.Affectors;
 using TowerDefense.Towers;
 using UnityEngine;
@@ -107,7 +107,17 @@ namespace TowerDefense.Agents
 					break;
 			}
 		}
-		
+
+		protected override void OnCompletePathUpdate()
+		{
+			if (isPathBlocked)
+			{
+				var destination = GetClosestTower().GetComponent<Collider>().ClosestPoint(transform.position);
+				NavigateTo(destination);
+				state = State.OnPartialPath;
+			}
+		}
+
 		/// <summary>
 		/// Change to <see cref="Agent.State.OnCompletePath" /> when path is no longer blocked or to
 		/// <see cref="Agent.State.Attacking" /> when the agent reaches <see cref="AttackingAgent.m_TargetTower" />
