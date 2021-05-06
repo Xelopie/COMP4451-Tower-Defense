@@ -234,6 +234,7 @@ namespace TowerDefense.Agents
 			Vector3 nodePosition = m_CurrentNode.GetRandomPointInNodeArea();
 			nodePosition.y = m_CurrentNode.transform.position.y;
 			m_Destination = nodePosition;
+			if (isPathBlocked) return;
 			NavigateTo(m_Destination);
 		}
 

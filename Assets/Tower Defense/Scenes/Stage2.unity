@@ -3520,6 +3520,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWavesOnAwake: 0
   waves:
+  - {fileID: 1524047291}
+  - {fileID: 1064865566}
+  - {fileID: 97843780}
   - {fileID: 563744370}
 --- !u!1001 &355947941
 PrefabInstance:
